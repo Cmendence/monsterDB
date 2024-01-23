@@ -22,8 +22,8 @@ function App() {
          <Route path="/allMonsters" element={<MonsterList monsters={monsters} />}></Route>
       </Routes>
       <Home />
-      </Router>
       <Footer />
+      </Router>
     </div>
   )
 }
