@@ -4,10 +4,10 @@ export default function Home(){
 
    return(
       <div className='text-center text-gray-800'>
-            <h1 className='uppercase text-4xl font-semibold p-10'>
+            <h1 className='uppercase text-3xl font-semibold px-4 py-10'>
                Welcome to our D&D 2e Monster Database!
             </h1>
-            <div className='text-base text-center p-8'>
+            <div className='text-base text-center p-4'>
                <p>
                   This project was inspired by a friend who could not find a D&D 2e Monster database with filters to get the 
                   desired type of creature based on hit dice, terrain, AC, or Alignment. 

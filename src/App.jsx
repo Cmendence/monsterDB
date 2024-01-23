@@ -19,11 +19,9 @@ function App() {
       <NavBar />
       <Routes>
          <Route path="/home" element={<Home />}></Route>
-         <Route path="/allMonsters" element={<MonsterList />}></Route>
+         <Route path="/allMonsters" element={<MonsterList monsters={monsters} />}></Route>
       </Routes>
       <Home />
-      {/* <FilterPanel monsters={monsters} /> */}
-      {/* <MonsterList monsters={monsters} /> */}
       </Router>
       <Footer />
     </div>

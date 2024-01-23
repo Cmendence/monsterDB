@@ -7,8 +7,6 @@ export default function MonsterList({monsters}) {
 
    return(
 
-
-
       <div>
       {monsters.map((monster) => {
         if (monster.monster_data.statblock) {
