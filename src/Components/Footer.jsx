@@ -1,4 +1,6 @@
 import React from "react";
+import GitHubIcon from "/GitHubIcon.png"
+import LinkedInIcon from "/linkedin-3-24.png"
 
 const Footer = () => {
   return (
@@ -16,7 +18,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="../src/assets/GitHubIcon.png" className="mr-4" />
+          <img src={GitHubIcon} className="mr-4" />
         </a>
         <p className="text-sm text-gray-400">
           &copy; {new Date().getFullYear()} CMendence
@@ -26,7 +28,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="../src/assets/linkedin-3-24.png" className="ml-4" />
+          <img src={LinkedInIcon} className="ml-4" />
         </a>
       </div>
     </footer>
