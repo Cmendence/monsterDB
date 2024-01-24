@@ -74,7 +74,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="bg-teal-950 shadow-md fixed top-0 w-full">
+    <nav className="bg-teal-950 shadow-md sticky top-0 z-50 w-full">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -158,21 +158,21 @@ export default function NavBar() {
           <div className="sm:hidden" id="mobile-menu">
             <Link
               to="/"
-              className="text-gray-300 active:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              className="text-gray-300 active:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium focus:bg-purple-600"
               onClick={toggleMobileMenu}
             >
               Home
             </Link>
             <Link
               to=""
-              className="text-gray-300 active:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              className="text-gray-300 active:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium focus:bg-purple-600"
               onClick={toggleMobileMenu}
             >
               Filter
             </Link>
             <Link
               to="/allMonsters"
-              className="text-gray-300 active:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              className="text-gray-300 active:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium focus:bg-purple-600"
               onClick={toggleMobileMenu}
             >
               All Monsters

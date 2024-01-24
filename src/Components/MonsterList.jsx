@@ -57,7 +57,7 @@ export default function MonsterList({ monsters }) {
   }, []);
 
   return (
-    <div className="py-20">
+    <div className="py-4">
       <h2 className="text-gray-800 font-semibold uppercase text-lg mx-6 my-2">
          All Monsters
       </h2>
