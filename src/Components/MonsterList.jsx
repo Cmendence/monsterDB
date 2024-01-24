@@ -21,19 +21,6 @@ export default function MonsterList({monsters}) {
                keysToRender={keysToRender}
                key={monster.title}
             />
-            // <div key={monster.monster_key}>
-            //   {/* <h2>{monsterKey}</h2> */}
-            //   {Object.entries(monster.monster_data.statblock).map(([variation, stats]) => (
-            //     <div className="monster-card" key={variation}>
-            //       <h3>{variation}</h3>
-            //       {keysToRender.map((key) => (
-            //         <p key={key}>
-            //           <strong>{key}:</strong> {stats[key] || 'N/A'}
-            //         </p>
-            //       ))}
-            //     </div>
-            //   ))}
-            // </div>
           );
         }
         return null; // Skip rendering if statblock is not present
