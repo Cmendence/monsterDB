@@ -3,7 +3,7 @@ import React from 'react'
 export default function Home(){
 
    return(
-      <div className='text-center text-gray-800 h-dvh'>
+      <div className='text-center text-gray-800'>
             <h1 className='uppercase text-3xl font-semibold px-4 py-10'>
                Welcome to our D&D 2e Monster Database!
             </h1>

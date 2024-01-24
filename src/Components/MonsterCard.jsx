@@ -6,8 +6,6 @@ export default function MonsterCard({ monster, keysToRender, monsterKey }) {
    
    return (
      <div className='grid grid-cols-2'>
-         <div>
-        </div>
        {Object.entries(monster.monster_data.statblock).map(([variation, stats]) => (
           <div className="border border-2 p-4 border-teal-800 rounded-lg m-1 " key={variation}>
              <h2 className='uppercase font-semibold text-xl '>{monsterKey}</h2>

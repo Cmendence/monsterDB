@@ -151,7 +151,7 @@ export default function NavBar() {
 
       {/* Mobile menu, show/hide based on menu state. */}
       <div
-        className={`sm:hidden ${mobileMenuOpen ? "block" : "hidden"}`}
+        className={`sm:hidden ${mobileMenuOpen ? "block" : "hidden"} `}
         id="mobile-menu"
       >
         <div className="space-y-1 px-2 pb-3 pt-2">
@@ -159,18 +159,21 @@ export default function NavBar() {
             <Link
               to="/"
               className="text-gray-300 hover:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              onClick={toggleMobileMenu}
             >
               Home
             </Link>
             <Link
               to=""
               className="text-gray-300 hover:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              onClick={toggleMobileMenu}
             >
               Filter
             </Link>
             <Link
               to="/allMonsters"
               className="text-gray-300 hover:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              onClick={toggleMobileMenu}
             >
               All Monsters
             </Link>

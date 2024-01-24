@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer
       aria-labelledby="footer-heading"
-      className="bg-teal-950 mt-auto mt-auto relative w-full"
+      className="bg-teal-950 mt-auto fixed bottom-0 w-full"
     >
       <h2 id="footer-heading" className="sr-only">
         Footer
