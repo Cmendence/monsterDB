@@ -3,7 +3,7 @@
   "short_name": "2e MDB",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "/dragonSquare.png",
       "sizes": "192x192",
       "type": "image/png"
     },
