@@ -158,21 +158,21 @@ export default function NavBar() {
           <div className="sm:hidden" id="mobile-menu">
             <Link
               to="/"
-              className="text-gray-300 hover:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              className="text-gray-300 active:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               onClick={toggleMobileMenu}
             >
               Home
             </Link>
             <Link
               to=""
-              className="text-gray-300 hover:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              className="text-gray-300 active:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               onClick={toggleMobileMenu}
             >
               Filter
             </Link>
             <Link
               to="/allMonsters"
-              className="text-gray-300 hover:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              className="text-gray-300 active:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               onClick={toggleMobileMenu}
             >
               All Monsters
