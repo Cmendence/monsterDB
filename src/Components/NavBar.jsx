@@ -64,6 +64,7 @@
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import DragonLogo from "/android-chrome-512x512.png"
 
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -118,8 +119,8 @@ export default function NavBar() {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <img
-              className="h-8 w-auto"
-              src="../public/android-chrome-192x192.png"
+              className="h-10 w-auto"
+              src={DragonLogo}
               alt="Dragon"
             />
             <div className="hidden sm:ml-6 sm:block">
