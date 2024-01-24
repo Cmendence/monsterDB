@@ -57,7 +57,10 @@ export default function MonsterList({ monsters }) {
   }, []);
 
   return (
-    <div>
+    <div className="py-20">
+      <h2 className="text-gray-800 font-semibold uppercase text-lg mx-6 my-2">
+         All Monsters
+      </h2>
       {monsters.map((monster) => {
         if (monster.monster_data.statblock) {
           let monsterKey = monster.title;
