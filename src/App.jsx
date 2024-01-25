@@ -1,9 +1,9 @@
 
 import './App.css'
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import monsters from "../ALL_MONSTERS.json"
+import monsters from "../updatedMonsters.json"
 import MonsterList from "./Components/MonsterList"
 import FilterPanel from './Components/FilterPanel'
 import NavBar from './Components/NavBar'
