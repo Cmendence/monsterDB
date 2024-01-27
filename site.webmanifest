@@ -3,12 +3,12 @@
   "short_name": "2e MDB",
   "icons": [
     {
-      "src": "/dragonSquare.png",
+      "src": "/dragonRounded.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/dragonSquare.png",
+      "src": "/dragonRounded.png.png",
       "sizes": "512x512",
       "type": "image/png"
     }
