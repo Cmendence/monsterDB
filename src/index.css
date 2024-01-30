@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slider {
+   height: 10px;
+}
+
+.slider .thumb {
+   width: 23px;
+   height: 23px;
+   cursor: grab;
+   background: #14b8a6;
+   border-radius: 50%;
+   border: 1px black solid;
+   top: -.4rem;
+}

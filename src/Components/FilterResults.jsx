@@ -1,9 +1,7 @@
-
-
 import React, { useState, useEffect } from "react";
 import MonsterCard from "./MonsterCard";
 
-export default function MonsterList({ monsters }) {
+export default function MonsterList({ monsters, selectedFilters, toggleResults }) {
   const [showButton, setShowButton] = useState(false);
 
   const scrollFunction = () => {
@@ -28,10 +26,18 @@ export default function MonsterList({ monsters }) {
   }, []);
 
   return (
-    <div className="py-4">
+    <div >
+      <button className="bg-violet-700 text-gray-50 tracking-wide font-semibold rounded-md ml-4 px-3 py-2 active:bg-violet-900 hover:bg-violet-800"
+               onClick={()=>toggleResults()}
+       >
+         Back to Filters
+       </button>
+       
+       <div className="py-4">
       <h2 className="text-gray-800 font-semibold uppercase text-lg mx-6 my-2">
-         All Monsters ({monsters.length})
+         Showing results for
       </h2>
+   
       {monsters.map((monster) => {
         if (monster.monster_data.statblock) {
           let monsterKey = monster.title;
@@ -59,7 +65,7 @@ export default function MonsterList({ monsters }) {
         <button
           type="button"
           onClick={backToTop}
-          className="fixed bottom-20 right-5 rounded-full bg-violet-500 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg"
+          className="fixed bottom-20 right-5 rounded-full bg-purple-600 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg"
         >
           <svg
             aria-hidden="true"
@@ -77,6 +83,7 @@ export default function MonsterList({ monsters }) {
           </svg>
         </button>
       )}
+    </div>
     </div>
   );
 }

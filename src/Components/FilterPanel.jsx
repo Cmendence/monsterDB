@@ -1,13 +1,27 @@
 import React, { useState } from "react";
+import Slider from "react-slider"
 import MonsterCard from "./MonsterCard";
+import FilterResults from "./FilterResults"
 
-export default function FilterPanel({ monsters }) {
+export default function FilterPanel({ monsters, selectedFilters, setSelectedFilters }) {
    // This is just an example set of filters, you can customize it based on your data
    const climateFilters = ['Temperate', 'Warm', 'Tropical'];
    const terrrainFilters= ['Plains', 'Desert', 'Subterranean', 'Swamp']
- 
-   const [selectedFilters, setSelectedFilters] = useState(new Set());
- 
+   const alignmentFilters = ['Neutral', 'Good', 'Non-evil', 'Chaotic Evil', 'Lawful evil', 'Neutral Evil', 'Chaotic Neutral']
+  
+   const minDice = 0
+   const maxDice= 25
+
+   const [diceValues, setDiceValues] = useState([minDice, maxDice])
+   const [showResults, setShowResults] = useState(false)
+
+console.log('values: ', diceValues)
+
+   const resetFilters = () =>{
+      setSelectedFilters(new Set())
+      setDiceValues([minDice, maxDice])
+   }
+
    const handleFilterChange = (filter) => {
      const updatedFilters = new Set(selectedFilters);
      if (updatedFilters.has(filter)) {
@@ -16,22 +30,87 @@ export default function FilterPanel({ monsters }) {
        updatedFilters.add(filter);
      }
      setSelectedFilters(updatedFilters);
+     console.log(updatedFilters)
    };
  
+   const toggleResults = () => {
+      setShowResults(!showResults)
+   }
+
    return (
-     <div>
-       <h3>Climate Filters:</h3>
+      <div className="m-4 mb-12">
+        {!showResults ? (
+         <div>  
+      <h3 className="font-semibold">Hit Dice:</h3>
+      <div className="text-sm mt-1"><span className="font-semibold">Min:</span> {diceValues[0]} <span className="font-semibold">Max:</span> {diceValues[1]} </div>
+         <Slider
+            onChange={setDiceValues}
+            className="my-4 slider lg:w-1/3 bg-violet-400 rounded flex "
+            value={diceValues}
+            min={minDice}
+            max={maxDice}
+         />
+       <h3 className="font-semibold">Climate:</h3>
        {climateFilters.map((filter) => (
-         <label key={filter}>
+         <label key={filter} className="ml-4 m-2 flex" >
            <input
              type="checkbox"
              value={filter}
              checked={selectedFilters.has(filter)}
              onChange={() => handleFilterChange(filter)}
            />
-           {filter}
+           &nbsp; {filter}
          </label>
        ))}
+       <h3 className="font-semibold">Terrain:</h3>
+       {terrrainFilters.map((filter) => (
+         <label key={filter} className="ml-4 m-2 flex">
+           <input
+             type="checkbox"
+             value={filter}
+             checked={selectedFilters.has(filter)}
+             onChange={() => handleFilterChange(filter)}
+           />
+          &nbsp; {filter}
+         </label>
+       ))}
+       <h3 className="font-semibold mt-4">Alignment:</h3>
+       {alignmentFilters.map((filter) => (
+         <label key={filter} className="ml-4 m-2 flex">
+           <input
+             type="checkbox"
+             value={filter}
+             checked={selectedFilters.has(filter)}
+             onChange={() => handleFilterChange(filter)}
+           />
+            &nbsp; {filter}
+         </label>
+       ))}
+         <div>
+       <button className="bg-violet-700 text-gray-50 tracking-wide font-semibold rounded-md m-2 px-4 py-2 active:bg-violet-900 hover:bg-violet-800"
+               onClick={()=>toggleResults()}
+       >
+         See results
+       </button>
+       <button className="bg-gray-500 text-gray-50 tracking-wide font-semibold rounded-md m-2 px-4 py-2 active:bg-gray-900 hover:bg-gray-800"
+               onClick={()=> resetFilters()}
+       >
+         Reset Filters
+
+
+       </button>
+       </div>
+       </div>
+        ): (
+            <FilterResults 
+               toggleResults={toggleResults}
+               monsters={monsters}
+               selectedFilters={selectedFilters}
+            />
+
+         
+        )}
+         
      </div>
    );
  }
