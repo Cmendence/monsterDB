@@ -106,6 +106,7 @@ console.log('values: ', diceValues)
                toggleResults={toggleResults}
                monsters={monsters}
                selectedFilters={selectedFilters}
+               diceValues={diceValues}
             />
 
          

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MonsterCard from "./MonsterCard";
 
-export default function MonsterList({ monsters, selectedFilters, toggleResults }) {
+export default function MonsterList({ monsters, selectedFilters, toggleResults, diceValues }) {
   const [showButton, setShowButton] = useState(false);
 
   const scrollFunction = () => {
@@ -25,6 +25,27 @@ export default function MonsterList({ monsters, selectedFilters, toggleResults }
     };
   }, []);
 
+  const filteredMonsters = monsters.filter((monster) => {
+   // Ensure that monster.monster_data.statblock is defined
+   if (!monster.monster_data.statblock) {
+     return false;
+   }
+
+   // Iterate through all variations
+   const variations = Object.keys(monster.monster_data.statblock);
+   const anyVariationValid = variations.some((variationKey) => {
+     const hitDice = monster.monster_data.statblock[variationKey]?.['Hit Dice'];
+     return (
+       (!diceValues[0] || hitDice >= diceValues[0]) &&
+       (!diceValues[1] || hitDice <= diceValues[1])
+       // Add other filtering conditions based on selectedFilters if needed
+     );
+   });
+
+   return anyVariationValid; // Filter if at least one variation meets the criteria
+ });
+
+
   return (
     <div >
       <button className="bg-violet-700 text-gray-50 tracking-wide font-semibold rounded-md ml-4 px-3 py-2 active:bg-violet-900 hover:bg-violet-800"
@@ -35,10 +56,10 @@ export default function MonsterList({ monsters, selectedFilters, toggleResults }
        
        <div className="py-4">
       <h2 className="text-gray-800 font-semibold uppercase text-lg mx-6 my-2">
-         Showing results for
+         Showing results ({filteredMonsters.length})
       </h2>
    
-      {monsters.map((monster) => {
+      {filteredMonsters.map((monster) => {
         if (monster.monster_data.statblock) {
           let monsterKey = monster.title;
           let keysToRender = [
