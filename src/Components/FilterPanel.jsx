@@ -35,6 +35,7 @@ console.log('values: ', diceValues)
  
    const toggleResults = () => {
       setShowResults(!showResults)
+      window.scrollTo(0, 0)
    }
 
    return (

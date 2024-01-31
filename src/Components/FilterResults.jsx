@@ -47,14 +47,14 @@ export default function FilterResults({ monsters, selectedFilters, toggleResults
 
 
   return (
-    <div >
-      <button className="bg-violet-700 text-gray-50 tracking-wide font-semibold rounded-md ml-4 px-3 py-2 active:bg-violet-900 hover:bg-violet-800"
+    <div>
+      <button className="bg-violet-700 text-gray-50 tracking-wide font-semibold rounded-md px-3 py-2 active:bg-violet-900 hover:bg-violet-800"
                onClick={()=>toggleResults()}
        >
          Back to Filters
        </button>
        
-       <div className="py-4">
+       <div className="-mx-4">
       <h2 className="text-gray-800 font-semibold uppercase text-lg mx-6 my-2">
          Showing results ({filteredMonsters.length})
       </h2>
