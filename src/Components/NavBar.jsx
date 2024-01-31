@@ -8,6 +8,7 @@ export default function NavBar() {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+    window.scrollTo(0, 0)
   };
 
   return (
