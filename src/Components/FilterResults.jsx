@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MonsterCard from "./MonsterCard";
 
-export default function MonsterList({ monsters, selectedFilters, toggleResults, diceValues }) {
+export default function FilterResults({ monsters, selectedFilters, toggleResults, diceValues }) {
   const [showButton, setShowButton] = useState(false);
 
   const scrollFunction = () => {
