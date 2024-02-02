@@ -61,6 +61,8 @@ export default function MonsterCard({ monster, keysToRender, monsterKey }) {
   const variations = Object.keys(monster.monster_data.statblock);
   const isMultipleVariations = variations.length > 1;
 
+
+
   return (
     <div className="">
       {variations.map((variation, index) => (
@@ -79,13 +81,15 @@ export default function MonsterCard({ monster, keysToRender, monsterKey }) {
 function MonsterCardVariation({ monster, monsterKey, variation, keysToRender }) {
   const [showFullCard, setShowFullCard] = useState(false);
 
+  const cardBg = showFullCard ? "bg-emerald-900" : "bg-teal-800"
+
   const handleClick = () => {
     setShowFullCard(!showFullCard);
   };
 
   return (
     <div
-      className="border-2 p-4 shadow-md border-teal-800 bg-teal-800 rounded-lg mx-4 my-3 text-stone-50 cursor-pointer transition-all duration-200 ease-in-out"
+      className={` p-4 shadow-md ${cardBg} rounded-lg mx-4 my-3 text-stone-50 cursor-pointer transition-tranform active:scale-105 duration-200 ease-in-out`}
       onClick={handleClick}
     >
       {monsterKey && <h2 className="font-semibold text-md">{monsterKey} -</h2>}

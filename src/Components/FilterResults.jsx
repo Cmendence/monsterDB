@@ -25,15 +25,12 @@ export default function FilterResults({ monsters, selectedFilters, toggleResults
     };
   }, []);
 
-  const filteredMonsters = monsters.filter((monster) => {
-   // Ensure that monster.monster_data.statblock is defined
+  const filteredMonsters = monsters.map((monster) => {
    if (!monster.monster_data.statblock) {
-     return false;
+     return null; // Skip monsters with no statblock
    }
-
-   // Iterate through all variations
-   const variations = Object.keys(monster.monster_data.statblock);
-   const anyVariationValid = variations.some((variationKey) => {
+ 
+   const validVariations = Object.keys(monster.monster_data.statblock).filter((variationKey) => {
      const hitDice = monster.monster_data.statblock[variationKey]?.['Hit Dice'];
      return (
        (!diceValues[0] || hitDice >= diceValues[0]) &&
@@ -41,10 +38,28 @@ export default function FilterResults({ monsters, selectedFilters, toggleResults
        // Add other filtering conditions based on selectedFilters if needed
      );
    });
-
-   return anyVariationValid; // Filter if at least one variation meets the criteria
+ 
+   // Create a new object to store only the valid variations
+   const filteredStatblock = validVariations.reduce((acc, variationKey) => {
+     acc[variationKey] = monster.monster_data.statblock[variationKey];
+     return acc;
+   }, {});
+ 
+   // Return a new monster object with the filtered statblock
+   return {
+     ...monster,
+     monster_data: {
+       ...monster.monster_data,
+       statblock: filteredStatblock,
+     },
+   };
+ }).filter((monster) => monster !== null); // Remove null values
+ 
+ // Filter out monsters that have no valid variations
+ const finalFilteredMonsters = filteredMonsters.filter((monster) => {
+   return Object.keys(monster.monster_data.statblock).length > 0;
  });
-
+ 
 
   return (
     <div>
@@ -56,10 +71,10 @@ export default function FilterResults({ monsters, selectedFilters, toggleResults
        
        <div className="-mx-4">
       <h2 className="text-gray-800 font-semibold uppercase text-lg mx-6 my-2">
-         Showing results ({filteredMonsters.length})
+         Showing results ({finalFilteredMonsters.length})
       </h2>
    
-      {filteredMonsters.map((monster) => {
+      {finalFilteredMonsters.map((monster) => {
         if (monster.monster_data.statblock) {
           let monsterKey = monster.title;
           let keysToRender = [
