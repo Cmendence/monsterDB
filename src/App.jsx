@@ -3,7 +3,7 @@ import './App.css'
 // import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from 'react';
-import monsters from "../updatedMonsters.json"
+import monsters from "../newMonsterDB.json"
 import MonsterList from "./Components/MonsterList"
 import FilterPanel from './Components/FilterPanel'
 import FilterResults from './Components/FilterResults'
@@ -23,7 +23,7 @@ function App() {
       <Routes>
          <Route path="/" element={<Home />}></Route>
          <Route path="/allMonsters" element={<MonsterList monsters={monsters} />} />
-         <Route path="/allMonsters" element={<FilterResults monsters={monsters} selectedFilters={selectedFilters} />} />
+         <Route path="/filterResults" element={<FilterResults monsters={monsters} selectedFilters={selectedFilters} />} />
          <Route path="/filter" element={<FilterPanel monsters={monsters} selectedFilters={selectedFilters} setSelectedFilters={setSelectedFilters} />} />
       </Routes>
       <Footer />

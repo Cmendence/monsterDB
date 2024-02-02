@@ -5,12 +5,25 @@ import FilterResults from "./FilterResults"
 
 export default function FilterPanel({ monsters, selectedFilters, setSelectedFilters }) {
    // This is just an example set of filters, you can customize it based on your data
+const filters = {
+   climate: [
+
+   ],
+   terrain: [
+
+   ],
+   alignment: [
+
+   ],
+
+}
+
    const climateFilters = ['Temperate', 'Warm', 'Tropical'];
    const terrrainFilters= ['Plains', 'Desert', 'Subterranean', 'Swamp']
    const alignmentFilters = ['Neutral', 'Good', 'Non-evil', 'Chaotic Evil', 'Lawful evil', 'Neutral Evil', 'Chaotic Neutral']
   
-   const minDice = 0
-   const maxDice= 25
+   const minDice = 0;
+   const maxDice= 50;
 
    const [diceValues, setDiceValues] = useState([minDice, maxDice])
    const [showResults, setShowResults] = useState(false)

@@ -55,50 +55,88 @@
 // } 
 
 
+// import React, { useState } from 'react';
+
+// export default function MonsterCard({ monster, keysToRender, monsterKey }) {
+//   const variations = Object.keys(monster.monster_data.statblock);
+//   const isMultipleVariations = variations.length > 1;
+
+
+
+//   return (
+//     <div className="">
+//       {variations.map((variation, index) => (
+//         <MonsterCardVariation
+//           key={index}
+//           monster={monster}
+//           monsterKey={isMultipleVariations ? monsterKey : null}
+//           variation={variation}
+//           keysToRender={keysToRender}
+//         />
+//       ))}
+//     </div>
+//   );
+// }
+
+// function MonsterCardVariation({ monster, monsterKey, variation, keysToRender }) {
+//   const [showFullCard, setShowFullCard] = useState(false);
+
+//   const cardBg = showFullCard ? "bg-emerald-900" : "bg-teal-800"
+
+//   const handleClick = () => {
+//     setShowFullCard(!showFullCard);
+//   };
+
+//   return (
+//     <div
+//       className={` p-4 shadow-md ${cardBg} rounded-lg mx-4 my-3 text-stone-50 cursor-pointer transition-tranform active:scale-105 duration-200 ease-in-out`}
+//       onClick={handleClick}
+//     >
+//       {monsterKey && <h2 className="font-semibold text-md">{monsterKey} -</h2>}
+//       <h3 className="font-semibold text-md">{variation}</h3>
+//       {showFullCard ? (
+//         <div>
+//           {Object.keys(monster.monster_data.statblock[variation]).map((key) => (
+//             <p key={key} className="text-xs">
+//               <strong className="font-semibold">{key}:</strong> {monster.monster_data.statblock[variation][key] || 'N/A'}
+//             </p>
+//           ))}
+//         </div>
+//       ) : (
+//         <div>
+//           {keysToRender.map((key) => (
+//             <p key={key} className="text-xs">
+//               <strong className="font-semibold">{key}:</strong> {monster.monster_data.statblock[variation][key] || 'N/A'}
+//             </p>
+//           ))}
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
 import React, { useState } from 'react';
 
-export default function MonsterCard({ monster, keysToRender, monsterKey }) {
-  const variations = Object.keys(monster.monster_data.statblock);
-  const isMultipleVariations = variations.length > 1;
-
-
-
-  return (
-    <div className="">
-      {variations.map((variation, index) => (
-        <MonsterCardVariation
-          key={index}
-          monster={monster}
-          monsterKey={isMultipleVariations ? monsterKey : null}
-          variation={variation}
-          keysToRender={keysToRender}
-        />
-      ))}
-    </div>
-  );
-}
-
-function MonsterCardVariation({ monster, monsterKey, variation, keysToRender }) {
+ export default function MonsterCard({ monsters, keysToRender, }) {
   const [showFullCard, setShowFullCard] = useState(false);
 
-  const cardBg = showFullCard ? "bg-emerald-900" : "bg-teal-800"
+  const cardBg = showFullCard ? 'bg-emerald-900' : 'bg-teal-800';
 
-  const handleClick = () => {
+  const toggleFullCard = () => {
     setShowFullCard(!showFullCard);
   };
 
   return (
     <div
-      className={` p-4 shadow-md ${cardBg} rounded-lg mx-4 my-3 text-stone-50 cursor-pointer transition-tranform active:scale-105 duration-200 ease-in-out`}
-      onClick={handleClick}
+      className={` p-4 shadow-md ${cardBg} rounded-lg mx-4 my-3 text-stone-50 cursor-pointer transition-transform active:scale-105 duration-200 ease-in-out`}
+      onClick={toggleFullCard}
     >
-      {monsterKey && <h2 className="font-semibold text-md">{monsterKey} -</h2>}
-      <h3 className="font-semibold text-md">{variation}</h3>
+      <h3 className="font-semibold text-md">{monsters['Name']}</h3>
       {showFullCard ? (
         <div>
-          {Object.keys(monster.monster_data.statblock[variation]).map((key) => (
+          {Object.entries(monsters).map(([key, value]) => (
             <p key={key} className="text-xs">
-              <strong className="font-semibold">{key}:</strong> {monster.monster_data.statblock[variation][key] || 'N/A'}
+              <strong className="font-semibold">{key}:</strong> {value || 'N/A'}
             </p>
           ))}
         </div>
@@ -106,7 +144,7 @@ function MonsterCardVariation({ monster, monsterKey, variation, keysToRender }) 
         <div>
           {keysToRender.map((key) => (
             <p key={key} className="text-xs">
-              <strong className="font-semibold">{key}:</strong> {monster.monster_data.statblock[variation][key] || 'N/A'}
+              <strong className="font-semibold">{key}:</strong> {monsters[key] || 'N/A'}
             </p>
           ))}
         </div>

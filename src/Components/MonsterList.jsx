@@ -27,14 +27,15 @@ export default function MonsterList({ monsters }) {
     };
   }, []);
 
+console.log(monsters[0])
+
   return (
     <div className="py-4">
       <h2 className="text-gray-800 font-semibold uppercase text-lg mx-6 my-2">
          All Monsters ({monsters.length})
       </h2>
       {monsters.map((monster) => {
-        if (monster.monster_data.statblock) {
-          let monsterKey = monster.title;
+   
           let keysToRender = [
             'Activity Cycle',
             'Alignment',
@@ -45,14 +46,11 @@ export default function MonsterList({ monsters }) {
 
           return (
             <MonsterCard
-              monster={monster}
-              monsterKey={monsterKey}
               keysToRender={keysToRender}
-              key={monster.title}
+              key={monster['Name']}
+              monsters={monster}
             />
           );
-        }
-        return null; // Skip rendering if statblock is not present
       })}
 
       {showButton && (
