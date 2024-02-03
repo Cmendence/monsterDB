@@ -1,134 +1,282 @@
 import React, { useState } from "react";
-import Slider from "react-slider"
+import Slider from "react-slider";
 import MonsterCard from "./MonsterCard";
-import FilterResults from "./FilterResults"
+import FilterResults from "./FilterResults";
 
-export default function FilterPanel({ monsters, selectedFilters, setSelectedFilters }) {
-   // This is just an example set of filters, you can customize it based on your data
-const filters = {
-   climate: [
+export default function FilterPanel({
+  monsters,
+  selectedFilters,
+  setSelectedFilters,
+}) {
+  // This is just an example set of filters, you can customize it based on your data
+  const filters = {
+    climate: [
+      { value: "cold", label: "Cold" },
+      { value: "temperate", label: "Temperate" },
+      { value: "warm", label: "Warm" },
+      { value: "tropical", label: "Tropical" },
+      { value: "subtropical", label: "Subtropical" },
+      { value: "coast", label: "Coast" },
+    ],
+    terrain: [
+      { value: "desert", label: "Desert" },
+      { value: "forest", label: "Forest" },
+      { value: "hills", label: "Hills" },
+      { value: "mountains", label: "Mountains" },
+      { value: "plains", label: "Plains" },
+      { value: "subterranean", label: "Subterranean" },
+      { value: "swamp", label: "Swamp" },
+      { value: "marsh", label: "Marsh" },
+      { value: "water", label: "Water" },
+      { value: "ocean", label: "Ocean" },
+    ],
+    alignment: [
+      { value: "lawful good", label: "Lawful Good" },
+      { value: "lawful neutral", label: "Lawful Neutral" },
+      { value: "lawful evil", label: "Lawful Evil" },
+      { value: "neutral good", label: "Neutral Good" },
+      { value: "neutral", label: "Neutral" },
+      { value: "neutral evil", label: "Neutral Evil" },
+      { value: "chaotic good", label: "Chaotic Good" },
+      { value: "chaotic neutral", label: "Chaotic Neutral" },
+      { value: "chaotic evil", label: "Chaotic Evil" },
+    ],
+  };
 
-   ],
-   terrain: [
+  // const climateFilters =
+  //    [
+  //       {value: 'cold', label: 'Cold' },
+  //       {value: 'temperate', label: 'Temperate'},
+  //       {value: 'warm', label: 'Warm' },
+  //       {value: 'tropical', label: 'Tropical'},
+  //       {value: 'subtropical', label: 'Subtropical'},
+  //       {value: 'coast', label: 'Coast'},
+  //    ];
+  // const terrrainFilters=
+  //    [
+  //       {value: 'desert', label: 'Desert'},
+  //       {value: 'forest', label: 'Forest'},
+  //       {value: 'hills', label: 'Hills'},
+  //       {value: 'mountains', label: 'Mountains'},
+  //       {value: 'plains', label: 'Plains'},
+  //       {value: 'subterranean', label: 'Subterranean'},
+  //       {value: 'swamp', label: 'Swamp'},
+  //       {value: 'marsh', label: 'Marsh'},
+  //       {value: 'water', label: 'Water'},
+  //       {value: 'ocean', label: 'Ocean'},
+  //    ]
+  // const alignmentFilters =
+  //    [
+  //       {value: 'lawful good' , label:'Lawful Good'},
+  //       {value: 'lawful neutral', label: 'Lawful Neutral'},
+  //       {value: 'lawful evil', label: 'Lawful Evil'},
+  //       {value: 'neutral good', label: 'Neutral Good'},
+  //       {value: 'neutral', lebel: 'Neutral'},
+  //       {value: 'neutral evil', label: 'Neutral Evil',},
+  //       {value: 'chaotic good', label: 'Chaotic Good'},
+  //       {value: 'chaotic neutral', label: 'Chaotic Neutral' },
+  //       {value: 'chaotic evil', label: 'Chaotic Evil' },
+  //    ]
 
-   ],
-   alignment: [
+  const minDice = 0;
+  const maxDice = 50;
 
-   ],
+  const [diceValues, setDiceValues] = useState([minDice, maxDice]);
+  const [showResults, setShowResults] = useState(false);
 
-}
+  const [expandedCategories, setExpandedCategories] = useState({
+    climate: false,
+    terrain: false,
+    alignment: false,
+  });
 
-   const climateFilters = ['Temperate', 'Warm', 'Tropical'];
-   const terrrainFilters= ['Plains', 'Desert', 'Subterranean', 'Swamp']
-   const alignmentFilters = ['Neutral', 'Good', 'Non-evil', 'Chaotic Evil', 'Lawful evil', 'Neutral Evil', 'Chaotic Neutral']
-  
-   const minDice = 0;
-   const maxDice= 50;
+  const bottomBorder = (option) =>
+    option ? "border-b-2 border-violet-500" : "";
 
-   const [diceValues, setDiceValues] = useState([minDice, maxDice])
-   const [showResults, setShowResults] = useState(false)
+  const chevronIcon = (option) =>
+    option ? (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-5 h-5"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="m4.5 15.75 7.5-7.5 7.5 7.5"
+        />
+      </svg>
+    ) : (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="w-5 h-5"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+        />
+      </svg>
+    );
 
-console.log('values: ', diceValues)
+  const resetFilters = () => {
+    setSelectedFilters(new Set());
+    setDiceValues([minDice, maxDice]);
+  };
 
-   const resetFilters = () =>{
-      setSelectedFilters(new Set())
-      setDiceValues([minDice, maxDice])
-   }
+  const handleFilterChange = (filter) => {
+    const updatedFilters = new Set(selectedFilters);
+    if (updatedFilters.has(filter)) {
+      updatedFilters.delete(filter);
+    } else {
+      updatedFilters.add(filter);
+    }
+    setSelectedFilters(updatedFilters);
+    console.log(updatedFilters);
+  };
 
-   const handleFilterChange = (filter) => {
-     const updatedFilters = new Set(selectedFilters);
-     if (updatedFilters.has(filter)) {
-       updatedFilters.delete(filter);
-     } else {
-       updatedFilters.add(filter);
-     }
-     setSelectedFilters(updatedFilters);
-     console.log(updatedFilters)
-   };
- 
-   const toggleResults = () => {
-      setShowResults(!showResults)
-      window.scrollTo(0, 0)
-   }
+  const toggleResults = () => {
+    setShowResults(!showResults);
+    window.scrollTo(0, 0);
+  };
 
-   return (
-      <div className="m-4 mb-12">
-        {!showResults ? (
-         <div>  
-      <h3 className="font-semibold">Hit Dice:</h3>
-      <div className="text-sm mt-1"><span className="font-semibold">Min:</span> {diceValues[0]} <span className="font-semibold">Max:</span> {diceValues[1]} </div>
-         <Slider
+  const toggleCategory = (category) => {
+    setExpandedCategories((prev) => ({
+      ...prev,
+      [category]: !prev[category],
+    }));
+  };
+
+  return (
+    <div className="m-4 mb-12">
+      {!showResults ? (
+        <div>
+          <h3 className="font-semibold">Hit Dice:</h3>
+          <div className="text-sm mt-1">
+            <span className="font-semibold">Min:</span> {diceValues[0]}{" "}
+            <span className="font-semibold">Max:</span> {diceValues[1]}{" "}
+          </div>
+          <Slider
             onChange={setDiceValues}
             className="my-4 slider lg:w-1/3 bg-violet-400 rounded flex "
             value={diceValues}
             min={minDice}
             max={maxDice}
-         />
-       <h3 className="font-semibold">Climate:</h3>
-       {climateFilters.map((filter) => (
-         <label key={filter} className="ml-4 m-2 flex" >
-           <input
-             type="checkbox"
-             value={filter}
-             checked={selectedFilters.has(filter)}
-             onChange={() => handleFilterChange(filter)}
-           />
-           &nbsp; {filter}
-         </label>
-       ))}
-       <h3 className="font-semibold">Terrain:</h3>
-       {terrrainFilters.map((filter) => (
-         <label key={filter} className="ml-4 m-2 flex">
-           <input
-             type="checkbox"
-             value={filter}
-             checked={selectedFilters.has(filter)}
-             onChange={() => handleFilterChange(filter)}
-           />
-          &nbsp; {filter}
-         </label>
-       ))}
-       <h3 className="font-semibold mt-4">Alignment:</h3>
-       {alignmentFilters.map((filter) => (
-         <label key={filter} className="ml-4 m-2 flex">
-           <input
-             type="checkbox"
-             value={filter}
-             checked={selectedFilters.has(filter)}
-             onChange={() => handleFilterChange(filter)}
-           />
-            &nbsp; {filter}
-         </label>
-       ))}
-         <div>
-       <button className="bg-violet-700 text-gray-50 tracking-wide font-semibold rounded-md m-2 px-4 py-2 active:bg-violet-900 hover:bg-violet-800"
-               onClick={()=>toggleResults()}
-       >
-         See results
-       </button>
-       <button className="bg-gray-500 text-gray-50 tracking-wide font-semibold rounded-md m-2 px-4 py-2 active:bg-gray-900 hover:bg-gray-800"
-               onClick={()=> resetFilters()}
-       >
-         Reset Filters
-
-
-       </button>
-       </div>
-       </div>
-        ): (
-            <FilterResults 
-               toggleResults={toggleResults}
-               monsters={monsters}
-               selectedFilters={selectedFilters}
-               diceValues={diceValues}
-            />
-
-         
-        )}
-         
-     </div>
-   );
- }
+          />
+          <h3
+            className={`font-semibold flex mt-6 items-center ${bottomBorder(
+              !expandedCategories.climate
+            )}`}
+            onClick={() => toggleCategory("climate")}
+          >
+            Climate &nbsp; {chevronIcon(expandedCategories.climate)}
+          </h3>
+          {expandedCategories.climate && (
+            <div
+              className={`ml-4 border-b-2 ${bottomBorder(
+                expandedCategories.climate
+              )}`}
+            >
+              {filters.climate.map(({ value, label }) => (
+                <label key={value} className="m-2 flex">
+                  <input
+                    type="checkbox"
+                    value={value}
+                    checked={selectedFilters.has(value)}
+                    onChange={() => handleFilterChange(value)}
+                  />
+                  &nbsp; {label}
+                </label>
+              ))}
+            </div>
+          )}
+          <h3
+            className={`font-semibold mt-4 flex items-center ${bottomBorder(
+              !expandedCategories.terrain
+            )}`}
+            onClick={() => toggleCategory("terrain")}
+          >
+            Terrain &nbsp; {chevronIcon(expandedCategories.terrain)}
+          </h3>
+          {expandedCategories.terrain && (
+            <div
+              className={`ml-4 border-b-2 ${bottomBorder(
+                expandedCategories.terrain
+              )}`}
+            >
+              {filters.terrain.map(({ value, label }) => (
+                <label key={value} className="ml-4 m-2 flex">
+                  <input
+                    type="checkbox"
+                    value={value}
+                    checked={selectedFilters.has(value)}
+                    onChange={() => handleFilterChange(value)}
+                  />
+                  &nbsp; {label}
+                </label>
+              ))}
+            </div>
+          )}
+          <h3
+            className={`font-semibold my-4 flex items-center ${bottomBorder(
+              !expandedCategories.alignment
+            )}`}
+            onClick={() => toggleCategory("alignment")}
+          >
+            Alignment &nbsp; {chevronIcon(expandedCategories.alignment)}
+          </h3>
+          {expandedCategories.alignment && (
+            <div
+              className={`ml-4 mb-4 border-b-2 ${bottomBorder(
+                expandedCategories.alignment
+              )}`}
+            >
+              {filters.alignment.map(({ value, label }) => (
+                <label key={value} className="ml-4 m-2 flex">
+                  <input
+                    type="checkbox"
+                    value={value}
+                    checked={selectedFilters.has(value)}
+                    onChange={() => handleFilterChange(value)}
+                  />
+                  &nbsp; {label}
+                </label>
+              ))}
+            </div>
+          )}
+          <div>
+            <button
+              className="bg-violet-700 text-gray-50 tracking-wide font-semibold rounded-md m-2 px-4 py-2 active:bg-violet-900 hover:bg-violet-800"
+              onClick={() => toggleResults()}
+            >
+              See results
+            </button>
+            <button
+              className="bg-gray-500 text-gray-50 tracking-wide font-semibold rounded-md m-2 px-4 py-2 active:bg-gray-900 hover:bg-gray-800"
+              onClick={() => resetFilters()}
+            >
+              Reset Filters
+            </button>
+          </div>
+        </div>
+      ) : (
+        <FilterResults
+          toggleResults={toggleResults}
+          monsters={monsters}
+          selectedFilters={selectedFilters}
+          diceValues={diceValues}
+        />
+      )}
+    </div>
+  );
+}
 
 // export default function FilterPanel({ monsters }) {
 //   const [selectedFilters, setSelectedFilters] = useState(new Set());
@@ -145,18 +293,16 @@ console.log('values: ', diceValues)
 
 //   const filteredMonsters = monsters.filter((monster) => {
 //    const { statblock } = monster.monster_data;
- 
+
 //    if (statblock && Object.keys(statblock).length > 0) {
 //      const firstStatblockKey = Object.keys(statblock)[0];
 //      const monsterClimateTerrain = statblock[firstStatblockKey]["Climate/Terrain"];
- 
+
 //      return selectedFilters.size === 0 || selectedFilters.has(monsterClimateTerrain);
 //    }
- 
+
 //    return false;
 //  });
- 
- 
 
 //   const keysToRender = ['Activity Cycle', 'Alignment', 'Hit Dice', 'Climate/Terrain', 'Treasure'];
 
