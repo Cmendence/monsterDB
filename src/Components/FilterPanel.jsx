@@ -55,7 +55,7 @@ export default function FilterPanel({ monsters }) {
   });
 
   const filterInfo = `HD ${diceValues[0]}-${diceValues[1]}, Activity Cycle : ${selectedFilters.activityCycle}, Climate/Terrain: ${selectedFilters.climate} ${selectedFilters.terrain} ${selectedFilters.planes}`
-  console.log(filterInfo)
+
   const [showResults, setShowResults] = useState(false);
   const [expandedCategories, setExpandedCategories] = useState({
     activityCycle: false,
@@ -122,8 +122,6 @@ export default function FilterPanel({ monsters }) {
     );
   });
 
-  console.log(filteredMonsters);
-
   const bottomBorder = (option) =>
     option ? "border-b-2 border-violet-500" : "";
 
@@ -169,8 +167,6 @@ export default function FilterPanel({ monsters }) {
 
     // Update the state
     setSelectedFilters(newFilters);
-    console.log("hit dice: ", diceValues);
-    console.log("current filters:", newFilters);
   };
 
   const toggleResults = () => {
