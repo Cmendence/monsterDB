@@ -4,6 +4,9 @@ import FilterResults from "./FilterResults";
 
 export default function FilterPanel({ monsters }) {
   const filters = {
+   largeMonsters:[
+      {value: [30,100], label: "30+ HD"}
+   ],
     climate: [
       { value: "subarctic", label: "Subarctic" },
       { value: "arctic", label: "Arctic" },
@@ -44,9 +47,10 @@ export default function FilterPanel({ monsters }) {
   };
 
   const minDice = 1;
-  const maxDice = 50;
+  const maxDice = 30;
 
   const [diceValues, setDiceValues] = useState([minDice, maxDice]);
+  const [largeMonstersChecked, setLargeMonstersChecked] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState({
     activityCycle: [],
     climate: [],
@@ -64,63 +68,136 @@ export default function FilterPanel({ monsters }) {
     planes: false,
   });
 
-  const filteredMonsters = monsters.filter((monster) => {
-    const hitDice = parseInt(monster["Hit Dice"], 10);
+//   const filteredMonsters = monsters.filter((monster) => {
+//     const hitDice = parseInt(monster["Hit Dice"], 10);
 
-    // Check Hit Dice range
-    const isHitDiceInRange =
-      (!diceValues[0] || hitDice >= diceValues[0]) &&
-      (!diceValues[1] || hitDice <= diceValues[1]);
+//     // Check Hit Dice range
+//     const isHitDiceInRange =
+//       (!diceValues[0] || hitDice >= diceValues[0]) &&
+//       (!diceValues[1] || hitDice <= diceValues[1]);
 
-    // Check selected filters for each category
-    const isClimateMatch =
-      !expandedCategories.climate ||
-      selectedFilters.climate.length === 0 ||
-      selectedFilters.climate.every((filter) =>
-        monster["Climate/Terrain"]
-          .toLowerCase()
-          .split(/[,/]/)
-          .some((word) => word.includes(filter))
-      );
+//     // Check selected filters for each category
+//     const isClimateMatch =
+//     !expandedCategories.climate ||
+//     selectedFilters.climate.length === 0 ||
+//     selectedFilters.climate.includes("any") ||
+//     selectedFilters.climate.every((filter) =>
+//       monster["Climate/Terrain"]
+//         .toLowerCase()
+//         .split(/[,/]/)
+//         .some((word) => word.includes(filter))
+//     );
 
-    const isTerrainMatch =
-      !expandedCategories.terrain ||
-      selectedFilters.terrain.length === 0 ||
-      selectedFilters.terrain.every((filter) =>
-        monster["Climate/Terrain"]
-          .toLowerCase()
-          .split(/[,/]/)
-          .some((word) => word.includes(filter))
-      );
+//     const isTerrainMatch =
+//     !expandedCategories.terrain ||
+//     selectedFilters.terrain.length === 0 ||
+//     selectedFilters.terrain.includes("any") ||
+//     selectedFilters.terrain.every((filter) =>
+//       monster["Climate/Terrain"]
+//         .toLowerCase()
+//         .split(/[,/]/)
+//         .some((word) => word.includes(filter))
+//     );
 
-    const isPlanesMatch =
-      !expandedCategories.planes ||
-      selectedFilters.planes.length === 0 ||
-      selectedFilters.planes.some((filter) =>
-        monster["Climate/Terrain"].toLowerCase().includes(filter)
-      );
+//     const isPlanesMatch =
+//     !expandedCategories.planes ||
+//     selectedFilters.planes.length === 0 ||
+//     selectedFilters.planes.includes("any") ||
+//     selectedFilters.planes.some((filter) =>
+//       monster["Climate/Terrain"].toLowerCase().includes(filter)
+//     );
 
-    const selectedActivityCycle = selectedFilters.activityCycle;
-    const isActivityCycleMatch =
-      !expandedCategories.activityCycle ||
-      selectedActivityCycle.length === 0 ||
-      selectedActivityCycle.includes("any") ||
-      (selectedActivityCycle.includes("day") &&
-        (monster["Activity Cycle"].toLowerCase() === "any" ||
-          monster["Activity Cycle"].toLowerCase() === "day")) ||
-      (selectedActivityCycle.includes("night") &&
-        (monster["Activity Cycle"].toLowerCase() === "any" ||
-          monster["Activity Cycle"].toLowerCase() === "night"));
+//     const selectedActivityCycle = selectedFilters.activityCycle;
+//     const isActivityCycleMatch =
+//       !expandedCategories.activityCycle ||
+//       selectedActivityCycle.length === 0 ||
+//       selectedActivityCycle.includes("any") ||
+//       (selectedActivityCycle.includes("day") &&
+//         (monster["Activity Cycle"].toLowerCase() === "any" ||
+//           monster["Activity Cycle"].toLowerCase() === "day")) ||
+//       (selectedActivityCycle.includes("night") &&
+//         (monster["Activity Cycle"].toLowerCase() === "any" ||
+//           monster["Activity Cycle"].toLowerCase() === "night"));
 
-    // Return true only if all conditions are met
-    return (
-      isHitDiceInRange &&
-      isClimateMatch &&
-      isTerrainMatch &&
-      isPlanesMatch &&
-      isActivityCycleMatch
-    );
-  });
+//     // Return true only if all conditions are met
+//     return (
+//       isHitDiceInRange &&
+//       isClimateMatch &&
+//       isTerrainMatch &&
+//       isPlanesMatch &&
+//       isActivityCycleMatch
+//     );
+//   });
+
+const isHitDiceInRange = (monster, diceValues) => {
+   const hitDice = parseInt(monster["Hit Dice"], 10);
+   return (
+     (!diceValues[0] || hitDice >= diceValues[0]) &&
+     (!diceValues[1] || hitDice <= diceValues[1])
+   );
+ };
+
+ const isClimateMatch = (monster, selectedFilters) => {
+   const monsterClimate = monster["Climate/Terrain"].toLowerCase();
+   
+   return (
+     selectedFilters.climate.length === 0 ||
+     selectedFilters.climate.includes("any") ||
+     monsterClimate.includes("any") ||
+     selectedFilters.climate.every((filter) =>
+       monsterClimate.split(/[,/]/).some((word) => word.includes(filter))
+     )
+   );
+ };
+
+ const isTerrainMatch = (monster, selectedFilters) => {
+   const monsterTerrain = monster["Climate/Terrain"].toLowerCase();
+   
+   return (
+     selectedFilters.terrain.length === 0 ||
+     selectedFilters.terrain.includes("any") ||
+     monsterTerrain.includes("any") ||
+     selectedFilters.terrain.every((filter) =>
+       monsterTerrain.split(/[,/]/).some((word) => word.includes(filter))
+     )
+   );
+ };
+
+  const isPlanesMatch = (monster, selectedFilters) =>
+  selectedFilters.planes.length === 0 ||
+  selectedFilters.planes.includes("any") ||
+  selectedFilters.planes.some((filter) =>
+    monster["Climate/Terrain"].toLowerCase().includes(filter)
+  );
+
+  const isActivityCycleMatch = (monster, selectedFilters) => {
+   const selectedActivityCycle = selectedFilters.activityCycle;
+   return (
+     selectedActivityCycle.length === 0 ||
+     selectedActivityCycle.includes("any") ||
+     (selectedActivityCycle.includes("day") &&
+       (monster["Activity Cycle"].toLowerCase() === "any" ||
+         monster["Activity Cycle"].toLowerCase() === "day")) ||
+     (selectedActivityCycle.includes("night") &&
+       (monster["Activity Cycle"].toLowerCase() === "any" ||
+         monster["Activity Cycle"].toLowerCase() === "night"))
+   );
+ };
+
+ const filterMonsters = (monster, selectedFilters, ) =>
+  isHitDiceInRange(monster, largeMonstersChecked ? [30,100] : diceValues) &&
+  isClimateMatch(monster, selectedFilters) &&
+  isTerrainMatch(monster, selectedFilters) &&
+  isPlanesMatch(monster, selectedFilters) &&
+  isActivityCycleMatch(monster, selectedFilters);
+
+
+  const filteredMonsters = monsters.filter((monster) =>
+  filterMonsters(monster, selectedFilters, expandedCategories)
+)
+
+
+console.log(filteredMonsters)
 
   const bottomBorder = (option) =>
     option ? "border-b-2 border-violet-500" : "";
@@ -150,6 +227,7 @@ export default function FilterPanel({ monsters }) {
       terrain: [],
     });
     setDiceValues([minDice, maxDice]);
+    setLargeMonstersChecked(false)
   };
 
   const handleFilterChange = (category, value) => {
@@ -165,9 +243,22 @@ export default function FilterPanel({ monsters }) {
       newFilters[category] = [...newFilters[category], value];
     }
 
+
+
     // Update the state
     setSelectedFilters(newFilters);
   };
+
+  const handleLargeMonstersChange = () => {
+   setLargeMonstersChecked(!largeMonstersChecked);
+   if (!largeMonstersChecked) {
+     // If checkbox is checked, set dice values and disable the slider
+     setDiceValues([30, 100]);
+   } else {
+     // If checkbox is unchecked, enable the slider with default values
+     setDiceValues([minDice, maxDice]);
+   }
+ };
 
   const toggleResults = () => {
     setShowResults(!showResults);
@@ -196,7 +287,18 @@ export default function FilterPanel({ monsters }) {
             value={diceValues}
             min={minDice}
             max={maxDice}
+            disabled={largeMonstersChecked}
           />
+
+<label key={filters.largeMonsters} className="ml-4 flex font-semibold">
+        <input
+          type="checkbox"
+          value={filters.largeMonsters}
+          checked={largeMonstersChecked}
+          onChange={()=> handleLargeMonstersChange()}
+        />
+        &nbsp; {filters.largeMonsters[0].label}
+      </label>
 
           <h3
             className={`font-semibold mt-6 flex items-center ${bottomBorder(
@@ -349,7 +451,7 @@ export default function FilterPanel({ monsters }) {
               className="bg-violet-700 text-gray-50 tracking-wide font-semibold rounded-md m-2 px-4 py-2 active:bg-violet-900 hover:bg-violet-800"
               onClick={() => toggleResults()}
             >
-              See results
+              See results ({filteredMonsters.length})
             </button>
             <button
               className="bg-gray-500 text-gray-50 tracking-wide font-semibold rounded-md m-2 px-4 py-2 active:bg-gray-900 hover:bg-gray-800"
