@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import Slider from "react-slider";
-import MonsterCard from "./MonsterCard";
 import FilterResults from "./FilterResults";
 
-export default function FilterPanel({
-  monsters,
-  selectedFilters,
-  setSelectedFilters,
-}) {
-  // This is just an example set of filters, you can customize it based on your data
+export default function FilterPanel({ monsters }) {
   const filters = {
     climate: [
+      { value: "subarctic", label: "Subarctic" },
+      { value: "arctic", label: "Arctic" },
       { value: "cold", label: "Cold" },
       { value: "temperate", label: "Temperate" },
       { value: "warm", label: "Warm" },
@@ -21,8 +17,8 @@ export default function FilterPanel({
     terrain: [
       { value: "desert", label: "Desert" },
       { value: "forest", label: "Forest" },
-      { value: "hills", label: "Hills" },
-      { value: "mountains", label: "Mountains" },
+      { value: "hill", label: "Hills" },
+      { value: "mountain", label: "Mountains" },
       { value: "plains", label: "Plains" },
       { value: "subterranean", label: "Subterranean" },
       { value: "swamp", label: "Swamp" },
@@ -30,116 +26,151 @@ export default function FilterPanel({
       { value: "water", label: "Water" },
       { value: "ocean", label: "Ocean" },
     ],
-    alignment: [
-      { value: "lawful good", label: "Lawful Good" },
-      { value: "lawful neutral", label: "Lawful Neutral" },
-      { value: "lawful evil", label: "Lawful Evil" },
-      { value: "neutral good", label: "Neutral Good" },
-      { value: "neutral", label: "Neutral" },
-      { value: "neutral evil", label: "Neutral Evil" },
-      { value: "chaotic good", label: "Chaotic Good" },
-      { value: "chaotic neutral", label: "Chaotic Neutral" },
-      { value: "chaotic evil", label: "Chaotic Evil" },
+    planes: [
+      { value: "astral", label: "Astral" },
+      { value: "ethereal", label: "Ethereal" },
+      { value: "air", label: "Plane of Air" },
+      { value: "earth", label: "Plane of Earth" },
+      { value: "fire", label: "Plane of Fire" },
+      { value: "water", label: "Plane of Water" },
+      { value: "lower", label: "Lower Planes" },
+      { value: "shadow", label: "Shadow Planes" },
+    ],
+    activityCycle: [
+      { value: "any", label: "Any" },
+      { value: "day", label: "Day" },
+      { value: "night", label: "Night" },
     ],
   };
 
-  // const climateFilters =
-  //    [
-  //       {value: 'cold', label: 'Cold' },
-  //       {value: 'temperate', label: 'Temperate'},
-  //       {value: 'warm', label: 'Warm' },
-  //       {value: 'tropical', label: 'Tropical'},
-  //       {value: 'subtropical', label: 'Subtropical'},
-  //       {value: 'coast', label: 'Coast'},
-  //    ];
-  // const terrrainFilters=
-  //    [
-  //       {value: 'desert', label: 'Desert'},
-  //       {value: 'forest', label: 'Forest'},
-  //       {value: 'hills', label: 'Hills'},
-  //       {value: 'mountains', label: 'Mountains'},
-  //       {value: 'plains', label: 'Plains'},
-  //       {value: 'subterranean', label: 'Subterranean'},
-  //       {value: 'swamp', label: 'Swamp'},
-  //       {value: 'marsh', label: 'Marsh'},
-  //       {value: 'water', label: 'Water'},
-  //       {value: 'ocean', label: 'Ocean'},
-  //    ]
-  // const alignmentFilters =
-  //    [
-  //       {value: 'lawful good' , label:'Lawful Good'},
-  //       {value: 'lawful neutral', label: 'Lawful Neutral'},
-  //       {value: 'lawful evil', label: 'Lawful Evil'},
-  //       {value: 'neutral good', label: 'Neutral Good'},
-  //       {value: 'neutral', lebel: 'Neutral'},
-  //       {value: 'neutral evil', label: 'Neutral Evil',},
-  //       {value: 'chaotic good', label: 'Chaotic Good'},
-  //       {value: 'chaotic neutral', label: 'Chaotic Neutral' },
-  //       {value: 'chaotic evil', label: 'Chaotic Evil' },
-  //    ]
-
-  const minDice = 0;
+  const minDice = 1;
   const maxDice = 50;
 
   const [diceValues, setDiceValues] = useState([minDice, maxDice]);
-  const [showResults, setShowResults] = useState(false);
+  const [selectedFilters, setSelectedFilters] = useState({
+    activityCycle: [],
+    climate: [],
+    terrain: [],
+    planes: [],
+  });
 
+  const filterInfo = `HD ${diceValues[0]}-${diceValues[1]}, Activity Cycle : ${selectedFilters.activityCycle}, Climate/Terrain: ${selectedFilters.climate} ${selectedFilters.terrain} ${selectedFilters.planes}`
+  console.log(filterInfo)
+  const [showResults, setShowResults] = useState(false);
   const [expandedCategories, setExpandedCategories] = useState({
+    activityCycle: false,
     climate: false,
     terrain: false,
-    alignment: false,
+    planes: false,
   });
+
+  const filteredMonsters = monsters.filter((monster) => {
+    const hitDice = parseInt(monster["Hit Dice"], 10);
+
+    // Check Hit Dice range
+    const isHitDiceInRange =
+      (!diceValues[0] || hitDice >= diceValues[0]) &&
+      (!diceValues[1] || hitDice <= diceValues[1]);
+
+    // Check selected filters for each category
+    const isClimateMatch =
+      !expandedCategories.climate ||
+      selectedFilters.climate.length === 0 ||
+      selectedFilters.climate.every((filter) =>
+        monster["Climate/Terrain"]
+          .toLowerCase()
+          .split(/[,/]/)
+          .some((word) => word.includes(filter))
+      );
+
+    const isTerrainMatch =
+      !expandedCategories.terrain ||
+      selectedFilters.terrain.length === 0 ||
+      selectedFilters.terrain.every((filter) =>
+        monster["Climate/Terrain"]
+          .toLowerCase()
+          .split(/[,/]/)
+          .some((word) => word.includes(filter))
+      );
+
+    const isPlanesMatch =
+      !expandedCategories.planes ||
+      selectedFilters.planes.length === 0 ||
+      selectedFilters.planes.some((filter) =>
+        monster["Climate/Terrain"].toLowerCase().includes(filter)
+      );
+
+    const selectedActivityCycle = selectedFilters.activityCycle;
+    const isActivityCycleMatch =
+      !expandedCategories.activityCycle ||
+      selectedActivityCycle.length === 0 ||
+      selectedActivityCycle.includes("any") ||
+      (selectedActivityCycle.includes("day") &&
+        (monster["Activity Cycle"].toLowerCase() === "any" ||
+          monster["Activity Cycle"].toLowerCase() === "day")) ||
+      (selectedActivityCycle.includes("night") &&
+        (monster["Activity Cycle"].toLowerCase() === "any" ||
+          monster["Activity Cycle"].toLowerCase() === "night"));
+
+    // Return true only if all conditions are met
+    return (
+      isHitDiceInRange &&
+      isClimateMatch &&
+      isTerrainMatch &&
+      isPlanesMatch &&
+      isActivityCycleMatch
+    );
+  });
+
+  console.log(filteredMonsters);
 
   const bottomBorder = (option) =>
     option ? "border-b-2 border-violet-500" : "";
 
-  const chevronIcon = (option) =>
-    option ? (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-5 h-5"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="m4.5 15.75 7.5-7.5 7.5 7.5"
-        />
-      </svg>
-    ) : (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="w-5 h-5"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="m19.5 8.25-7.5 7.5-7.5-7.5"
-        />
-      </svg>
-    );
+  const chevronIcon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-5 h-5"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m4.5 15.75 7.5-7.5 7.5 7.5"
+      />
+    </svg>
+  );
 
   const resetFilters = () => {
-    setSelectedFilters(new Set());
+    setSelectedFilters({
+      activityCycle: [],
+      planes: [],
+      climate: [],
+      terrain: [],
+    });
     setDiceValues([minDice, maxDice]);
   };
 
-  const handleFilterChange = (filter) => {
-    const updatedFilters = new Set(selectedFilters);
-    if (updatedFilters.has(filter)) {
-      updatedFilters.delete(filter);
+  const handleFilterChange = (category, value) => {
+    // Create a new object to avoid mutating the state directly
+    const newFilters = { ...selectedFilters };
+
+    // Toggle the value in the selectedFilters array for the given category
+    if (newFilters[category].includes(value)) {
+      newFilters[category] = newFilters[category].filter(
+        (filter) => filter !== value
+      );
     } else {
-      updatedFilters.add(filter);
+      newFilters[category] = [...newFilters[category], value];
     }
-    setSelectedFilters(updatedFilters);
-    console.log(updatedFilters);
+
+    // Update the state
+    setSelectedFilters(newFilters);
+    console.log("hit dice: ", diceValues);
+    console.log("current filters:", newFilters);
   };
 
   const toggleResults = () => {
@@ -155,7 +186,7 @@ export default function FilterPanel({
   };
 
   return (
-    <div className="m-4 mb-12">
+    <div className="m-4 mb-12 select-none">
       {!showResults ? (
         <div>
           <h3 className="font-semibold">Hit Dice:</h3>
@@ -170,13 +201,60 @@ export default function FilterPanel({
             min={minDice}
             max={maxDice}
           />
+
           <h3
-            className={`font-semibold flex mt-6 items-center ${bottomBorder(
+            className={`font-semibold mt-6 flex items-center ${bottomBorder(
+              !expandedCategories.activityCycle
+            )}`}
+            onClick={() => toggleCategory("activityCycle")}
+          >
+            Activity Cycle &nbsp;{" "}
+            {
+              <div
+                className={`chevron ${
+                  !expandedCategories.activityCycle ? "rotateChevron" : ""
+                }`}
+              >
+                {chevronIcon}
+              </div>
+            }
+          </h3>
+          {expandedCategories.activityCycle && (
+            <div
+              className={`ml-4 mb-4 border-b-2 ${bottomBorder(
+                expandedCategories.activityCycle
+              )}`}
+            >
+              {filters.activityCycle.map(({ value, label }) => (
+                <label key={value} className="ml-4 m-2 flex">
+                  <input
+                    type="checkbox"
+                    value={value}
+                    checked={selectedFilters.activityCycle.includes(value)}
+                    onChange={() => handleFilterChange("activityCycle", value)}
+                  />
+                  &nbsp; {label}
+                </label>
+              ))}
+            </div>
+          )}
+
+          <h3
+            className={`font-semibold flex my-4 items-center ${bottomBorder(
               !expandedCategories.climate
             )}`}
             onClick={() => toggleCategory("climate")}
           >
-            Climate &nbsp; {chevronIcon(expandedCategories.climate)}
+            Climate &nbsp;{" "}
+            {
+              <div
+                className={`chevron ${
+                  !expandedCategories.climate ? "rotateChevron" : ""
+                }`}
+              >
+                {chevronIcon}
+              </div>
+            }
           </h3>
           {expandedCategories.climate && (
             <div
@@ -189,8 +267,8 @@ export default function FilterPanel({
                   <input
                     type="checkbox"
                     value={value}
-                    checked={selectedFilters.has(value)}
-                    onChange={() => handleFilterChange(value)}
+                    checked={selectedFilters.climate.includes(value)}
+                    onChange={() => handleFilterChange("climate", value)}
                   />
                   &nbsp; {label}
                 </label>
@@ -203,7 +281,16 @@ export default function FilterPanel({
             )}`}
             onClick={() => toggleCategory("terrain")}
           >
-            Terrain &nbsp; {chevronIcon(expandedCategories.terrain)}
+            Terrain &nbsp;{" "}
+            {
+              <div
+                className={`chevron ${
+                  !expandedCategories.terrain ? "rotateChevron" : ""
+                }`}
+              >
+                {chevronIcon}
+              </div>
+            }
           </h3>
           {expandedCategories.terrain && (
             <div
@@ -216,8 +303,8 @@ export default function FilterPanel({
                   <input
                     type="checkbox"
                     value={value}
-                    checked={selectedFilters.has(value)}
-                    onChange={() => handleFilterChange(value)}
+                    checked={selectedFilters.terrain.includes(value)}
+                    onChange={() => handleFilterChange("terrain", value)}
                   />
                   &nbsp; {label}
                 </label>
@@ -226,31 +313,41 @@ export default function FilterPanel({
           )}
           <h3
             className={`font-semibold my-4 flex items-center ${bottomBorder(
-              !expandedCategories.alignment
+              !expandedCategories.planes
             )}`}
-            onClick={() => toggleCategory("alignment")}
+            onClick={() => toggleCategory("planes")}
           >
-            Alignment &nbsp; {chevronIcon(expandedCategories.alignment)}
+            Planes &nbsp;{" "}
+            {
+              <div
+                className={`chevron ${
+                  !expandedCategories.planes ? "rotateChevron" : ""
+                }`}
+              >
+                {chevronIcon}
+              </div>
+            }
           </h3>
-          {expandedCategories.alignment && (
+          {expandedCategories.planes && (
             <div
               className={`ml-4 mb-4 border-b-2 ${bottomBorder(
-                expandedCategories.alignment
+                expandedCategories.planes
               )}`}
             >
-              {filters.alignment.map(({ value, label }) => (
+              {filters.planes.map(({ value, label }) => (
                 <label key={value} className="ml-4 m-2 flex">
                   <input
                     type="checkbox"
                     value={value}
-                    checked={selectedFilters.has(value)}
-                    onChange={() => handleFilterChange(value)}
+                    checked={selectedFilters.planes.includes(value)}
+                    onChange={() => handleFilterChange("planes", value)}
                   />
                   &nbsp; {label}
                 </label>
               ))}
             </div>
           )}
+
           <div>
             <button
               className="bg-violet-700 text-gray-50 tracking-wide font-semibold rounded-md m-2 px-4 py-2 active:bg-violet-900 hover:bg-violet-800"
@@ -268,316 +365,11 @@ export default function FilterPanel({
         </div>
       ) : (
         <FilterResults
+          filterInfo={filterInfo}
           toggleResults={toggleResults}
-          monsters={monsters}
-          selectedFilters={selectedFilters}
-          diceValues={diceValues}
+          filteredMonsters={filteredMonsters}
         />
       )}
     </div>
   );
 }
-
-// export default function FilterPanel({ monsters }) {
-//   const [selectedFilters, setSelectedFilters] = useState(new Set());
-
-//   const handleFilterChange = (filter) => {
-//     const updatedFilters = new Set(selectedFilters);
-//     if (updatedFilters.has(filter)) {
-//       updatedFilters.delete(filter);
-//     } else {
-//       updatedFilters.add(filter);
-//     }
-//     setSelectedFilters(updatedFilters);
-//   };
-
-//   const filteredMonsters = monsters.filter((monster) => {
-//    const { statblock } = monster.monster_data;
-
-//    if (statblock && Object.keys(statblock).length > 0) {
-//      const firstStatblockKey = Object.keys(statblock)[0];
-//      const monsterClimateTerrain = statblock[firstStatblockKey]["Climate/Terrain"];
-
-//      return selectedFilters.size === 0 || selectedFilters.has(monsterClimateTerrain);
-//    }
-
-//    return false;
-//  });
-
-//   const keysToRender = ['Activity Cycle', 'Alignment', 'Hit Dice', 'Climate/Terrain', 'Treasure'];
-
-//   return (
-//     <div>
-//       {/* Filters */}
-//       <div>
-//         <h3>Climate/Terrain Filters:</h3>
-//         {Array.from(new Set(monsters.map((monster) => monster.monster_data.statblock[Object.keys(monster.monster_data.statblock)[0]]["Climate/Terrain"]))).map((filter) => (
-//           <label key={filter}>
-//             <input
-//               type="checkbox"
-//               value={filter}
-//               checked={selectedFilters.has(filter)}
-//               onChange={() => handleFilterChange(filter)}
-//             />
-//             {filter}
-//           </label>
-//         ))}
-//       </div>
-
-//       {/* Monster Cards */}
-//       {filteredMonsters.map((monster) => (
-//         <MonsterCard key={monster.title} monster={monster} keysToRender={keysToRender} />
-//       ))}
-//     </div>
-//   );
-// }
-
-// import { Fragment } from "react";
-// import { Disclosure, Menu, Transition } from "@headlessui/react";
-// import { ChevronDownIcon, FunnelIcon } from "@heroicons/react/20/solid";
-
-// const filters = {
-//   price: [
-//     { value: "0", label: "$0 - $25", checked: false },
-//     { value: "25", label: "$25 - $50", checked: false },
-//     { value: "50", label: "$50 - $75", checked: false },
-//     { value: "75", label: "$75+", checked: false },
-//   ],
-//   color: [
-//     { value: "white", label: "White", checked: false },
-//     { value: "beige", label: "Beige", checked: false },
-//     { value: "blue", label: "Blue", checked: true },
-//     { value: "brown", label: "Brown", checked: false },
-//     { value: "green", label: "Green", checked: false },
-//     { value: "purple", label: "Purple", checked: false },
-//   ],
-//   size: [
-//     { value: "xs", label: "XS", checked: false },
-//     { value: "s", label: "S", checked: true },
-//     { value: "m", label: "M", checked: false },
-//     { value: "l", label: "L", checked: false },
-//     { value: "xl", label: "XL", checked: false },
-//     { value: "2xl", label: "2XL", checked: false },
-//   ],
-//   category: [
-//     { value: "all-new-arrivals", label: "All New Arrivals", checked: false },
-//     { value: "tees", label: "Tees", checked: false },
-//     { value: "objects", label: "Objects", checked: false },
-//     { value: "sweatshirts", label: "Sweatshirts", checked: false },
-//     { value: "pants-and-shorts", label: "Pants & Shorts", checked: false },
-//   ],
-// };
-// const sortOptions = [
-//   { name: "Most Popular", href: "#", current: true },
-//   { name: "Best Rating", href: "#", current: false },
-//   { name: "Newest", href: "#", current: false },
-// ];
-
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(" ");
-// }
-
-// export default function Example() {
-//   return (
-//     <div className="bg-white">
-//       {/* <div className="px-4 py-16 text-center sm:px-6 lg:px-8">
-//         <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-//           Workspace
-//         </h1>
-//         <p className="mx-auto mt-4 max-w-xl text-base text-gray-500">
-//           The secret to a tidy desk? Don't get rid of anything, just put it in
-//           really really nice looking containers.
-//         </p>
-//       </div> */}
-
-//       {/* Filters */}
-//       <Disclosure
-//         as="section"
-//         aria-labelledby="filter-heading"
-//         className="grid items-center border-b border-t border-gray-200"
-//       >
-//         <h2 id="filter-heading" className="sr-only">
-//           Filters
-//         </h2>
-//         <div className="relative col-start-1 row-start-1 py-4">
-//           <div className="mx-auto flex max-w-7xl space-x-6 divide-x divide-gray-200 px-4 text-sm sm:px-6 lg:px-8">
-//             <div>
-//               <Disclosure.Button className="group flex items-center font-medium text-gray-700">
-//                 <FunnelIcon
-//                   className="mr-2 h-5 w-5 flex-none text-gray-400 group-hover:text-gray-500"
-//                   aria-hidden="true"
-//                 />
-//                 2 Filters
-//               </Disclosure.Button>
-//             </div>
-//             <div className="pl-6">
-//               <button type="button" className="text-gray-500">
-//                 Clear all
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//         <Disclosure.Panel className="border-t border-gray-200 py-10">
-//           <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-4 px-4 text-sm sm:px-6 md:gap-x-6 lg:px-8">
-//             <div className="grid auto-rows-min grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-6">
-//               <fieldset>
-//                 <legend className="block font-medium">Price</legend>
-//                 <div className="space-y-6 pt-6 sm:space-y-4 sm:pt-4">
-//                   {filters.price.map((option, optionIdx) => (
-//                     <div
-//                       key={option.value}
-//                       className="flex items-center text-base sm:text-sm"
-//                     >
-//                       <input
-//                         id={`price-${optionIdx}`}
-//                         name="price[]"
-//                         defaultValue={option.value}
-//                         type="checkbox"
-//                         className="h-4 w-4 flex-shrink-0 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-//                         defaultChecked={option.checked}
-//                       />
-//                       <label
-//                         htmlFor={`price-${optionIdx}`}
-//                         className="ml-3 min-w-0 flex-1 text-gray-600"
-//                       >
-//                         {option.label}
-//                       </label>
-//                     </div>
-//                   ))}
-//                 </div>
-//               </fieldset>
-//               <fieldset>
-//                 <legend className="block font-medium">Color</legend>
-//                 <div className="space-y-6 pt-6 sm:space-y-4 sm:pt-4">
-//                   {filters.color.map((option, optionIdx) => (
-//                     <div
-//                       key={option.value}
-//                       className="flex items-center text-base sm:text-sm"
-//                     >
-//                       <input
-//                         id={`color-${optionIdx}`}
-//                         name="color[]"
-//                         defaultValue={option.value}
-//                         type="checkbox"
-//                         className="h-4 w-4 flex-shrink-0 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-//                         defaultChecked={option.checked}
-//                       />
-//                       <label
-//                         htmlFor={`color-${optionIdx}`}
-//                         className="ml-3 min-w-0 flex-1 text-gray-600"
-//                       >
-//                         {option.label}
-//                       </label>
-//                     </div>
-//                   ))}
-//                 </div>
-//               </fieldset>
-//             </div>
-//             <div className="grid auto-rows-min grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-6">
-//               <fieldset>
-//                 <legend className="block font-medium">Size</legend>
-//                 <div className="space-y-6 pt-6 sm:space-y-4 sm:pt-4">
-//                   {filters.size.map((option, optionIdx) => (
-//                     <div
-//                       key={option.value}
-//                       className="flex items-center text-base sm:text-sm"
-//                     >
-//                       <input
-//                         id={`size-${optionIdx}`}
-//                         name="size[]"
-//                         defaultValue={option.value}
-//                         type="checkbox"
-//                         className="h-4 w-4 flex-shrink-0 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-//                         defaultChecked={option.checked}
-//                       />
-//                       <label
-//                         htmlFor={`size-${optionIdx}`}
-//                         className="ml-3 min-w-0 flex-1 text-gray-600"
-//                       >
-//                         {option.label}
-//                       </label>
-//                     </div>
-//                   ))}
-//                 </div>
-//               </fieldset>
-//               <fieldset>
-//                 <legend className="block font-medium">Category</legend>
-//                 <div className="space-y-6 pt-6 sm:space-y-4 sm:pt-4">
-//                   {filters.category.map((option, optionIdx) => (
-//                     <div
-//                       key={option.value}
-//                       className="flex items-center text-base sm:text-sm"
-//                     >
-//                       <input
-//                         id={`category-${optionIdx}`}
-//                         name="category[]"
-//                         defaultValue={option.value}
-//                         type="checkbox"
-//                         className="h-4 w-4 flex-shrink-0 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-//                         defaultChecked={option.checked}
-//                       />
-//                       <label
-//                         htmlFor={`category-${optionIdx}`}
-//                         className="ml-3 min-w-0 flex-1 text-gray-600"
-//                       >
-//                         {option.label}
-//                       </label>
-//                     </div>
-//                   ))}
-//                 </div>
-//               </fieldset>
-//             </div>
-//           </div>
-//         </Disclosure.Panel>
-//         <div className="col-start-1 row-start-1 py-4">
-//           <div className="mx-auto flex max-w-7xl justify-end px-4 sm:px-6 lg:px-8">
-//             <Menu as="div" className="relative inline-block">
-//               <div className="flex">
-//                 <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
-//                   Sort
-//                   <ChevronDownIcon
-//                     className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-//                     aria-hidden="true"
-//                   />
-//                 </Menu.Button>
-//               </div>
-
-//               <Transition
-//                 as={Fragment}
-//                 enter="transition ease-out duration-100"
-//                 enterFrom="transform opacity-0 scale-95"
-//                 enterTo="transform opacity-100 scale-100"
-//                 leave="transition ease-in duration-75"
-//                 leaveFrom="transform opacity-100 scale-100"
-//                 leaveTo="transform opacity-0 scale-95"
-//               >
-//                 <Menu.Items className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
-//                   <div className="py-1">
-//                     {sortOptions.map((option) => (
-//                       <Menu.Item key={option.name}>
-//                         {({ active }) => (
-//                           <a
-//                             href={option.href}
-//                             className={classNames(
-//                               option.current
-//                                 ? "font-medium text-gray-900"
-//                                 : "text-gray-500",
-//                               active ? "bg-gray-100" : "",
-//                               "block px-4 py-2 text-sm"
-//                             )}
-//                           >
-//                             {option.name}
-//                           </a>
-//                         )}
-//                       </Menu.Item>
-//                     ))}
-//                   </div>
-//                 </Menu.Items>
-//               </Transition>
-//             </Menu>
-//           </div>
-//         </div>
-//       </Disclosure>
-//     </div>
-//   );
-// }

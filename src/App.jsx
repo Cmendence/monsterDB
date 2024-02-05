@@ -14,7 +14,6 @@ import Footer from './Components/Footer';
 
 function App() {
 
-   const [selectedFilters, setSelectedFilters] = useState(new Set());
 
   return (
      <div className='bg-teal-100 font-sans text-gray-800 min-h-screen'>
@@ -23,8 +22,8 @@ function App() {
       <Routes>
          <Route path="/" element={<Home />}></Route>
          <Route path="/allMonsters" element={<MonsterList monsters={monsters} />} />
-         <Route path="/filterResults" element={<FilterResults monsters={monsters} selectedFilters={selectedFilters} />} />
-         <Route path="/filter" element={<FilterPanel monsters={monsters} selectedFilters={selectedFilters} setSelectedFilters={setSelectedFilters} />} />
+         <Route path="/filterResults" element={<FilterResults monsters={monsters}/>} />
+         <Route path="/filter" element={<FilterPanel monsters={monsters} />} />
       </Routes>
       <Footer />
       </Router>

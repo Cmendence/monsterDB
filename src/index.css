@@ -15,3 +15,11 @@
    border: 1px black solid;
    top: -.4rem;
 }
+
+.rotateChevron {
+   transform: rotate(180deg);
+}
+
+.chevron {
+      transition: transform 0.4s ease;
+}

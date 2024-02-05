@@ -10,7 +10,7 @@ export default function Home(){
             <div className='text-base text-center p-4'>
                <p className='mb-6'>
                   This project was inspired by a friend who could not find a D&D 2e Monster database with filters to get the 
-                  desired type of creature based on hit dice, terrain, AC, or Alignment. 
+                  desired monsters based on hit dice, climate, terrain, or activity cycle. 
                </p>
                <p className='mb-6'>
                   All credit for the data available here goes to <a className='text-pink-600 font-semibold' href='https://web.archive.org/web/20180818101608/http://lomion.de/cmm/_index.php' target="_blank" rel="noreferrer">lomion.de</a>{' '} for the original,
