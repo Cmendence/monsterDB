@@ -15,19 +15,21 @@ export default function FilterPanel({ monsters }) {
       { value: "warm", label: "Warm" },
       { value: "tropical", label: "Tropical" },
       { value: "subtropical", label: "Subtropical" },
-      { value: "coast", label: "Coast" },
     ],
     terrain: [
       { value: "desert", label: "Desert" },
       { value: "forest", label: "Forest" },
       { value: "hill", label: "Hills" },
       { value: "mountain", label: "Mountains" },
+      { value: "jungle", label: "Jungle" },
       { value: "plains", label: "Plains" },
       { value: "subterranean", label: "Subterranean" },
       { value: "swamp", label: "Swamp" },
       { value: "marsh", label: "Marsh" },
       { value: "water", label: "Water" },
       { value: "ocean", label: "Ocean" },
+      { value: "sea", label: "Sea" },
+      { value: "coast", label: "Coast" },
     ],
     planes: [
       { value: "astral", label: "Astral" },
@@ -44,6 +46,10 @@ export default function FilterPanel({ monsters }) {
       { value: "day", label: "Day" },
       { value: "night", label: "Night" },
     ],
+    movementType: [
+      { value: "fl", label: "Flying"},
+      { value: "sw", label: "Swimming"},
+    ]
   };
 
   const minDice = 1;
@@ -56,6 +62,7 @@ export default function FilterPanel({ monsters }) {
     climate: [],
     terrain: [],
     planes: [],
+    movementType: []
   });
 
   const filterInfo = `HD ${diceValues[0]}-${diceValues[1]}, Activity Cycle : ${selectedFilters.activityCycle}, Climate/Terrain: ${selectedFilters.climate} ${selectedFilters.terrain} ${selectedFilters.planes}`
@@ -66,68 +73,9 @@ export default function FilterPanel({ monsters }) {
     climate: false,
     terrain: false,
     planes: false,
+    movementType: false
   });
 
-//   const filteredMonsters = monsters.filter((monster) => {
-//     const hitDice = parseInt(monster["Hit Dice"], 10);
-
-//     // Check Hit Dice range
-//     const isHitDiceInRange =
-//       (!diceValues[0] || hitDice >= diceValues[0]) &&
-//       (!diceValues[1] || hitDice <= diceValues[1]);
-
-//     // Check selected filters for each category
-//     const isClimateMatch =
-//     !expandedCategories.climate ||
-//     selectedFilters.climate.length === 0 ||
-//     selectedFilters.climate.includes("any") ||
-//     selectedFilters.climate.every((filter) =>
-//       monster["Climate/Terrain"]
-//         .toLowerCase()
-//         .split(/[,/]/)
-//         .some((word) => word.includes(filter))
-//     );
-
-//     const isTerrainMatch =
-//     !expandedCategories.terrain ||
-//     selectedFilters.terrain.length === 0 ||
-//     selectedFilters.terrain.includes("any") ||
-//     selectedFilters.terrain.every((filter) =>
-//       monster["Climate/Terrain"]
-//         .toLowerCase()
-//         .split(/[,/]/)
-//         .some((word) => word.includes(filter))
-//     );
-
-//     const isPlanesMatch =
-//     !expandedCategories.planes ||
-//     selectedFilters.planes.length === 0 ||
-//     selectedFilters.planes.includes("any") ||
-//     selectedFilters.planes.some((filter) =>
-//       monster["Climate/Terrain"].toLowerCase().includes(filter)
-//     );
-
-//     const selectedActivityCycle = selectedFilters.activityCycle;
-//     const isActivityCycleMatch =
-//       !expandedCategories.activityCycle ||
-//       selectedActivityCycle.length === 0 ||
-//       selectedActivityCycle.includes("any") ||
-//       (selectedActivityCycle.includes("day") &&
-//         (monster["Activity Cycle"].toLowerCase() === "any" ||
-//           monster["Activity Cycle"].toLowerCase() === "day")) ||
-//       (selectedActivityCycle.includes("night") &&
-//         (monster["Activity Cycle"].toLowerCase() === "any" ||
-//           monster["Activity Cycle"].toLowerCase() === "night"));
-
-//     // Return true only if all conditions are met
-//     return (
-//       isHitDiceInRange &&
-//       isClimateMatch &&
-//       isTerrainMatch &&
-//       isPlanesMatch &&
-//       isActivityCycleMatch
-//     );
-//   });
 
 const isHitDiceInRange = (monster, diceValues) => {
    const hitDice = parseInt(monster["Hit Dice"], 10);
@@ -139,11 +87,10 @@ const isHitDiceInRange = (monster, diceValues) => {
 
  const isClimateMatch = (monster, selectedFilters) => {
    const monsterClimate = monster["Climate/Terrain"].toLowerCase();
-   
+ 
    return (
-     selectedFilters.climate.length === 0 ||
-     selectedFilters.climate.includes("any") ||
-     monsterClimate.includes("any") ||
+      selectedFilters.climate.length === 0 ||
+      monsterClimate === "any" ||
      selectedFilters.climate.every((filter) =>
        monsterClimate.split(/[,/]/).some((word) => word.includes(filter))
      )
@@ -154,9 +101,8 @@ const isHitDiceInRange = (monster, diceValues) => {
    const monsterTerrain = monster["Climate/Terrain"].toLowerCase();
    
    return (
-     selectedFilters.terrain.length === 0 ||
-     selectedFilters.terrain.includes("any") ||
-     monsterTerrain.includes("any") ||
+      selectedFilters.terrain.length === 0 ||
+      monsterTerrain === "any" ||
      selectedFilters.terrain.every((filter) =>
        monsterTerrain.split(/[,/]/).some((word) => word.includes(filter))
      )
@@ -165,7 +111,6 @@ const isHitDiceInRange = (monster, diceValues) => {
 
   const isPlanesMatch = (monster, selectedFilters) =>
   selectedFilters.planes.length === 0 ||
-  selectedFilters.planes.includes("any") ||
   selectedFilters.planes.some((filter) =>
     monster["Climate/Terrain"].toLowerCase().includes(filter)
   );
@@ -184,16 +129,30 @@ const isHitDiceInRange = (monster, diceValues) => {
    );
  };
 
+const isMovementTypeMatch = (monster, selectedFilters) => {
+   const monsterMovement = monster["Movement"].toLowerCase();
+   
+   return (
+      selectedFilters.movementType.length === 0 ||
+     selectedFilters.movementType.every((filter) =>
+       monsterMovement.split(/[,/()]/).some((word) => word.includes(filter))
+     )
+   );
+ };
+
+console.log(selectedFilters)
+
  const filterMonsters = (monster, selectedFilters, ) =>
   isHitDiceInRange(monster, largeMonstersChecked ? [30,100] : diceValues) &&
   isClimateMatch(monster, selectedFilters) &&
   isTerrainMatch(monster, selectedFilters) &&
   isPlanesMatch(monster, selectedFilters) &&
+  isMovementTypeMatch(monster, selectedFilters) &&
   isActivityCycleMatch(monster, selectedFilters);
 
 
   const filteredMonsters = monsters.filter((monster) =>
-  filterMonsters(monster, selectedFilters, expandedCategories)
+  filterMonsters(monster, selectedFilters)
 )
 
 
@@ -201,6 +160,8 @@ console.log(filteredMonsters)
 
   const bottomBorder = (option) =>
     option ? "border-b-2 border-violet-500" : "";
+
+  const isSliderDisabled = largeMonstersChecked? "bg-gray-300 sliderDisabled" : "bg-violet-400" ;
 
   const chevronIcon = (
     <svg
@@ -225,6 +186,7 @@ console.log(filteredMonsters)
       planes: [],
       climate: [],
       terrain: [],
+      movementType: []
     });
     setDiceValues([minDice, maxDice]);
     setLargeMonstersChecked(false)
@@ -283,7 +245,7 @@ console.log(filteredMonsters)
           </div>
           <Slider
             onChange={setDiceValues}
-            className="my-4 slider lg:w-1/3 bg-violet-400 rounded flex "
+            className={`my-4 slider lg:w-1/3 ${isSliderDisabled} rounded flex `}
             value={diceValues}
             min={minDice}
             max={maxDice}
@@ -445,10 +407,46 @@ console.log(filteredMonsters)
               ))}
             </div>
           )}
+           <h3
+            className={`font-semibold flex my-4 items-center ${bottomBorder(
+              !expandedCategories.movementType
+            )}`}
+            onClick={() => toggleCategory("movementType")}
+          >
+            Movement Type &nbsp;{" "}
+            {
+              <div
+                className={`chevron ${
+                  !expandedCategories.movementType ? "rotateChevron" : ""
+                }`}
+              >
+                {chevronIcon}
+              </div>
+            }
+          </h3>
+          {expandedCategories.movementType && (
+            <div
+              className={`ml-4 border-b-2 ${bottomBorder(
+                expandedCategories.movementType
+              )}`}
+            >
+              {filters.movementType.map(({ value, label }) => (
+                <label key={value} className="m-2 flex">
+                  <input
+                    type="checkbox"
+                    value={value}
+                    checked={selectedFilters.movementType.includes(value)}
+                    onChange={() => handleFilterChange("movementType", value)}
+                  />
+                  &nbsp; {label}
+                </label>
+              ))}
+            </div>
+          )}
 
-          <div>
+          <div className="flex justify-between">
             <button
-              className="bg-violet-700 text-gray-50 tracking-wide font-semibold rounded-md m-2 px-4 py-2 active:bg-violet-900 hover:bg-violet-800"
+              className="bg-violet-700 text-gray-50 tracking font-semibold rounded-md m-2 px-4 py-2 active:bg-violet-900 hover:bg-violet-800"
               onClick={() => toggleResults()}
             >
               See results ({filteredMonsters.length})

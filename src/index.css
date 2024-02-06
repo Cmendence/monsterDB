@@ -16,6 +16,10 @@
    top: -.4rem;
 }
 
+.sliderDisabled .thumb {
+   display: none;
+}
+
 .rotateChevron {
    transform: rotate(180deg);
 }
