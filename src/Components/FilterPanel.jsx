@@ -55,7 +55,7 @@ export default function FilterPanel({ monsters }) {
   const minDice = 1;
   const maxDice = 30;
 
-  const [diceValues, setDiceValues] = useState([minDice, maxDice]);
+  const [diceValues, setDiceValues] = useState([minDice, (maxDice-5)]);
   const [largeMonstersChecked, setLargeMonstersChecked] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState({
     activityCycle: [],
@@ -221,7 +221,7 @@ console.log(filteredMonsters)
      setDiceValues([30, 100]);
    } else {
      // If checkbox is unchecked, enable the slider with default values
-     setDiceValues([minDice, maxDice]);
+     setDiceValues([minDice, (maxDice -5 )]);
    }
  };
 
