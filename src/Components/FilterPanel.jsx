@@ -65,7 +65,10 @@ export default function FilterPanel({ monsters }) {
     movementType: []
   });
 
-  const filterInfo = `HD ${diceValues[0]}-${diceValues[1]}, Activity Cycle : ${selectedFilters.activityCycle}, Climate/Terrain: ${selectedFilters.climate} ${selectedFilters.terrain} ${selectedFilters.planes}`
+
+
+  const filterInfo = `HD ${diceValues[0]}-${diceValues[1]}, Activity : ${selectedFilters.activityCycle}, 
+                     Climate/Terrain: ${selectedFilters.climate} ${selectedFilters.terrain} ${selectedFilters.planes}, Move: ${selectedFilters.movementType}`
 
   const [showResults, setShowResults] = useState(false);
   const [expandedCategories, setExpandedCategories] = useState({
