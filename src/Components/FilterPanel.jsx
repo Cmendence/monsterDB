@@ -152,15 +152,17 @@ const isMovementTypeMatch = (monster, selectedFilters) => {
    );
  };
 
- const isFrequencyMatch = (monster, selectedFilters) => {
+
+const isFrequencyMatch = (monster, selectedFilters) => {
    const monsterFrequency = monster["Frequency"].toLowerCase();
-   
+   const selectedFrequencyFilters = selectedFilters.frequency.map(filter => filter.toLowerCase());
+
    return (
-      selectedFilters.frequency.length === 0 ||
-      monsterFrequency === selectedFilters.frequency[0]
-  
+       selectedFrequencyFilters.length === 0 ||
+       selectedFrequencyFilters.includes(monsterFrequency)
    );
- };
+};
+
 
 console.log(selectedFilters)
 
