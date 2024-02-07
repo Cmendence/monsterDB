@@ -3,7 +3,7 @@ import React, { useState } from 'react';
  export default function MonsterCard({ monsters, keysToRender, }) {
   const [showFullCard, setShowFullCard] = useState(false);
 
-  const cardBg = showFullCard ? 'bg-emerald-900' : 'bg-teal-800';
+  const cardBg = showFullCard ? 'bg-emerald-800' : 'bg-teal-800';
 
   const toggleFullCard = () => {
     setShowFullCard(!showFullCard);
@@ -35,3 +35,4 @@ import React, { useState } from 'react';
     </div>
   );
 }
+
