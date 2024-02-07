@@ -17,7 +17,7 @@
 }
 
 .sliderDisabled .thumb {
-   display: none;
+   background: gray;
 }
 
 .rotateChevron {

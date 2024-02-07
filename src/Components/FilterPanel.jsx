@@ -49,26 +49,34 @@ export default function FilterPanel({ monsters }) {
     movementType: [
       { value: "fl", label: "Flying"},
       { value: "sw", label: "Swimming"},
+    ],
+    frequency: [
+      {value: "common", label: "Common" },
+      {value: "uncommon", label: "Uncommon" },
+      {value: "rare", label: "Rare"},
+      {value: "very rare", label: "Very Rare"},
     ]
   };
 
   const minDice = 1;
   const maxDice = 30;
 
-  const [diceValues, setDiceValues] = useState([minDice, (maxDice-5)]);
+  const [diceValues, setDiceValues] = useState([minDice, maxDice]);
   const [largeMonstersChecked, setLargeMonstersChecked] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState({
     activityCycle: [],
     climate: [],
     terrain: [],
     planes: [],
-    movementType: []
+    movementType: [],
+    frequency: []
   });
 
 
 
-  const filterInfo = `HD ${diceValues[0]}-${diceValues[1]}, Activity : ${selectedFilters.activityCycle}, 
-                     Climate/Terrain: ${selectedFilters.climate} ${selectedFilters.terrain} ${selectedFilters.planes}, Move: ${selectedFilters.movementType}`
+  const filterInfo = `HD ${diceValues[0]}-${diceValues[1]}, Activity: ${selectedFilters.activityCycle}, 
+                     Climate/Terrain: ${selectedFilters.climate} ${selectedFilters.terrain} ${selectedFilters.planes},
+                     Move: ${selectedFilters.movementType} Frequency: ${selectedFilters.frequency}`
 
   const [showResults, setShowResults] = useState(false);
   const [expandedCategories, setExpandedCategories] = useState({
@@ -76,7 +84,8 @@ export default function FilterPanel({ monsters }) {
     climate: false,
     terrain: false,
     planes: false,
-    movementType: false
+    movementType: false,
+    frequency: false
   });
 
 
@@ -143,6 +152,16 @@ const isMovementTypeMatch = (monster, selectedFilters) => {
    );
  };
 
+ const isFrequencyMatch = (monster, selectedFilters) => {
+   const monsterFrequency = monster["Frequency"].toLowerCase();
+   
+   return (
+      selectedFilters.frequency.length === 0 ||
+      monsterFrequency === selectedFilters.frequency[0]
+  
+   );
+ };
+
 console.log(selectedFilters)
 
  const filterMonsters = (monster, selectedFilters, ) =>
@@ -151,6 +170,7 @@ console.log(selectedFilters)
   isTerrainMatch(monster, selectedFilters) &&
   isPlanesMatch(monster, selectedFilters) &&
   isMovementTypeMatch(monster, selectedFilters) &&
+  isFrequencyMatch(monster, selectedFilters) &&
   isActivityCycleMatch(monster, selectedFilters);
 
 
@@ -189,7 +209,8 @@ console.log(filteredMonsters)
       planes: [],
       climate: [],
       terrain: [],
-      movementType: []
+      movementType: [],
+      frequency: []
     });
     setDiceValues([minDice, maxDice]);
     setLargeMonstersChecked(false)
@@ -221,7 +242,7 @@ console.log(filteredMonsters)
      setDiceValues([30, 100]);
    } else {
      // If checkbox is unchecked, enable the slider with default values
-     setDiceValues([minDice, (maxDice -5 )]);
+     setDiceValues([minDice, maxDice]);
    }
  };
 
@@ -238,9 +259,9 @@ console.log(filteredMonsters)
   };
 
   return (
-    <div className="m-4 mb-12 select-none">
+    <div className="m-4 mb-12 select-none ">
       {!showResults ? (
-        <div>
+        <div className="lg:w-1/2">
           <h3 className="font-semibold">Hit Dice:</h3>
           <div className="text-sm mt-1">
             <span className="font-semibold">Min:</span> {diceValues[0]}{" "}
@@ -326,7 +347,7 @@ console.log(filteredMonsters)
               )}`}
             >
               {filters.climate.map(({ value, label }) => (
-                <label key={value} className="m-2 flex">
+                <label key={value} className="ml-4 m-2 flex">
                   <input
                     type="checkbox"
                     value={value}
@@ -440,6 +461,42 @@ console.log(filteredMonsters)
                     value={value}
                     checked={selectedFilters.movementType.includes(value)}
                     onChange={() => handleFilterChange("movementType", value)}
+                  />
+                  &nbsp; {label}
+                </label>
+              ))}
+            </div>
+          )}
+            <h3
+            className={`font-semibold flex my-4 items-center ${bottomBorder(
+              !expandedCategories.frequency
+            )}`}
+            onClick={() => toggleCategory("frequency")}
+          >
+            Frequency &nbsp;{" "}
+            {
+              <div
+                className={`chevron ${
+                  !expandedCategories.frequency ? "rotateChevron" : ""
+                }`}
+              >
+                {chevronIcon}
+              </div>
+            }
+          </h3>
+          {expandedCategories.frequency && (
+            <div
+              className={`ml-4 border-b-2 ${bottomBorder(
+                expandedCategories.frequency
+              )}`}
+            >
+              {filters.frequency.map(({ value, label }) => (
+                <label key={value} className="m-2 flex">
+                  <input
+                    type="checkbox"
+                    value={value}
+                    checked={selectedFilters.frequency.includes(value)}
+                    onChange={() => handleFilterChange("frequency", value)}
                   />
                   &nbsp; {label}
                 </label>

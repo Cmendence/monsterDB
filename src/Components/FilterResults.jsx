@@ -3,6 +3,7 @@ import MonsterCard from "./MonsterCard";
 
 export default function FilterResults({ filteredMonsters, toggleResults, filterInfo }) {
   const [showButton, setShowButton] = useState(false);
+  const keysToRender= ['Activity Cycle', 'Alignment', 'Hit Dice', 'Climate/Terrain', 'Treasure']
 
   const scrollFunction = () => {
     setShowButton(window.scrollY > 20);
@@ -33,16 +34,18 @@ export default function FilterResults({ filteredMonsters, toggleResults, filterI
         <h2 className="text-gray-800 font-semibold capitalize text-lg mx-6 my-2">
           Showing ({filteredMonsters.length}) results for
         </h2>
-         <h2 className="text-gray-800 font-semibold capitalize text-md mx-6 my-2">{filterInfo}</h2>
+         <h2 className="text-gray-800 font-semibold capitalize text-sm mx-6 my-2">{filterInfo}</h2>
+         <div className="lg:w-1/2">
         {filteredMonsters.map((monster, index) => {
             return (
               <MonsterCard
                 key={index}
                 monsters={monster}
-                keysToRender={['Activity Cycle', 'Alignment', 'Hit Dice', 'Climate/Terrain', 'Treasure']}
+                keysToRender={keysToRender}
               />
-            );
-        })}
+              );
+            })}
+            </div>
 
         {showButton && (
           <button
