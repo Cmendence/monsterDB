@@ -435,42 +435,6 @@ console.log(filteredMonsters)
           )}
            <h3
             className={`font-semibold flex my-4 items-center ${bottomBorder(
-              !expandedCategories.movementType
-            )}`}
-            onClick={() => toggleCategory("movementType")}
-          >
-            Movement Type &nbsp;{" "}
-            {
-              <div
-                className={`chevron ${
-                  !expandedCategories.movementType ? "rotateChevron" : ""
-                }`}
-              >
-                {chevronIcon}
-              </div>
-            }
-          </h3>
-          {expandedCategories.movementType && (
-            <div
-              className={`ml-4 border-b-2 ${bottomBorder(
-                expandedCategories.movementType
-              )}`}
-            >
-              {filters.movementType.map(({ value, label }) => (
-                <label key={value} className="m-2 flex">
-                  <input
-                    type="checkbox"
-                    value={value}
-                    checked={selectedFilters.movementType.includes(value)}
-                    onChange={() => handleFilterChange("movementType", value)}
-                  />
-                  &nbsp; {label}
-                </label>
-              ))}
-            </div>
-          )}
-            <h3
-            className={`font-semibold flex my-4 items-center ${bottomBorder(
               !expandedCategories.frequency
             )}`}
             onClick={() => toggleCategory("frequency")}
@@ -505,6 +469,43 @@ console.log(filteredMonsters)
               ))}
             </div>
           )}
+           <h3
+            className={`font-semibold flex my-4 items-center ${bottomBorder(
+              !expandedCategories.movementType
+            )}`}
+            onClick={() => toggleCategory("movementType")}
+          >
+            Movement Type &nbsp;{" "}
+            {
+              <div
+                className={`chevron ${
+                  !expandedCategories.movementType ? "rotateChevron" : ""
+                }`}
+              >
+                {chevronIcon}
+              </div>
+            }
+          </h3>
+          {expandedCategories.movementType && (
+            <div
+              className={`ml-4 border-b-2 ${bottomBorder(
+                expandedCategories.movementType
+              )}`}
+            >
+              {filters.movementType.map(({ value, label }) => (
+                <label key={value} className="m-2 flex">
+                  <input
+                    type="checkbox"
+                    value={value}
+                    checked={selectedFilters.movementType.includes(value)}
+                    onChange={() => handleFilterChange("movementType", value)}
+                  />
+                  &nbsp; {label}
+                </label>
+              ))}
+            </div>
+          )}
+           
 
           <div className="flex justify-between">
             <button
