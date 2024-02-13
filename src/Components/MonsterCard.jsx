@@ -3,7 +3,7 @@ import React, { useState } from 'react';
  export default function MonsterCard({ monsters, keysToRender, }) {
   const [showFullCard, setShowFullCard] = useState(false);
 
-  const cardBg = showFullCard ? 'bg-emerald-800' : 'bg-teal-800';
+  const cardBg = showFullCard ? 'bg-red-400' : 'bg-orange-300 ';
 
   const toggleFullCard = () => {
     setShowFullCard(!showFullCard);
@@ -11,7 +11,7 @@ import React, { useState } from 'react';
 
   return (
     <div
-      className={`monsterCard p-4 shadow-md ${cardBg} rounded-lg mx-4 my-3 text-stone-50 cursor-pointer`}
+      className={`monsterCard p-4 shadow-md ${cardBg} rounded-lg mx-4 my-3 text-gray-800 cursor-pointer `}
       onClick={toggleFullCard}
     >
       <h3 className="font-semibold text-md">{monsters['Name']}</h3>
