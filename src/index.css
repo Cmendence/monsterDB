@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+   overflow: hidden;
+   overscroll-behavior: none;
+ }
+
 .slider {
    height: 10px;
 }
@@ -27,3 +32,4 @@
 .chevron {
       transition: transform 0.4s ease;
 }
+
