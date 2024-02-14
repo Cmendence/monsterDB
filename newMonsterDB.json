@@ -47853,7 +47853,7 @@
     "Special Defenses": "Nil",
     "THAC0": "17",
     "Treasure": "L (C,O,Qx10,S)",
-    "XP Value": "65<br>Subchief, leader: 120<br>Chief: 175"
+    "XP Value": "65 / Subchief, leader: 120 / Chief: 175"
   },
   {
     "Name": "Orc, Neo-Orog - Black",
@@ -47877,7 +47877,7 @@
     "Special Defenses": "Camouflage",
     "THAC0": "17",
     "Treasure": "L (C,O,Qx10,S)",
-    "XP Value": "175<br>Sergeant: 270<br>Officer: 420<br>General: 650"
+    "XP Value": "175 / Sergeant: 270 / Officer: 420 / General: 650"
   },
   {
     "Name": "Orc, Neo-Orog - Red",
@@ -47901,7 +47901,7 @@
     "Special Defenses": "Nil",
     "THAC0": "15",
     "Treasure": "L (C,O,Qx10,S)",
-    "XP Value": "270<br>Sergeant: 420<br>Officer: 650<br>General: 975"
+    "XP Value": "270 / Sergeant: 420 / Officer: 650 / General: 975"
   },
   {
     "Name": "Orc, Ondonti",
@@ -47922,10 +47922,10 @@
     "Organization": "Tribe",
     "Size": "M (6' tall)",
     "Special Attacks": "Nil",
-    "Special Defenses": "<i>Sanctuary</i>, <i>barkskin</i>, <i>tree</i>, immune to <i>charm</i>, + 1 save vs. poison (priest spells)",
+    "Special Defenses": "Sanctuary, barkskin, tree, immune to charm, + 1 save vs. poison (priest spells)",
     "THAC0": "19",
     "Treasure": "Nil",
-    "XP Value": "120<br>Cleric, 1st: 175<br>Cleric, 2nd: 270<br>Cleric, 3rd: 420<br>Cleric, 4th: 650<br>Cleric, 5th: 975<br>Cleric, 6th: 1,400<br>Cleric, 7th: 2,000"
+    "XP Value": "120 / Cleric, 1st: 175 / Cleric, 2nd: 270 / Cleric, 3rd: 420 / Cleric, 4th: 650 / Cleric, 5th: 975 / Cleric, 6th: 1,400 / Cleric, 7th: 2,000"
   },
   {
     "Name": "Oread",
@@ -47949,7 +47949,7 @@
     "Special Defenses": "Spells, meld into stone",
     "THAC0": "17",
     "Treasure": "Qx100,U",
-    "XP Value": "420<br>Snowhair: 10,000"
+    "XP Value": "420, Snowhair: 10,000"
   },
   {
     "Name": "Ormyrr",
@@ -48019,9 +48019,9 @@
     "Size": "L (8' diam.)",
     "Special Attacks": "Grab, disease",
     "Special Defenses": "Never surprised",
-    "THAC0": "9-10 HD: 11<br>11-12 HD: 9",
+    "THAC0": "9-10 HD: 11 / 11-12 HD: 9",
     "Treasure": "See below",
-    "XP Value": "9 HD: 2,000<br>10 HD: 3,000<br>11 HD: 4,000<br>12 HD: 5,000"
+    "XP Value": "9 HD: 2,000 / 10 HD: 3,000 / 11 HD: 4,000 / 12 HD: 5,000"
   },
   {
     "Name": "Otyugh",
@@ -48043,9 +48043,9 @@
     "Size": "M-L (6-7' diam.)",
     "Special Attacks": "Grab, disease",
     "Special Defenses": "Never surprised",
-    "THAC0": "6 HD: 15<br>7-8 HD: 13",
+    "THAC0": "6 HD: 15 / 7-8 HD: 13",
     "Treasure": "See below",
-    "XP Value": "6 HD: 650<br>7 HD: 975<br>8 HD: 1,400"
+    "XP Value": "6 HD: 650 / 7 HD: 975 / 8 HD: 1,400"
   },
   {
     "Name": "Ouija Table",
