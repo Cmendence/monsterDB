@@ -5,6 +5,7 @@ import filters from "../assets/filters";
 import FilterCategory from "./FilterCategory";
 
 export default function FilterPanel({
+  monsterSearch,
   monsters,
   handleSearch,
   clearSearch,
@@ -136,7 +137,7 @@ export default function FilterPanel({
     isFrequencyMatch(monster, selectedFilters) &&
     isActivityCycleMatch(monster, selectedFilters);
 
-  const filteredMonsters = monsters.filter((monster) =>
+  const filteredMonsters = monsterSearch.filter((monster) =>
     filterMonsters(monster, selectedFilters)
   );
 

@@ -28,19 +28,21 @@ function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const clearSearch = () => setQuery('')
-
-  const filteredMonsters = monsters.filter((monster) => {
+  const clearSearch = () => {
+   setQuery('')
+   setCurrentPage(1)
+  }
+  const monsterSearch = monsters.filter((monster) => {
     const monsterName = monster["Name"].toLowerCase();
     return monsterName.includes(query.toLowerCase());
   });
 
   // Calculate the total number of pages
-  const totalPages = Math.ceil(monsters.length / resultsPerPage);
+  const totalPages = Math.ceil(monsterSearch.length / resultsPerPage);
 
   // Calculate the index of the first and last result to display on the current page
   const startIndex = (currentPage - 1) * resultsPerPage;
-  const endIndex = Math.min(startIndex + resultsPerPage, monsters.length);
+  const endIndex = Math.min(startIndex + resultsPerPage, monsterSearch.length);
 
 
 
@@ -54,6 +56,7 @@ function App() {
             path="/allMonsters"
             element={
               <MonsterList
+                monsterSearch={monsterSearch}
                 monsters={monsters}
                 query={query}
                 setQuery={setQuery}
@@ -73,6 +76,7 @@ function App() {
             path="/filter"
             element={
               <FilterPanel
+                monsterSearch={monsterSearch}
                 monsters={monsters}
                 query={query}
                 setQuery={setQuery}

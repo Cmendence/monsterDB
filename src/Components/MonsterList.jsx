@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar";
 import ScrollToTopButton from "./ScrollToTopButton";
 
 export default function MonsterList({
+  monsterSearch,
   monsters,
   handleSearch,
   query,
@@ -26,7 +27,7 @@ export default function MonsterList({
  }, []);
 
     // Get the monsters to display on the current page
-    const monstersOnCurrentPage = monsters.slice(startIndex, endIndex);
+    const monstersOnCurrentPage = monsterSearch.slice(startIndex, endIndex);
 
   return (
     <div className="py-2 lg:w-1/2 select-none">
@@ -39,7 +40,7 @@ export default function MonsterList({
       />
       
       <h2 className="text-gray-800 font-semibold uppercase text-lg mx-6">
-        All Monsters ({monsters.length})
+        All Monsters ({monsterSearch.length})
       </h2>
       <div>
         {monstersOnCurrentPage.map((monster) => {
