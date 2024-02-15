@@ -6,7 +6,6 @@ export default function FilterCategory(
    {
       category,
       expandedCategories,
-      setExpandedCategories,
       selectedFilters,
       toggleCategory,
       handleFilterChange,
@@ -65,42 +64,6 @@ export default function FilterCategory(
           ))}
         </div>
       )}
-      {/* <h3
-      className={`font-semibold mt-4 flex items-center ${bottomBorder(
-        !expandedCategories.terrain
-      )}`}
-      onClick={() => toggleCategory("terrain")}
-    >
-      Terrain &nbsp;{" "}
-      {
-        <div
-          className={`chevron ${
-            !expandedCategories.terrain ? "rotateChevron" : ""
-          }`}
-        >
-          {chevronIcon}
-        </div>
-      }
-    </h3>
-    {expandedCategories.terrain && (
-      <div
-        className={`ml-4 border-b-2 ${bottomBorder(
-          expandedCategories.terrain
-        )}`}
-      >
-        {filters.terrain.map(({ value, label }) => (
-          <label key={value} className="ml-4 m-2 flex">
-            <input
-              type="checkbox"
-              value={value}
-              checked={selectedFilters.terrain.includes(value)}
-              onChange={() => handleFilterChange("terrain", value)}
-            />
-            &nbsp; {label}
-          </label>
-        ))}
-      </div>
-    )} */}
     </div>
    )
 }

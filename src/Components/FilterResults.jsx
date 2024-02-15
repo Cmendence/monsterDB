@@ -31,7 +31,7 @@ export default function FilterResults({
     const totalPages = Math.ceil(filteredMonsters.length / resultsPerPage);
 
   return (
-    <div>
+    <div className="lg:w-1/2">
       <SearchBar
          query={query}
          setQuery={setQuery}
@@ -53,7 +53,7 @@ export default function FilterResults({
         <h2 className="text-gray-800 font-semibold capitalize text-sm mx-6 my-2">
           {filterInfo}
         </h2>
-        <div className="lg:w-1/2">
+        <div className="">
           {monstersOnCurrentPage.map((monster, index) => {
             return (
               <MonsterCard

@@ -1,5 +1,4 @@
 const filters = {
-   Large: [{ value: [30, 100], label: "30+ HD" }],
    Activity: [
       { value: "any", label: "Any" },
       { value: "day", label: "Day" },
@@ -43,6 +42,7 @@ const filters = {
    Movement: [
      { value: "fl", label: "Flying" },
      { value: "sw", label: "Swimming" },
+     { value: "br", label: "Burrowing" },
    ],
    Frequency: [
      { value: "common", label: "Common" },
@@ -50,6 +50,10 @@ const filters = {
      { value: "rare", label: "Rare" },
      { value: "very rare", label: "Very Rare" },
    ],
+   // World: [
+   //    {value: "athas", label: "Athas"},
+   //    {value: "ravenloft", label: "Ravenloft"},
+   // ]
  };
 
  export default filters

@@ -1,33 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slider";
 import FilterResults from "./FilterResults";
 import filters from "../assets/filters";
 import FilterCategory from "./FilterCategory";
 
-export default function FilterPanel(
-   { 
-      monsters, 
-      handleSearch,
-      clearSearch, 
-      query, 
-      setQuery, 
-      currentPage, 
-      handlePageChange, 
-      resultsPerPage,
-      totalPages, 
-      startIndex,
-      endIndex,
-      setCurrentPage
-   }) {
-
-
+export default function FilterPanel({
+  monsters,
+  handleSearch,
+  clearSearch,
+  query,
+  setQuery,
+  currentPage,
+  handlePageChange,
+  resultsPerPage,
+  totalPages,
+  startIndex,
+  endIndex,
+  setCurrentPage,
+}) {
   const minDice = 1;
   const maxDice = 30;
 
   const [diceValues, setDiceValues] = useState([minDice, maxDice]);
   const [largeMonstersChecked, setLargeMonstersChecked] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState({
-    Large: [],
     Activity: [],
     Climate: [],
     Terrain: [],
@@ -36,20 +32,25 @@ export default function FilterPanel(
     Frequency: [],
   });
 
-  const filterInfo = `HD ${diceValues[0]}-${diceValues[1]}, Activity: ${selectedFilters.Activity}, 
-                     Climate/Terrain: ${selectedFilters.Climate} ${selectedFilters.Terrain} ${selectedFilters.Plane},
-                     Move: ${selectedFilters.Movement} Frequency: ${selectedFilters.Frequency}`;
-
   const [showResults, setShowResults] = useState(false);
   const [expandedCategories, setExpandedCategories] = useState({
-    Large: false,
-    Activity: false,
-    Climate: false,
-    Terrain: false,
-    Plane: false,
-    Movement: false,
-    Frequency: false,
-  });
+     Activity: false,
+     Climate: false,
+     Terrain: false,
+     Plane: false,
+     Movement: false,
+     Frequency: false,
+   });
+   
+   useEffect(() => { 
+      setQuery('')
+    }, []);
+
+   const LargeMonsters = [{ value: [30, 100], label: "30+ HD" }];
+
+   const filterInfo = `HD ${diceValues[0]}-${diceValues[1]}, Activity: ${selectedFilters.Activity}, 
+                      Climate/Terrain: ${selectedFilters.Climate} ${selectedFilters.Terrain} ${selectedFilters.Plane},
+                      Move: ${selectedFilters.Movement} Frequency: ${selectedFilters.Frequency}`;
 
   const isHitDiceInRange = (monster, diceValues) => {
     const hitDice = parseInt(monster["Hit Dice"], 10);
@@ -126,8 +127,6 @@ export default function FilterPanel(
     );
   };
 
-  console.log(selectedFilters);
-
   const filterMonsters = (monster, selectedFilters) =>
     isHitDiceInRange(monster, largeMonstersChecked ? [30, 100] : diceValues) &&
     isClimateMatch(monster, selectedFilters) &&
@@ -141,16 +140,12 @@ export default function FilterPanel(
     filterMonsters(monster, selectedFilters)
   );
 
-  console.log(filteredMonsters);
-
   const isSliderDisabled = largeMonstersChecked
     ? "bg-gray-300 sliderDisabled"
     : "bg-violet-400";
 
-
   const resetFilters = () => {
     setSelectedFilters({
-      Large: [],
       Activity: [],
       Plane: [],
       Climate: [],
@@ -192,7 +187,7 @@ export default function FilterPanel(
 
   const toggleResults = () => {
     setShowResults(!showResults);
-    setCurrentPage(1)
+    setCurrentPage(1);
     window.scrollTo(0, 0);
   };
 
@@ -204,234 +199,10 @@ export default function FilterPanel(
   };
 
   return (
-   
-         
-      //   <div className="lg:w-1/2">
-
-
-      //     <h3
-      //       className={`font-semibold mt-6 flex items-center ${bottomBorder(
-      //         !expandedCategories.activityCycle
-      //       )}`}
-      //       onClick={() => toggleCategory("activityCycle")}
-      //     >
-      //       Activity Cycle &nbsp;{" "}
-      //       {
-      //         <div
-      //           className={`chevron ${
-      //             !expandedCategories.activityCycle ? "rotateChevron" : ""
-      //           }`}
-      //         >
-      //           {chevronIcon}
-      //         </div>
-      //       }
-      //     </h3>
-      //     {expandedCategories.activityCycle && (
-      //       <div
-      //         className={`ml-4 mb-4 border-b-2 ${bottomBorder(
-      //           expandedCategories.activityCycle
-      //         )}`}
-      //       >
-      //         {filters.activityCycle.map(({ value, label }) => (
-      //           <label key={value} className="ml-4 m-2 flex">
-      //             <input
-      //               type="checkbox"
-      //               value={value}
-      //               checked={selectedFilters.activityCycle.includes(value)}
-      //               onChange={() => handleFilterChange("activityCycle", value)}
-      //             />
-      //             &nbsp; {label}
-      //           </label>
-      //         ))}
-      //       </div>
-      //     )}
-
-      //     <h3
-      //       className={`font-semibold flex my-4 items-center ${bottomBorder(
-      //         !expandedCategories.climate
-      //       )}`}
-      //       onClick={() => toggleCategory("climate")}
-      //     >
-      //       Climate &nbsp;{" "}
-      //       {
-      //         <div
-      //           className={`chevron ${
-      //             !expandedCategories.climate ? "rotateChevron" : ""
-      //           }`}
-      //         >
-      //           {chevronIcon}
-      //         </div>
-      //       }
-      //     </h3>
-      //     {expandedCategories.climate && (
-      //       <div
-      //         className={`ml-4 border-b-2 ${bottomBorder(
-      //           expandedCategories.climate
-      //         )}`}
-      //       >
-      //         {filters.climate.map(({ value, label }) => (
-      //           <label key={value} className="ml-4 m-2 flex">
-      //             <input
-      //               type="checkbox"
-      //               value={value}
-      //               checked={selectedFilters.climate.includes(value)}
-      //               onChange={() => handleFilterChange("climate", value)}
-      //             />
-      //             &nbsp; {label}
-      //           </label>
-      //         ))}
-      //       </div>
-      //     )}
-      //     <h3
-      //       className={`font-semibold mt-4 flex items-center ${bottomBorder(
-      //         !expandedCategories.terrain
-      //       )}`}
-      //       onClick={() => toggleCategory("terrain")}
-      //     >
-      //       Terrain &nbsp;{" "}
-      //       {
-      //         <div
-      //           className={`chevron ${
-      //             !expandedCategories.terrain ? "rotateChevron" : ""
-      //           }`}
-      //         >
-      //           {chevronIcon}
-      //         </div>
-      //       }
-      //     </h3>
-      //     {expandedCategories.terrain && (
-      //       <div
-      //         className={`ml-4 border-b-2 ${bottomBorder(
-      //           expandedCategories.terrain
-      //         )}`}
-      //       >
-      //         {filters.terrain.map(({ value, label }) => (
-      //           <label key={value} className="ml-4 m-2 flex">
-      //             <input
-      //               type="checkbox"
-      //               value={value}
-      //               checked={selectedFilters.terrain.includes(value)}
-      //               onChange={() => handleFilterChange("terrain", value)}
-      //             />
-      //             &nbsp; {label}
-      //           </label>
-      //         ))}
-      //       </div>
-      //     )}
-      //     <h3
-      //       className={`font-semibold my-4 flex items-center ${bottomBorder(
-      //         !expandedCategories.planes
-      //       )}`}
-      //       onClick={() => toggleCategory("planes")}
-      //     >
-      //       Planes &nbsp;{" "}
-      //       {
-      //         <div
-      //           className={`chevron ${
-      //             !expandedCategories.planes ? "rotateChevron" : ""
-      //           }`}
-      //         >
-      //           {chevronIcon}
-      //         </div>
-      //       }
-      //     </h3>
-      //     {expandedCategories.planes && (
-      //       <div
-      //         className={`ml-4 mb-4 border-b-2 ${bottomBorder(
-      //           expandedCategories.planes
-      //         )}`}
-      //       >
-      //         {filters.planes.map(({ value, label }) => (
-      //           <label key={value} className="ml-4 m-2 flex">
-      //             <input
-      //               type="checkbox"
-      //               value={value}
-      //               checked={selectedFilters.planes.includes(value)}
-      //               onChange={() => handleFilterChange("planes", value)}
-      //             />
-      //             &nbsp; {label}
-      //           </label>
-      //         ))}
-      //       </div>
-      //     )}
-      //     <h3
-      //       className={`font-semibold flex my-4 items-center ${bottomBorder(
-      //         !expandedCategories.movementType
-      //       )}`}
-      //       onClick={() => toggleCategory("movementType")}
-      //     >
-      //       Movement Type &nbsp;{" "}
-      //       {
-      //         <div
-      //           className={`chevron ${
-      //             !expandedCategories.movementType ? "rotateChevron" : ""
-      //           }`}
-      //         >
-      //           {chevronIcon}
-      //         </div>
-      //       }
-      //     </h3>
-      //     {expandedCategories.movementType && (
-      //       <div
-      //         className={`ml-4 border-b-2 ${bottomBorder(
-      //           expandedCategories.movementType
-      //         )}`}
-      //       >
-      //         {filters.movementType.map(({ value, label }) => (
-      //           <label key={value} className="m-2 flex">
-      //             <input
-      //               type="checkbox"
-      //               value={value}
-      //               checked={selectedFilters.movementType.includes(value)}
-      //               onChange={() => handleFilterChange("movementType", value)}
-      //             />
-      //             &nbsp; {label}
-      //           </label>
-      //         ))}
-      //       </div>
-      //     )}
-      //     <h3
-      //       className={`font-semibold flex my-4 items-center ${bottomBorder(
-      //         !expandedCategories.frequency
-      //       )}`}
-      //       onClick={() => toggleCategory("frequency")}
-      //     >
-      //       Frequency &nbsp;{" "}
-      //       {
-      //         <div
-      //           className={`chevron ${
-      //             !expandedCategories.frequency ? "rotateChevron" : ""
-      //           }`}
-      //         >
-      //           {chevronIcon}
-      //         </div>
-      //       }
-      //     </h3>
-      //     {expandedCategories.frequency && (
-      //       <div
-      //         className={`ml-4 border-b-2 ${bottomBorder(
-      //           expandedCategories.frequency
-      //         )}`}
-      //       >
-      //         {filters.frequency.map(({ value, label }) => (
-      //           <label key={value} className="m-2 flex">
-      //             <input
-      //               type="checkbox"
-      //               value={value}
-      //               checked={selectedFilters.frequency.includes(value)}
-      //               onChange={() => handleFilterChange("frequency", value)}
-      //             />
-      //             &nbsp; {label}
-      //           </label>
-      //         ))}
-      //       </div>
-      //     )}
-
-      <div className="m-4 mb-12 select-none ">
+    <div className="m-4 mb-12 select-none ">
       {!showResults ? (
-         
-<div>
-<h3 className="font-semibold">Hit Dice:</h3>
+        <div>
+          <h3 className="font-semibold">Hit Dice:</h3>
           <div className="text-sm mt-1">
             <span className="font-semibold">Min:</span> {diceValues[0]}{" "}
             <span className="font-semibold">Max:</span> {diceValues[1]}{" "}
@@ -455,22 +226,21 @@ export default function FilterPanel(
               checked={largeMonstersChecked}
               onChange={() => handleLargeMonstersChange()}
             />
-            &nbsp; {filters.Large[0].label}
+            &nbsp; {LargeMonsters[0].label}
           </label>
-<div>
-      {Object.keys(filters).map((category) => (
-        <FilterCategory
-          key={category}
-          category={category}
-          filters={filters[category]}
-          selectedFilters={selectedFilters}
-          handleFilterChange={handleFilterChange}
-          expandedCategories={expandedCategories}
-          toggleCategory={toggleCategory}
-          
-        />
-      ))}
-    </div>
+          <div>
+            {Object.keys(filters).map((category) => (
+              <FilterCategory
+                key={category}
+                category={category}
+                filters={filters[category]}
+                selectedFilters={selectedFilters}
+                handleFilterChange={handleFilterChange}
+                expandedCategories={expandedCategories}
+                toggleCategory={toggleCategory}
+              />
+            ))}
+          </div>
           <div className="flex justify-between">
             <button
               className="bg-violet-700 text-gray-50 tracking font-semibold rounded-md m-2 px-4 py-2 active:bg-violet-900 hover:bg-violet-800"
