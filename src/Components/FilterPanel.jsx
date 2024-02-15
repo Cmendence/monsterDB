@@ -31,6 +31,7 @@ export default function FilterPanel({
     Plane: [],
     Movement: [],
     Frequency: [],
+    World: []
   });
 
   const [showResults, setShowResults] = useState(false);
@@ -41,6 +42,7 @@ export default function FilterPanel({
      Plane: false,
      Movement: false,
      Frequency: false,
+     World: false
    });
    
    useEffect(() => { 
@@ -52,6 +54,8 @@ export default function FilterPanel({
    const filterInfo = `HD ${diceValues[0]}-${diceValues[1]}, Activity: ${selectedFilters.Activity}, 
                       Climate/Terrain: ${selectedFilters.Climate} ${selectedFilters.Terrain} ${selectedFilters.Plane},
                       Move: ${selectedFilters.Movement} Frequency: ${selectedFilters.Frequency}`;
+
+
 
   const isHitDiceInRange = (monster, diceValues) => {
     const hitDice = parseInt(monster["Hit Dice"], 10);
@@ -128,14 +132,90 @@ export default function FilterPanel({
     );
   };
 
-  const filterMonsters = (monster, selectedFilters) =>
-    isHitDiceInRange(monster, largeMonstersChecked ? [30, 100] : diceValues) &&
-    isClimateMatch(monster, selectedFilters) &&
-    isTerrainMatch(monster, selectedFilters) &&
-    isPlanesMatch(monster, selectedFilters) &&
-    isMovementTypeMatch(monster, selectedFilters) &&
-    isFrequencyMatch(monster, selectedFilters) &&
-    isActivityCycleMatch(monster, selectedFilters);
+//   const hasExcludedKeywords = (monster) =>
+//   Object.values(monster).some(
+//     (value) =>
+//       typeof value === "string" &&
+//       (value.toLowerCase().includes("athas") || value.toLowerCase().includes("ravenloft"))
+//   );
+
+// const isIncludedWorld = (monster, selectedWorlds) => {
+//   return (
+//     (!hasExcludedKeywords(monster)) &&
+//     (selectedWorlds.length === 0 ||
+//       (selectedWorlds.length > 0 &&
+//         selectedWorlds.some((world) =>
+//           Object.values(monster).some((value) =>
+//             typeof value === "string" &&
+//             value.toLowerCase().includes(world.toLowerCase())
+//           )
+//         ))
+//     )
+//   );
+// };
+
+
+//   const filterMonsters = (monster, selectedFilters) => {
+//    const includedWorld = isIncludedWorld(monster, selectedFilters.World);
+
+//    return(
+//     includedWorld &&
+//     isHitDiceInRange(monster, largeMonstersChecked ? [30, 100] : diceValues) &&
+//     isClimateMatch(monster, selectedFilters) &&
+//     isTerrainMatch(monster, selectedFilters) &&
+//     isPlanesMatch(monster, selectedFilters) &&
+//     isMovementTypeMatch(monster, selectedFilters) &&
+//     isFrequencyMatch(monster, selectedFilters) &&
+//     isActivityCycleMatch(monster, selectedFilters)
+//     )
+//    }
+
+const isIncludedWorld = (monster, selectedWorlds) => {
+   const hasAthasKeyword = (monster) =>
+     Object.values(monster).some(
+       (value) =>
+         typeof value === "string" && value.toLowerCase().includes("athas")
+     );
+ 
+   const hasRavenloftKeyword = (monster) =>
+     Object.values(monster).some(
+       (value) =>
+         typeof value === "string" && value.toLowerCase().includes("ravenloft")
+     );
+ 
+   return (
+     (selectedWorlds.includes("athas") && hasAthasKeyword(monster)) ||
+     (selectedWorlds.includes("ravenloft") && hasRavenloftKeyword(monster)) ||
+     (selectedWorlds.length === 0 &&
+       !hasAthasKeyword(monster) &&
+       !hasRavenloftKeyword(monster)) ||
+     (selectedWorlds.length > 0 &&
+       selectedWorlds.every((world) =>
+         Object.values(monster).some((value) =>
+           typeof value === "string" && value.toLowerCase().includes(world.toLowerCase())
+         )
+       ))
+   );
+ };
+ 
+ 
+ 
+ 
+ const filterMonsters = (monster, selectedFilters) => {
+   const includedWorld = isIncludedWorld(monster, selectedFilters.World);
+ 
+   return (
+     includedWorld &&
+     isHitDiceInRange(monster, largeMonstersChecked ? [30, 100] : diceValues) &&
+     isClimateMatch(monster, selectedFilters) &&
+     isTerrainMatch(monster, selectedFilters) &&
+     isPlanesMatch(monster, selectedFilters) &&
+     isMovementTypeMatch(monster, selectedFilters) &&
+     isFrequencyMatch(monster, selectedFilters) &&
+     isActivityCycleMatch(monster, selectedFilters)
+   );
+ };
+ 
 
   const filteredMonsters = monsterSearch.filter((monster) =>
     filterMonsters(monster, selectedFilters)
@@ -153,6 +233,7 @@ export default function FilterPanel({
       Terrain: [],
       Movement: [],
       Frequency: [],
+      World: []
     });
     setDiceValues([minDice, maxDice]);
     setLargeMonstersChecked(false);
@@ -189,6 +270,7 @@ export default function FilterPanel({
   const toggleResults = () => {
     setShowResults(!showResults);
     setCurrentPage(1);
+    setQuery('')
     window.scrollTo(0, 0);
   };
 
@@ -202,7 +284,7 @@ export default function FilterPanel({
   return (
     <div className="m-4 mb-12 select-none ">
       {!showResults ? (
-        <div>
+        <div className="lg:w-1/2">
           <h3 className="font-semibold">Hit Dice:</h3>
           <div className="text-sm mt-1">
             <span className="font-semibold">Min:</span> {diceValues[0]}{" "}

@@ -43,6 +43,7 @@ const filters = {
      { value: "fl", label: "Flying" },
      { value: "sw", label: "Swimming" },
      { value: "br", label: "Burrowing" },
+     { value: "cl", label: "Climbing" },
    ],
    Frequency: [
      { value: "common", label: "Common" },
@@ -50,10 +51,10 @@ const filters = {
      { value: "rare", label: "Rare" },
      { value: "very rare", label: "Very Rare" },
    ],
-   // World: [
-   //    {value: "athas", label: "Athas"},
-   //    {value: "ravenloft", label: "Ravenloft"},
-   // ]
+   World: [
+      {value: "athas", label: "Athas"},
+      {value: "ravenloft", label: "Ravenloft"},
+   ]
  };
 
  export default filters
