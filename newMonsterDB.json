@@ -19529,7 +19529,7 @@
     "No. of Attacks": "1",
     "Organization": "Band",
     "Size": "S (2' tall)",
-    "Special Attacks": "<i>Magic missile</i>",
+    "Special Attacks": "Magic missile",
     "Special Defenses": "Magic use",
     "THAC0": "19",
     "Treasure": "Incidental",
@@ -19643,7 +19643,7 @@
     "Hit Dice": "10, 14, or 18",
     "Intelligence": "Average (8-10)",
     "Magic Resistance": "50%/25%",
-    "Morale": "10 and 14 Hit Dice: Champion (15-16)<br>18 Hit Dice: Fanatic (17-18)",
+    "Morale": "10 and 14 Hit Dice: Champion (15-16) / 18 Hit Dice: Fanatic (17-18)",
     "Movement": "Fl 36 (A)",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -19651,9 +19651,9 @@
     "Size": "L to H (8-16' tall)",
     "Special Attacks": "Whirlwind, sandstorm",
     "Special Defenses": "+ 3 weapon or better to hit",
-    "THAC0": "10 Hit dice: 11<br>14 Hit Dice: 7<br>18 Hit Dice: 5",
+    "THAC0": "10 Hit dice: 11 / 14 Hit Dice: 7 / 18 Hit Dice: 5",
     "Treasure": "Nil",
-    "XP Value": "10 Hit Dice: 7,000<br>14 Hit Dice: 11,000<br>18 Hit Dice: 15,000"
+    "XP Value": "10 Hit Dice: 7,000 / 14 Hit Dice: 11,000 / 18 Hit Dice: 15,000"
   },
   {
     "Name": "Elemental (Athas), Greater, Earth",
@@ -19667,7 +19667,7 @@
     "Hit Dice": "10, 14, or 18",
     "Intelligence": "Average (8-10)",
     "Magic Resistance": "50%/25%",
-    "Morale": "10 and 14 Hit Dice: Champion (15-16)<br>18 Hit Dice: Fanatic (17-18)",
+    "Morale": "10 and 14 Hit Dice: Champion (15-16) / 18 Hit Dice: Fanatic (17-18)",
     "Movement": "9",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -19675,9 +19675,9 @@
     "Size": "L to H (8-16' tall)",
     "Special Attacks": "Earthquake, structural damage",
     "Special Defenses": "+3 weapon or better to hit",
-    "THAC0": "10 Hit dice: 11<br>14 Hit Dice: 7<br>18 Hit Dice: 5",
+    "THAC0": "10 Hit dice: 11 / 14 Hit Dice: 7 /  Hit Dice: 5",
     "Treasure": "Nil",
-    "XP Value": "10 Hit Dice: 6,000<br>14 Hit Dice: 10,000<br>18 Hit Dice: 14,000"
+    "XP Value": "10 Hit Dice: 6,000 / 14 Hit Dice: 10,000 / 18 Hit Dice: 14,000"
   },
   {
     "Name": "Elemental (Athas), Greater, Fire",
@@ -19691,7 +19691,7 @@
     "Hit Dice": "10, 14, or 18",
     "Intelligence": "Average (8-10)",
     "Magic Resistance": "50%/25%",
-    "Morale": "10 and 14 Hit Dice: Champion (15-16)<br>18 Hit Dice: Fanatic (17-18)",
+    "Morale": "10 and 14 Hit Dice: Champion (15-16) / 18 Hit Dice: Fanatic (17-18)",
     "Movement": "12",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -19699,9 +19699,9 @@
     "Size": "L to H (8-16' tall)",
     "Special Attacks": "Engulf",
     "Special Defenses": "+3 weapon or better to hit",
-    "THAC0": "10 Hit Dice: 11<br>14 Hit Dice: 7<br>18 Hit Dice: 5",
+    "THAC0": "10 Hit Dice: 11 / 14 Hit Dice: 7 / 18 Hit Dice: 5",
     "Treasure": "Nil",
-    "XP Value": "10 Hit Dice: 6,000<br>14 Hit Dice: 10,000<br>18 Hit Dice: 14,000"
+    "XP Value": "10 Hit Dice: 6,000 / 14 Hit Dice: 10,000 / 18 Hit Dice: 14,000"
   },
   {
     "Name": "Elemental (Athas), Greater, Water",
@@ -19715,7 +19715,7 @@
     "Hit Dice": "10, 14, or 18",
     "Intelligence": "Average (8-10)",
     "Magic Resistance": "50%/25%",
-    "Morale": "10 and 14 Hit Dice: Champion (15-16)<br>18 Hit Dice: Fanatic (17-18)",
+    "Morale": "10 and 14 Hit Dice: Champion (15-16) / 18 Hit Dice: Fanatic (17-18)",
     "Movement": "6, Sw 18",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -19723,9 +19723,9 @@
     "Size": "L to H (8-16' tall)",
     "Special Attacks": "Drown",
     "Special Defenses": "+3 weapon or better to hit",
-    "THAC0": "10 Hit dice: 11<br>14 Hit Dice: 7<br>18 Hit Dice: 5",
+    "THAC0": "10 Hit dice: 11 / 14 Hit Dice: 7 / 18 Hit Dice: 5",
     "Treasure": "Nil",
-    "XP Value": "10 Hit Dice: 6,000<br>14 Hit Dice: 10,000<br>18 Hit Dice: 14,000"
+    "XP Value": "10 Hit Dice: 6,000 / 14 Hit Dice: 10,000 / 18 Hit Dice: 14,000"
   },
   {
     "Name": "Elemental (Athas), Lesser, Air/Earth - Air",
@@ -19733,13 +19733,13 @@
     "Alignment": "Neutral",
     "Armor Class": "4",
     "Climate/Terrain": "Any Air",
-    "Damage/Attack": "2 Hit Dice: 1-6<br>4 Hit Dice: 1-10<br>6 Hit Dice: 1-12",
+    "Damage/Attack": "2 Hit Dice: 1-6 / 4 Hit Dice: 1-10 / 6 Hit Dice: 1-12",
     "Diet": "Air",
     "Frequency": "Rare",
     "Hit Dice": "2, 4, or 6",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "2 HD: Steady (11-12)<br>4-6 HD: Elite (13-14)",
+    "Morale": "2 HD: Steady (11-12) / 4-6 HD: Elite (13-14)",
     "Movement": "Fl 18 (A)",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -19747,9 +19747,9 @@
     "Size": "S-M (2-6'); Height = HD",
     "Special Attacks": "See below",
     "Special Defenses": "+1 or better weapon to hit",
-    "THAC0": "2 Hit Dice: 19<br>4 Hit Dice: 17<br>6 Hit Dice: 15",
+    "THAC0": "2 Hit Dice: 19 / 4 Hit Dice: 17 / 6 Hit Dice: 15",
     "Treasure": "Nil",
-    "XP Value": "2 Hit Dice: 650<br>4 Hit Dice: 975<br>6 Hit Dice: 1,400"
+    "XP Value": "2 Hit Dice: 650 / 4 Hit Dice: 975 / 6 Hit Dice: 1,400"
   },
   {
     "Name": "Elemental (Athas), Lesser, Air/Earth - Earth",
@@ -19757,13 +19757,13 @@
     "Alignment": "Neutral",
     "Armor Class": "4",
     "Climate/Terrain": "Any land",
-    "Damage/Attack": "2 Hit Dice: 1-8<br>4 Hit Dice: 2-16<br>6 Hit Dice: 3-24",
+    "Damage/Attack": "2 Hit Dice: 1-8 / 4 Hit Dice: 2-16 / 6 Hit Dice: 3-24",
     "Diet": "Earth, metals, or gems",
     "Frequency": "Rare",
     "Hit Dice": "2, 4, or 6",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "2 HD: Steady (11-12)<br>4-6 HD: Elite (13-14)",
+    "Morale": "2 HD: Steady (11-12) / 4-6 HD: Elite (13-14)",
     "Movement": "6",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -19771,9 +19771,9 @@
     "Size": "S-M (2-6'); Height = HD",
     "Special Attacks": "See below",
     "Special Defenses": "+1 or better weapon to hit",
-    "THAC0": "2 Hit Dice: 19<br>4 Hit Dice: 17<br>6 Hit Dice: 15",
+    "THAC0": "2 Hit Dice: 19 / 4 Hit Dice: 17 / 6 Hit Dice: 15",
     "Treasure": "Nil",
-    "XP Value": "2 Hit Dice: 420<br>4 Hit Dice: 650<br>6 Hit Dice: 975"
+    "XP Value": "2 Hit Dice: 420 / 4 Hit Dice: 650 / 6 Hit Dice: 975"
   },
   {
     "Name": "Elemental (Athas), Lesser, Fire/Water - Fire",
@@ -19781,13 +19781,13 @@
     "Alignment": "Neutral",
     "Armor Class": "4",
     "Climate/Terrain": "Fire or dry land",
-    "Damage/Attack": "2 Hit Dice: 1-6<br>4 Hit Dice: 1-12<br>6 Hit Dice: 2-20",
+    "Damage/Attack": "2 Hit Dice: 1-6 / 4 Hit Dice: 1-12 / 6 Hit Dice: 2-20",
     "Diet": "Combustibles",
     "Frequency": "Rare",
     "Hit Dice": "2, 4, or 6",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "2 HD: Steady (11-12)<br>4-6 HD: Elite (13-14)",
+    "Morale": "2 HD: Steady (11-12) / 4-6 HD: Elite (13-14)",
     "Movement": "Fl 15 (A)",
     "No. Appearing": "1-3",
     "No. of Attacks": "1",
@@ -19795,9 +19795,9 @@
     "Size": "S-M (2-6') Height = HD",
     "Special Attacks": "Flame tongue",
     "Special Defenses": "+1 or better weapon to hit",
-    "THAC0": "2 Hit Dice: 19<br>4 Hit Dice: 17<br>6 Hit Dice: 15",
+    "THAC0": "2 Hit Dice: 19 / 4 Hit Dice: 17 / 6 Hit Dice: 15",
     "Treasure": "Nil",
-    "XP Value": "2 Hit Dice: 420<br>4 Hit Dice: 650<br>6 Hit Dice: 975"
+    "XP Value": "2 Hit Dice: 420 / 4 Hit Dice: 650 / 6 Hit Dice: 975"
   },
   {
     "Name": "Elemental (Athas), Lesser, Fire/Water - Water",
@@ -19805,13 +19805,13 @@
     "Alignment": "Neutral",
     "Armor Class": "4",
     "Climate/Terrain": "Any water",
-    "Damage/Attack": "2 Hit Dice: 2-12<br>4 Hit Dice: 3-18<br>6 Hit Dice: 4-24",
+    "Damage/Attack": "2 Hit Dice: 2-12 / 4 Hit Dice: 3-18 / 6 Hit Dice: 4-24",
     "Diet": "Any liquids",
     "Frequency": "Rare",
     "Hit Dice": "2, 4, or 6",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "2 HD: Steady (11-12)<br>4-6 HD: Elite (13-14)",
+    "Morale": "2 HD: Steady (11-12) / 4-6 HD: Elite (13-14)",
     "Movement": "6",
     "No. Appearing": "1-3",
     "No. of Attacks": "1",
@@ -19819,9 +19819,9 @@
     "Size": "S-M (2-6') Height = HD",
     "Special Attacks": "Ram",
     "Special Defenses": "+1 or better weapon to hit",
-    "THAC0": "2 Hit Dice: 19<br>4 Hit Dice: 17<br>6 Hit Dice: 15",
+    "THAC0": "2 Hit Dice: 19 / 4 Hit Dice: 17 / 6 Hit Dice: 15",
     "Treasure": "Nil",
-    "XP Value": "2 Hit Dice: 420<br>4 Hit Dice: 650<br>6 Hit Dice: 975"
+    "XP Value": "2 Hit Dice: 420 / 4 Hit Dice: 650 / 6 Hit Dice: 975"
   },
   {
     "Name": "Elemental Beast (Athas), Air",
@@ -20013,7 +20013,7 @@
     "Special Defenses": "+1 or better weapon to hit, immune to water attacks",
     "THAC0": "13",
     "Treasure": "Nil (Fx&#189;)",
-    "XP Value": "2,000<br>Triad: 8,000"
+    "XP Value": "2,000, Triad: 8,000"
   },
   {
     "Name": "Elemental, Air Kin, Aerial Servant",
@@ -20229,7 +20229,7 @@
     "Special Defenses": "Immune to fire",
     "THAC0": "19 to 15",
     "Treasure": "Special",
-    "XP Value": "2+1 HD: 420<br>3+2 HD: 650<br>4+3 HD: 975<br>5+4 HD: 1,400"
+    "XP Value": "2+1 HD: 420 / 3+2 HD: 650 / 4+3 HD: 975 / 5+4 HD: 1,400"
   },
   {
     "Name": "Elemental, Fire Kin - Fire Snake",
@@ -20339,7 +20339,7 @@
     "Hit Dice": "4+4",
     "Intelligence": "Average (8-10)",
     "Magic Resistance": "Nil",
-    "Morale": "Fearless (20) when bound<br>Elite (13-14) when free",
+    "Morale": "Fearless (20) when bound, Elite (13-14) when free",
     "Movement": "12 (or as guarded object moves)",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -20537,11 +20537,11 @@
     "No. of Attacks": "2",
     "Organization": "Pack",
     "Size": "L (10' tall)",
-    "Special Attacks": "Sandstorm, <i>dispel magic</i>",
+    "Special Attacks": "Sandstorm, dispel magic ",
     "Special Defenses": "+2 or better weapon to hit; see below",
     "THAC0": "5",
     "Treasure": "Nil",
-    "XP Value": "16+16 HD: 16,000<br>24+24 HD: 24,000"
+    "XP Value": "16+16 HD: 16,000 / 24+24 HD: 24,000"
   },
   {
     "Name": "Elemental, Composite - Tempest",
@@ -20563,9 +20563,9 @@
     "Size": "G (50' diameter)",
     "Special Attacks": "Whirlwind, lightning",
     "Special Defenses": " 2 or better weapon to hit; see below",
-    "THAC0": "9-10 HD: 11<br>11-12 HD: 9",
+    "THAC0": "9-10 HD: 11 / 11-12 HD: 9",
     "Treasure": "K",
-    "XP Value": "9 HD: 6,000<br>10 HD: 7,000<br>11 HD: 8,000<br>12 HD: 9,000"
+    "XP Value": "9 HD: 6,000 / 10 HD: 7,000 / 11 HD: 8,000 / 12 HD: 9,000"
   },
   {
     "Name": "Elemental, Darkness",
@@ -20579,7 +20579,7 @@
     "Hit Dice": "8. 12 or 16",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "8 or 12 HD: Champion (15-16)<br>16 HD: Fanatic (17)",
+    "Morale": "8 or 12 HD: Champion (15-16) / 16 HD: Fanatic (17)",
     "Movement": "15",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -20587,9 +20587,9 @@
     "Size": "L to H (8-16' tall)",
     "Special Attacks": "Chill, blind",
     "Special Defenses": "+2 or better weapon to hit, hide",
-    "THAC0": "8 HD: 13<br>12 HD: 9<br>16 HD: 5",
+    "THAC0": "8 HD: 13 / 12 HD: 9 / 16 HD: 5",
     "Treasure": "Nil",
-    "XP Value": "8 HD: 3,000<br>12 HD: 7,000<br>16 HD: 11,000"
+    "XP Value": "8 HD: 3,000 / 12 HD: 7,000 / 16 HD: 11,000"
   },
   {
     "Name": "Elemental, Air/Earth - Air",
@@ -20603,7 +20603,7 @@
     "Hit Dice": "8, 12, or 16",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "8-12 Hit Dice: Champion (15-16)<br>16 Hit Dice: Fanatic (17)",
+    "Morale": "8-12 Hit Dice: Champion (15-16) / 16 Hit Dice: Fanatic (17)",
     "Movement": "Fl 36 (A)",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -20611,9 +20611,9 @@
     "Size": "L to H (8-16' tall)",
     "Special Attacks": "See below",
     "Special Defenses": "+2 weapon or better to hit",
-    "THAC0": "8 Hit Dice: 13<br>12 Hit Dice: 9<br>16 Hit Dice: 5",
+    "THAC0": "8 Hit Dice: 13 / 12 Hit Dice: 9 / 16 Hit Dice: 5",
     "Treasure": "Nil",
-    "XP Value": "8 Hit Dice: 3,000<br>12 Hit Dice: 7,000<br>16 Hit Dice: 11,000"
+    "XP Value": "8 Hit Dice: 3,000 / 12 Hit Dice: 7,000 / 16 Hit Dice: 11,000"
   },
   {
     "Name": "Elemental, Air/Earth - Earth",
@@ -20627,7 +20627,7 @@
     "Hit Dice": "8, 12, or 16",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "8-12 Hit Dice: Champion (15-16)<br>16 Hit Dice: Fanatic (17)",
+    "Morale": "8-12 Hit Dice: Champion (15-16) / 16 Hit Dice: Fanatic (17)",
     "Movement": "6",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -20635,9 +20635,9 @@
     "Size": "L to H (8-16' tall)",
     "Special Attacks": "See below",
     "Special Defenses": "+2 weapon or better to hit",
-    "THAC0": "8 Hit Dice: 13<br>12 Hit Dice: 9<br>16 Hit Dice: 5",
+    "THAC0": "8 Hit Dice: 13 / 12 Hit Dice: 9 / 16 Hit Dice: 5",
     "Treasure": "Nil",
-    "XP Value": "8 Hit Dice: 2,000<br>12 Hit Dice: 6,000<br>16 Hit Dice: 10,000"
+    "XP Value": "8 Hit Dice: 2,000 / 12 Hit Dice: 6,000 / 16 Hit Dice: 10,000"
   },
   {
     "Name": "Elemental, Fire/Water - Fire",
@@ -20651,7 +20651,7 @@
     "Hit Dice": "8, 12, or 16",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "8-12 Hit Dice: Champion (15-16)<br>16 Hit Dice: Fanatic (17)",
+    "Morale": "8-12 Hit Dice: Champion (15-16) / 16 Hit Dice: Fanatic (17)",
     "Movement": "12",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -20659,9 +20659,9 @@
     "Size": "L to H (8-16' tall)",
     "Special Attacks": "See below",
     "Special Defenses": "+2 weapon or better to hit",
-    "THAC0": "8 Hit Dice: 13<br>12 Hit Dice: 9<br>16 Hit Dice: 5",
+    "THAC0": "8 Hit Dice: 13 / 12 Hit Dice: 9 / 16 Hit Dice: 5",
     "Treasure": "Nil",
-    "XP Value": "8 Hit Dice: 2,000<br>12 Hit Dice: 6,000<br>16 Hit Dice: 10,000"
+    "XP Value": "8 Hit Dice: 2,000 / 12 Hit Dice: 6,000 / 16 Hit Dice: 10,000"
   },
   {
     "Name": "Elemental, Fire/Water - Water",
@@ -20675,7 +20675,7 @@
     "Hit Dice": "8, 12, or 16",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "8-12 Hit Dice: Champion (15-16)<br>16 Hit Dice: Fanatic (17)",
+    "Morale": "8-12 Hit Dice: Champion (15-16) / 16 Hit Dice: Fanatic (17)",
     "Movement": "6, Sw 18",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -20683,9 +20683,9 @@
     "Size": "L to H (8-16' tall)",
     "Special Attacks": "See below",
     "Special Defenses": "+2 weapon or better to hit",
-    "THAC0": "8 Hit Dice: 12<br>12 Hit Dice: 9<br>16 Hit Dice: 7",
+    "THAC0": "8 Hit Dice: 12 / 12 Hit Dice: 9 / 16 Hit Dice: 7",
     "Treasure": "Nil",
-    "XP Value": "8 Hit Dice: 2,000<br>12 Hit Dice: 6,000<br>16 Hit Dice: 10,000"
+    "XP Value": "8 Hit Dice: 2,000 / 12 Hit Dice: 6,000 / 16 Hit Dice: 10,000"
   },
   {
     "Name": "Elemental of Law, Air/Earth - Anemo",
@@ -20779,9 +20779,9 @@
     "Size": "L (8' wide)",
     "Special Attacks": "Spells",
     "Special Defenses": "See below",
-    "THAC0": "5-6 HD: 15<br>7-8 HD: 13<br>9-10 HD: 11<br>11-12 HD: 9",
+    "THAC0": "5-6 HD: 15 / 7-8 HD: 13 / 9-10 HD: 11 / 11-12 HD: 9",
     "Treasure": "Nil",
-    "XP Value": "5 HD: 1,400<br>6 HD: 2,000<br>7 HD: 3,000<br>8 HD: 4,000<br>9 HD: 5,000<br>10 HD: 6,000<br>11 HD: 7,000<br>12 HD: 8,000"
+    "XP Value": "5 HD: 1,400 / 6 HD: 2,000 / 7 HD: 3,000 / 8 HD: 4,000 / 9 HD: 5,000 / 10 HD: 6,000 / 11 HD: 7,000 / 12 HD: 8,000"
   },
   {
     "Name": "Elemental, Nature",
@@ -20827,9 +20827,9 @@
     "Size": "L to H (8-16' tall)",
     "Special Attacks": "Energy drain",
     "Special Defenses": "+2 weapons to hit",
-    "THAC0": "8 HD: 13<br>12 HD: 9<br>16 HD: 5",
+    "THAC0": "8 HD: 13 / 12 HD: 9 / 16 HD: 5",
     "Treasure": "Nil",
-    "XP Value": "8 HD: 5,000<br>12 HD: 9,000<br>16 HD: 13,000"
+    "XP Value": "8 HD: 5,000 / 12 HD: 9,000 / 16 HD: 13,000"
   },
   {
     "Name": "Elemental, Sandman",
@@ -20933,7 +20933,7 @@
     "Alignment": "Neutral",
     "Armor Class": "6",
     "Climate/Terrain": "Subtropical to tropical jungle and plains",
-    "Damage/Attack": "2-16/2-16/<br>2-12/2-12/2-12",
+    "Damage/Attack": "2-16/2-16/, 2-12/2-12/2-12",
     "Diet": "Herbivore",
     "Frequency": "Common",
     "Hit Dice": "11",
@@ -20957,7 +20957,7 @@
     "Alignment": "Neutral",
     "Armor Class": "5",
     "Climate/Terrain": "Subarctic plains",
-    "Damage/Attack": "3-18/3-18/<br>2-16/2-12/2-12",
+    "Damage/Attack": "3-18/3-18/, 2-16/2-12/2-12",
     "Diet": "Herbivore",
     "Frequency": "Very rare (Common)",
     "Hit Dice": "13",
@@ -20981,7 +20981,7 @@
     "Alignment": "Neutral",
     "Armor Class": "6",
     "Climate/Terrain": "Subarctic plains",
-    "Damage/Attack": "2-16/2-16/<br>2-12/2-12/2-12",
+    "Damage/Attack": "2-16/2-16/, 2-12/2-12/2-12",
     "Diet": "Herbivore",
     "Frequency": "Very rare (Common)",
     "Hit Dice": "12",
@@ -21005,13 +21005,13 @@
     "Alignment": "Neutral",
     "Armor Class": "4",
     "Climate/Terrain": "Temperate to subartic plains and tundra",
-    "Damage/Attack": "3-12/3-12/<br>3-12/3-12",
+    "Damage/Attack": "3-12/3-12/, 3-12/3-12",
     "Diet": "Herbivore",
     "Frequency": "Rare",
     "Hit Dice": "8+4 (10+5)",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "8+4 HD: Unsteady (7)<br>10+5 HD: Average (10)",
+    "Morale": "8+4 HD: Unsteady (7) / 10+5 HD: Average (10)",
     "Movement": "15",
     "No. Appearing": "1-8",
     "No. of Attacks": "4",
@@ -21019,9 +21019,9 @@
     "Size": "L (8-10' tall)",
     "Special Attacks": "Nil",
     "Special Defenses": "Nil",
-    "THAC0": "8+4 HD: 11<br>10+5 HD: 9",
+    "THAC0": "8+4 HD: 11 / 10+5 HD: 9",
     "Treasure": "Nil",
-    "XP Value": "8+4 HD: 2,000<br>10+5 HD: 4,000"
+    "XP Value": "8+4 HD: 2,000 / 10+5 HD: 4,000"
   },
   {
     "Name": "Elemental (Ravenloft) - Blood",
@@ -21035,17 +21035,17 @@
     "Hit Dice": "8, 12, or 16",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "8 HD: Champion (15-16)<br>12 HD: Champion (15-16)<br>16 HD: Fanatic (17-18)",
+    "Morale": "8 HD: Champion (15-16) / 12 HD: Champion (15-16) / 16 HD: Fanatic (17-18)",
     "Movement": "12",
     "No. Appearing": "1",
     "No. of Attacks": "1",
     "Organization": "Solitary",
-    "Size": "8 HD: L (8' tall)<br>12 HD: L (12' tall)<br>16 HD: H (16' tall)",
+    "Size": "8 HD: L (8' tall) / 12 HD: L (12' tall) / 16 HD: H (16' tall)",
     "Special Attacks": "See below",
     "Special Defenses": "See below",
-    "THAC0": "8 HD: 13<br>12 HD: 9<br>16 HD: 5",
+    "THAC0": "8 HD: 13 / 12 HD: 9 / 16 HD: 5",
     "Treasure": "Nil",
-    "XP Value": "8 HD: 3,000<br>12 HD: 7,000<br>16 HD: 11,000"
+    "XP Value": "8 HD: 3,000 / 12 HD: 7,000 /  HD: 11,000"
   },
   {
     "Name": "Elemental (Ravenloft) - Grave",
@@ -21059,17 +21059,17 @@
     "Hit Dice": "8, 12, or 16",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "8 HD: Champion (15-16)<br>12 HD: Champion (15-16)<br>16 HD: Fanatic (17-18)",
+    "Morale": "8 HD: Champion (15-16) / 12 HD: Champion (15-16) / 16 HD: Fanatic (17-18)",
     "Movement": "6",
     "No. Appearing": "1",
     "No. of Attacks": "1",
     "Organization": "Solitary",
-    "Size": "8 HD: L (8' tall)<br>12 HD: L (12' tall)<br>16 HD: H (16' tall)",
+    "Size": "8 HD: L (8' tall) / 12 HD: L (12' tall) / 16 HD: H (16' tall)",
     "Special Attacks": "Sink",
     "Special Defenses": "See below",
-    "THAC0": "8 HD: 13<br>12 HD: 9<br>16 HD: 5",
+    "THAC0": "8 HD: 13 / 12 HD: 9 / 16 HD: 5",
     "Treasure": "Nil",
-    "XP Value": "8 HD: 3,000<br>12 HD: 7,000<br>16 HD: 11,000"
+    "XP Value": "8 HD: 3,000 / 12 HD: 7,000 / 16 HD: 11,000"
   },
   {
     "Name": "Elemental (Ravenloft) - Mist",
@@ -21083,17 +21083,17 @@
     "Hit Dice": "8, 12, or 16",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "8 HD: Champion (15-16)<br>12 HD: Champion (15-16)<br>16 HD: Fanatic (17-18)",
+    "Morale": "8 HD: Champion (15-16) / 12 HD: Champion (15-16) / 16 HD: Fanatic (17-18)",
     "Movement": "Fl 36 (A)",
     "No. Appearing": "1",
     "No. of Attacks": "1",
     "Organization": "Solitary",
-    "Size": "8 HD: L (8' tall)<br>12 HD: L (12' tall)<br>16 HD: H (16' tall)",
-    "Special Attacks": "<i>Infuse evil</i>",
+    "Size": "8 HD: L (8' tall) / 12 HD: L (12' tall) / 16 HD: H (16' tall)",
+    "Special Attacks": "Infuse evil",
     "Special Defenses": "See below",
-    "THAC0": "8 HD: 13<br>12 HD: 9<br>16 HD: 5",
+    "THAC0": "8 HD: 13 / 12 HD: 9 / 16 HD: 5",
     "Treasure": "Nil",
-    "XP Value": "8 HD: 4,000<br>12 HD: 8,000<br>16 HD: 12,000"
+    "XP Value": "8 HD: 4,000 / 12 HD: 8,000 / 16 HD: 12,000"
   },
   {
     "Name": "Elemental (Ravenloft) - Pyre",
@@ -21107,17 +21107,17 @@
     "Hit Dice": "8, 12, or 16",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "8 HD: Champion (15-16)<br>12 HD: Champion (15-16)<br>16 HD: Fanatic (17-18)",
+    "Morale": "8 HD: Champion (15-16) / 12 HD: Champion (15-16) / 16 HD: Fanatic (17-18)",
     "Movement": "12",
     "No. Appearing": "1",
     "No. of Attacks": "1",
     "Organization": "Solitary",
-    "Size": "8 HD: L (8' tall)<br>12 HD: L (12' tall)<br>16 HD: H (16' tall)",
+    "Size": "8 HD: L (8' tall) / 12 HD: L (12' tall) / 16 HD: H (16' tall)",
     "Special Attacks": "See below",
     "Special Defenses": "See below",
-    "THAC0": "8 HD: 13<br>12 HD: 9<br>16 HD: 5",
+    "THAC0": "8 HD: 13 / 12 HD: 9 / 16 HD: 5",
     "Treasure": "Nil",
-    "XP Value": "8 HD: 3,000<br>12 HD: 7,000<br>16 HD: 11,000"
+    "XP Value": "8 HD: 3,000 / 12 HD: 7,000 / 16 HD: 11,000"
   },
   {
     "Name": "Elemental Vermin - Air (Duster)",
@@ -21226,7 +21226,7 @@
     "Frequency": "Uncommon",
     "Hit Dice": "1+1",
     "Intelligence": "High to Supra-genius (14-20)",
-    "Magic Resistance": "90% resistance to <i>sleep</i> and all <i>charm</i>-related spells",
+    "Magic Resistance": "90% resistance to sleep and all charm-related spells",
     "Morale": "Elite (13)",
     "Movement": "12",
     "No. Appearing": "20-200",
@@ -21250,7 +21250,7 @@
     "Frequency": "Very rare",
     "Hit Dice": "1+1",
     "Intelligence": "High to genius (14-18)",
-    "Magic Resistance": "90% to <i>sleep</i> and <i>charm</i> spells",
+    "Magic Resistance": "90% to sleep and charm spells",
     "Morale": "Elite (13)",
     "Movement": "9, Sw 15",
     "No. Appearing": "20-120",
@@ -21285,7 +21285,7 @@
     "Special Defenses": "Surprise",
     "THAC0": "19",
     "Treasure": "Varies",
-    "XP Value": "35<br>Hunting leaders: 65<br>Raiding leaders: 420<br>Psionicists: 650<br>Clerics: 650<br>Psionic leaders 975<br>Chieftains: 2,000"
+    "XP Value": "35 / Hunting leaders: 65 / Raiding leaders: 420 / Psionicists: 650 / Clerics: 650 / Psionic leaders 975 / Chieftains: 2,000"
   },
   {
     "Name": "Elf, Drow - Drider",
@@ -21309,7 +21309,7 @@
     "Special Defenses": "Nil",
     "THAC0": "13",
     "Treasure": "Nx2,Q",
-    "XP Value": "Transformed mages: 3,000<br>Transformed priests: 5,000"
+    "XP Value": "Transformed mages: 3,000 / Transformed priests: 5,000"
   },
   {
     "Name": "Elf, Drow - Drow",
@@ -21333,7 +21333,7 @@
     "Special Defenses": "See below",
     "THAC0": "19",
     "Treasure": "Nx5,Qx2",
-    "XP Value": "Priests: 975<br>Others: 650"
+    "XP Value": "Priests: 975 / Others: 650"
   },
   {
     "Name": "Elf, Grugach",
@@ -21450,7 +21450,7 @@
     "Organization": "Tribal",
     "Size": "M (7')",
     "Special Attacks": "+1 with long sword",
-    "Special Defenses": "<i>Meld into stone</i>, immune to petrification, 90% resistance to <i>sleep</i>, <i>charm</i>, <i>hold</i>, and <i>web</i>, communal powers",
+    "Special Defenses": "Meld into stone, immune to petrification, 90% resistance to sleep, charm, hold, and web, communal powers",
     "THAC0": "19 or better",
     "Treasure": "M + 1 jewelry (U,W)",
     "XP Value": "Variable (420+)"
@@ -21514,7 +21514,7 @@
     "Frequency": "Very rare",
     "Hit Dice": "1+2",
     "Intelligence": "High to supra-genius (14-20)",
-    "Magic Resistance": "90% to <i>sleep</i> and <i>charm</i> spells",
+    "Magic Resistance": "90% to sleep and charm spells",
     "Morale": "Steady (11)",
     "Movement": "12",
     "No. Appearing": "10-40 or 20-240",
@@ -21619,9 +21619,9 @@
     "Size": "S (4' across)",
     "Special Attacks": "Burns",
     "Special Defenses": "Nil",
-    "THAC0": "5 HD: 15<br>7 HD: 13<br>9 HD: 11",
+    "THAC0": "5 HD: 15 / 7 HD: 13 / 9 HD: 11",
     "Treasure": "None",
-    "XP Value": "5 HD: 175<br>7 HD: 420<br>9 HD: 975"
+    "XP Value": "5 HD: 175 / 7 HD: 420 / 9 HD: 975"
   },
   {
     "Name": "Enduk",
@@ -21645,7 +21645,7 @@
     "Special Defenses": "+1 bonus on surprise rolls",
     "THAC0": "15 (leader 13)",
     "Treasure": "P,Q (I)",
-    "XP Value": "650<br>Leader: 1,400"
+    "XP Value": "650, Leader: 1,400"
   },
   {
     "Name": "Entrope",
@@ -21717,7 +21717,7 @@
     "Special Defenses": "Nil",
     "THAC0": "17",
     "Treasure": "Nil",
-    "XP Value": "Average erdland: 120<br>Psionic erdland: 175"
+    "XP Value": "Average erdland: 120 / Psionic erdland: 175"
   },
   {
     "Name": "Ermordenung, Nostalia Romaine",
@@ -21807,9 +21807,9 @@
     "Movement": "Fl 50 (B)",
     "No. Appearing": "1",
     "No. of Attacks": "2",
-    "Organization": "Solitary (symbiont with <a href=\"reigar.html\">reigar</a>)",
+    "Organization": "Solitary (symbiont with reigar)",
     "Size": "G",
-    "Special Attacks": "<i>Jammerscream</i>, grappling",
+    "Special Attacks": "Jammerscream, grappling",
     "Special Defenses": "None",
     "THAC0": "5",
     "Treasure": "Nil",
@@ -21933,7 +21933,7 @@
     "Special Defenses": "Nil",
     "THAC0": "17 (see below)",
     "Treasure": "Nil",
-    "XP Value": "175<br>Combined facet (2 member): 420<br>Combined facet (3 member): 1,400<br>Combined facet (4 member): 3,000<br>Combined facet (5 member): 6,000"
+    "XP Value": "175 / Combined facet (2 member): 420 / Combined facet (3 member): 1,400 / Combined facet (4 member): 3,000 / Combined facet (5 member): 6,000"
   },
   {
     "Name": "Fachan (Savage Coast)",
@@ -22149,7 +22149,7 @@
     "Special Defenses": "Camouflage, spit",
     "THAC0": "Variable (as wizard)",
     "Treasure": "Q,T",
-    "XP Value": "Leafling: 7,000<br>Woodmaster: 8,000<br>Treelord: 9,000"
+    "XP Value": "Leafling: 7,000 / Woodmaster: 8,000 / Treelord: 9,000"
   },
   {
     "Name": "Fainil",
@@ -22653,7 +22653,7 @@
     "Special Defenses": "Nil",
     "THAC0": "17",
     "Treasure": "B,M,Q,S",
-    "XP Value": "Male: 270<br>Female: 175<br>Young: 35<br>Mage 1-4: 420<br>Mage 5-8: 1,400<br>Mage 9-12: 2,000<br>Rakka: 1,400"
+    "XP Value": "Male: 270 / Female: 175 / Young: 35 / Mage 1-4: 420 / Mage 5-8: 1,400 / Mage 9-12: 2,000 / Rakka: 1,400"
   },
   {
     "Name": "Fetch",
@@ -23109,7 +23109,7 @@
     "Special Defenses": "See below",
     "THAC0": "19",
     "Treasure": "K,M (F)",
-    "XP Value": "175<br>Elite: 270<br>Priest: 650<br>Overlord: 420"
+    "XP Value": "175 / Elite: 270 / Priest: 650 / Overlord: 420"
   },
   {
     "Name": "Fireshadow",
@@ -23226,7 +23226,7 @@
     "Organization": "Clusters",
     "Size": "M (4' radius)",
     "Special Attacks": "Poison, fire",
-    "Special Defenses": "<i>Confusion</i>, immune to fire",
+    "Special Defenses": "Confusion, immune to fire",
     "THAC0": "15",
     "Treasure": "Nil",
     "XP Value": "1,400"
@@ -23369,8 +23369,8 @@
     "No. of Attacks": "1",
     "Organization": "Solitary",
     "Size": "T or L (2&rdquo; or 8')",
-    "Special Attacks": "Swallows whole, <i>enlarge</i>",
-    "Special Defenses": "<i>Shrink</i>",
+    "Special Attacks": "Swallows whole, enlarge",
+    "Special Defenses": "Shrink",
     "THAC0": "15",
     "Treasure": "Nil",
     "XP Value": "2,000"
@@ -23435,7 +23435,7 @@
     "Hit Dice": "7-10",
     "Intelligence": "Animal (1)",
     "Magic Resistance": "Nil",
-    "Morale": "7-8 HD: Average (9)<br>9-10 HD: Average (10)",
+    "Morale": "7-8 HD: Average (9) / 9-10 HD: Average (10)",
     "Movement": "Sw 18",
     "No. Appearing": "1",
     "No. of Attacks": "1",
@@ -23443,9 +23443,9 @@
     "Size": "H (16-24' long)",
     "Special Attacks": "Poison spines, swallows whole",
     "Special Defenses": "Nil",
-    "THAC0": "7 HD: 13<br>8-9 HD: 12<br>10 HD: 11",
+    "THAC0": "7 HD: 13 / 8-9 HD: 12 / 10 HD: 11",
     "Treasure": "Nil",
-    "XP Value": "7 HD: 2,000<br>8 HD: 3,000<br>9 HD: 4,000<br>10 HD: 5,000"
+    "XP Value": "7 HD: 2,000 / 8 HD: 3,000 / 9 HD: 4,000 / 10 HD: 5,000"
   },
   {
     "Name": "Fish, Giant - Gar, Giant",
@@ -23645,7 +23645,7 @@
     "Alignment": "Neutral",
     "Armor Class": "6",
     "Climate/Terrain": "Underground Subterranean pools, streams, and rivers",
-    "Damage/Attack": "4-6 HD: 2d4/4-6 hp + poison<br>7-9 HD: 2d6/7-8 hp + poison<br>9 HD: 2d8/9 hp + poison",
+    "Damage/Attack": "4-6 HD: 2d4/4-6 hp + poison / 7-9 HD: 2d6/7-8 hp + poison / 9 HD: 2d8/9 hp + poison",
     "Diet": "Carnivore",
     "Frequency": "Uncommon",
     "Hit Dice": "4 to 9",
@@ -23659,9 +23659,9 @@
     "Size": "S-M (24' long)",
     "Special Attacks": "Poison",
     "Special Defenses": "Stun cloud",
-    "THAC0": "4 HD: 17<br>5-6 HD: 15<br>7-8 HD: 13<br>9 HD: 11",
+    "THAC0": "4 HD: 17 / 5-6 HD: 15 / -8 HD: 13 / 9 HD: 11",
     "Treasure": "Nil",
-    "XP Value": "4 HD: 270<br>5-6 HD: 420<br>7-8 HD: 975<br>9 HD: 1,400"
+    "XP Value": "4 HD: 270 / 5-6 HD: 420 / 7-8 HD: 975 / 9 HD: 1,400"
   },
   {
     "Name": "Fish, Subterranean - Wattley",
@@ -23731,7 +23731,7 @@
     "Size": "S (1-3' long)",
     "Special Attacks": "Heat",
     "Special Defenses": "Nil",
-    "THAC0": "1-2 HD: 19<br>3 HD: 17",
+    "THAC0": "1-2 HD: 19 / 3 HD: 17",
     "Treasure": "Nil (Qx3)",
     "XP Value": "Varies"
   },
@@ -23899,7 +23899,7 @@
     "Size": "H (20-40' long)",
     "Special Attacks": "Swallow whole, paralyze, acid",
     "Special Defenses": "Nil",
-    "THAC0": "7+7 HD: 13<br>8+8,9+9 HD: 11",
+    "THAC0": "7+7 HD: 13 / 8+8,9+9 HD: 11",
     "Treasure": "Nil",
     "XP Value": "4,000-6,000"
   },
@@ -24043,7 +24043,7 @@
     "Size": "M (6' wide)",
     "Special Attacks": "Surprise, dissolve, HD growth",
     "Special Defenses": "Immune to heat and flame",
-    "THAC0": "6 HD: 15<br>7 HD: 13<br>9 HD: 11<br>11 HD: 9",
+    "THAC0": "6 HD: 15 / 7 HD: 13 / 9 HD: 11 / 11 HD: 9",
     "Treasure": "Nil",
     "XP Value": "1,400-2,400"
   },
@@ -24067,9 +24067,9 @@
     "Size": "S (3&#189;-4' tall)",
     "Special Attacks": "Nil",
     "Special Defenses": "Nil",
-    "THAC0": "1-2 HD: 19<br>3 HD: 17",
+    "THAC0": "1-2 HD: 19 / 3 HD: 17",
     "Treasure": "See below",
-    "XP Value": "1 HD: 35<br>2 HD: 120<br>3 HD: 175"
+    "XP Value": "1 HD: 35 / 2 HD: 120 / 3 HD: 175"
   },
   {
     "Name": "Fleas of Madness",
@@ -24187,9 +24187,9 @@
     "Size": "T (2' diameter)",
     "Special Attacks": "Acid",
     "Special Defenses": "Foul smell, spells",
-    "THAC0": "2 HD: 19<br>3-4 HD: 17<br>5 HD: 15",
+    "THAC0": "2 HD: 19 / 3-4 HD: 17 / 5 HD: 15",
     "Treasure": "Nil (U)",
-    "XP Value": "Monk 650<br>Prior: 975 or 1,400<br>Abbot: 3,000"
+    "XP Value": "Monk 650 / Prior: 975 or 1,400 / Abbot: 3,000"
   },
   {
     "Name": "Focoid",
@@ -24234,7 +24234,7 @@
     "Organization": "Solitary",
     "Size": "M (6' tall)",
     "Special Attacks": "Fear aura, lighting bolt (3d6)",
-    "Special Defenses": "+1 or better magical wooden weapon to hit;<br>immune to lightning, cold, poison, and gases; animate dead",
+    "Special Defenses": "+1 or better magical wooden weapon to hit; immune to lightning, cold, poison, and gases; animate dead",
     "THAC0": "Special",
     "Treasure": "Nil",
     "XP Value": "4,000"
@@ -24475,7 +24475,7 @@
     "Size": "H (1 sq. ft. per HD)",
     "Special Attacks": "See below",
     "Special Defenses": "See below",
-    "THAC0": "6 HD: 15<br>7-8 HD: 13<br>9-10 HD: 11<br>11-12 HD: 9<br>13 HD: 7",
+    "THAC0": "6 HD: 15 / 7-8 HD: 13 / 9-10 HD: 11 / 11-12 HD: 9 / 13 HD: 7",
     "Treasure": "Nil",
     "XP Value": "6 HD: 2,000 (+1,000 per additional HD)"
   },
@@ -24523,9 +24523,9 @@
     "Size": "T-M (2-6' long)",
     "Special Attacks": "Tongue and swallow whole",
     "Special Defenses": "Nil",
-    "THAC0": "1 HD: 19<br>2-3 HD: 16",
+    "THAC0": "1 HD: 19 / 2-3 HD: 16",
     "Treasure": "Nil",
-    "XP Value": "1 HD: 120<br>2 HD: 175<br>3 HD: 270"
+    "XP Value": "1 HD: 120 / 2 HD: 175 / 3 HD: 270"
   },
   {
     "Name": "Frog - Killer",
@@ -24642,7 +24642,7 @@
     "Organization": "Solitary",
     "Size": "H (18' tall)",
     "Special Attacks": "Swallow, constriction",
-    "Special Defenses": "Immune to fire, 1 hp/die from electricity (<i>slows</i> 1 rnd.), half damage from blunt weapons",
+    "Special Defenses": "Immune to fire, 1 hp/die from electricity (slows 1 rnd.), half damage from blunt weapons",
     "THAC0": "5",
     "Treasure": "Incidental",
     "XP Value": "21,000"
@@ -24834,7 +24834,7 @@
     "Organization": "Flock",
     "Size": "T (1-2' &ldquo;wingspan&rdquo;)",
     "Special Attacks": "Nil",
-    "Special Defenses": "Struck only by +1 or better weapons, surprise, partial invisibility, immune to own element and <i>sleep</i> and <i>charm</i>",
+    "Special Defenses": "Struck only by +1 or better weapons, surprise, partial invisibility, immune to own element and sleep and charm",
     "THAC0": "19",
     "Treasure": "Nil",
     "XP Value": "175"
@@ -25243,9 +25243,9 @@
     "Size": "L (8-12' tall)",
     "Special Attacks": "See below",
     "Special Defenses": "See below",
-    "THAC0": "8 HD: 13<br>9-10 HD: 11",
+    "THAC0": "8 HD: 13 / 9-10 HD: 11",
     "Treasure": "Q (x3),X",
-    "XP Value": "8 HD: 8,000<br>9 HD: 9,000<br>10 HD: 10,000"
+    "XP Value": "8 HD: 8,000 / 9 HD: 9,000 / 10 HD: 10,000"
   },
   {
     "Name": "Gambado",
@@ -25389,7 +25389,7 @@
     "Special Defenses": "Regeneration",
     "THAC0": "5",
     "Treasure": "Nil",
-    "XP Value": "20 HD: 14,000<br>30 HD: 24,000"
+    "XP Value": "20 HD: 14,000 / 30 HD: 24,000"
   },
   {
     "Name": "Gargantua - Reptilian",
@@ -25649,7 +25649,7 @@
     "No. of Attacks": "3",
     "Organization": "Solitary",
     "Size": "M (7' long)",
-    "Special Attacks": "<i>Scare</i>",
+    "Special Attacks": "Scare",
     "Special Defenses": "+1 or better magical weapon to hit, camouflage",
     "THAC0": "11",
     "Treasure": "Nil",
@@ -25699,9 +25699,9 @@
     "Size": "L (12' long)",
     "Special Attacks": "Mental absorption, spells, magical items",
     "Special Defenses": "Immune to psionics",
-    "THAC0": "5-6 HD: 15<br>7-8 HD: 13<br>9-10 HD: 11",
+    "THAC0": "5-6 HD: 15 / 7-8 HD: 13 / 9-10 HD: 11",
     "Treasure": "V",
-    "XP Value": "5 HD: 8,000<br>6 HD: 9,000<br>7 HD: 10,000<br>8 HD: 11,000<br>9 HD: 12,000<br>10 HD: 13,000"
+    "XP Value": "5 HD: 8,000 / 6 HD: 9,000 / 7 HD: 10,000 / 8 HD: 11,000 / 9 HD: 12,000 / 10 HD: 13,000"
   },
   {
     "Name": "Gaund",
@@ -25749,7 +25749,7 @@
     "Special Defenses": "Immune to acid, fire, and heat",
     "THAC0": "17",
     "Treasure": "O,U",
-    "XP Value": "975<br>Leaders: 1,400"
+    "XP Value": "975, Leaders: 1,400"
   },
   {
     "Name": "Gear Spirit",
@@ -26061,7 +26061,7 @@
     "Special Defenses": "See below",
     "THAC0": "13",
     "Treasure": "Nil",
-    "XP Value": "5,000<br>Noble: 11,000"
+    "XP Value": "5,000, Noble: 11,000"
   },
   {
     "Name": "Genie - Efreeti",
@@ -26685,7 +26685,7 @@
     "Special Defenses": "Nil",
     "THAC0": "19",
     "Treasure": "K (C)",
-    "XP Value": "65<br>Priest: 175"
+    "XP Value": "65, Priest: 175"
   },
   {
     "Name": "Ghost, Animal - Bear",
@@ -26849,7 +26849,7 @@
     "No. of Attacks": "4",
     "Organization": "Doomed group",
     "Size": "L to G (varies)",
-    "Special Attacks": "<a href=\"poltgeis.html\">Poltergeist</a> powers",
+    "Special Attacks": "Poltergeist powers",
     "Special Defenses": "Invisibility",
     "THAC0": "5",
     "Treasure": "A (25% chance)",
@@ -26945,7 +26945,7 @@
     "No. of Attacks": "1",
     "Organization": "Solitary",
     "Size": "S (3' diameter)",
-    "Special Attacks": "Hypnotic display, <i>dominate</i>, energy drain",
+    "Special Attacks": "Hypnotic display, dominate, energy drain",
     "Special Defenses": "Struck only by weapons of +2 or better enchantment",
     "THAC0": "13",
     "Treasure": "B,Z",
@@ -27237,7 +27237,7 @@
     "Special Defenses": "Spell immunities, +1 weapon to hit",
     "THAC0": "15",
     "Treasure": "C",
-    "XP Value": "Common: 1,400<br>1st- to 4th-level mage: 2,000<br>5th- to 7th-level mage: 3,000"
+    "XP Value": "Common: 1,400 / 1st- to 4th-level mage: 2,000 / 5th- to 7th-level mage: 3,000"
   },
   {
     "Name": "Ghul-Kin - Soultaker",
@@ -27381,7 +27381,7 @@
     "Special Defenses": "Surprised only on a 1",
     "THAC0": "5",
     "Treasure": "E,Q (x5)",
-    "XP Value": "10,000<br>Infant: Nil<br>Juvenile, -3: 975<br>Juvenile, -2: 3,000<br>Juvenile, -1: 5,000<br>Spell caster, 1st: 11,000<br>Spell caster, 2nd: 11,000<br>Spell caster, 3rd 11,000<br>Spell caster, 4th: 13,000"
+    "XP Value": "10,000 / Infant: Nil / Juvenile, -3: 975 / Juvenile, -2: 3,000 / Juvenile, -1: 5,000 / Spell caster, 1st: 11,000 / Spell caster, 2nd: 11,000 / Spell caster, 3rd 11,000 / Spell caster, 4th: 13,000"
   },
   {
     "Name": "Giant, Crag",
@@ -27525,7 +27525,7 @@
     "Special Defenses": "Only surprised on a 1, gaseous form",
     "THAC0": "9",
     "Treasure": "D,Qx10",
-    "XP Value": "6,000<br>Warlock: 9,000"
+    "XP Value": "6,000, Warlock: 9,000"
   },
   {
     "Name": "Giant, Firbolg",
@@ -27549,7 +27549,7 @@
     "Special Defenses": "Swat away missiles",
     "THAC0": "9",
     "Treasure": "E,Y (Mx10,Q)",
-    "XP Value": "8,000<br>Shaman: 9,000"
+    "XP Value": "8,000, Shaman: 9,000"
   },
   {
     "Name": "Giant, Fire",
@@ -27573,7 +27573,7 @@
     "Special Defenses": "Resistant to fire",
     "THAC0": "5",
     "Treasure": "E",
-    "XP Value": "8,000<br>Infant: Nil<br>Juvenile, -3: 120<br>Juvenile, -2: 3,400<br>Juvenile, -1: 5,000<br>Shaman/Witch doctor, 1st level spells: 9,000<br>Shaman/Witch doctor, 2nd level spells: 10,000<br>Shaman/Witch doctor, 3rd level spells: 10,000<br>Shaman/Witch doctor, 4th level spells: 12,000"
+    "XP Value": "8,000 / Infant: Nil / Juvenile, -3: 120 / Juvenile, -2: 3,400 / Juvenile, -1: 5,000 / Shaman/Witch doctor, 1st level spells: 9,000 / Shaman/Witch doctor, 2nd level spells: 10,000 / Shaman/Witch doctor, 3rd level spells: 10,000 / Shaman/Witch doctor, 4th level spells: 12,000"
   },
   {
     "Name": "Giant, Fog",
@@ -27645,7 +27645,7 @@
     "Special Defenses": "Impervious to cold",
     "THAC0": "7 or 5",
     "Treasure": "E",
-    "XP Value": "7,000<br>Infant: Nil<br>Juvenile, -3: 270<br>Juvenile, -2: 975<br>Juvenile, -1: 4,000<br>Shaman/Witch doctor, 1st: 8,000<br>Shaman/Witch doctor, 2nd: 8,000<br>Shaman/Witch doctor, 3rd: 8,000<br>Shaman/Witch doctor, 4th+: 10,000"
+    "XP Value": "7,000 / Infant: Nil / Juvenile, -3: 270 / Juvenile, -2: 975 / Juvenile, -1: 4,000 / Shaman/Witch doctor, 1st: 8,000 / Shaman/Witch doctor, 2nd: 8,000 / Shaman/Witch doctor, 3rd: 8,000 / Shaman/Witch doctor, 4th+: 10,000"
   },
   {
     "Name": "Giant, Half-giant",
@@ -27669,7 +27669,7 @@
     "Special Defenses": "Nil",
     "THAC0": "17",
     "Treasure": "Varies",
-    "XP Value": "175<br>Leader: 420<br>Chieftain: 975<br>Psionicist: 2,000"
+    "XP Value": "175 / Leader: 420 / Chieftain: 975 / Psionicist: 2,000"
   },
   {
     "Name": "Giant, Hephaeston",
@@ -27717,7 +27717,7 @@
     "Special Defenses": "Nil",
     "THAC0": "9",
     "Treasure": "D",
-    "XP Value": "3,000<br>Infant: Nil<br>Juvenile, -3: 270<br>Juvenile, -2: 650<br>Juvenile, -1: 2,000"
+    "XP Value": "3,000 / Infant: Nil / Juvenile, -3: 270 / Juvenile, -2: 650 / Juvenile, -1: 2,000"
   },
   {
     "Name": "Gaint, Island",
@@ -27789,7 +27789,7 @@
     "Special Defenses": "Nil",
     "THAC0": "5",
     "Treasure": "E",
-    "XP Value": "7,000<br>Infant: Nil<br>Juvenile: 3,000<br>Shaman: 8,000<br>Shaman, 3rd: 9,000"
+    "XP Value": "7,000 / Infant: Nil / Juvenile: 3,000 / Shaman: 8,000 / Shaman, 3rd: 9,000"
   },
   {
     "Name": "Giant, Ogre",
@@ -27813,7 +27813,7 @@
     "Special Defenses": "See below",
     "THAC0": "7",
     "Treasure": "D",
-    "XP Value": "4,000; 5,000 (clan leader); <br> 175 (juvenile)"
+    "XP Value": "4,000; 5,000 (clan leader); 175 (juvenile)"
   },
   {
     "Name": "Giant, Reef",
@@ -27909,7 +27909,7 @@
     "Special Defenses": "See below",
     "THAC0": "7",
     "Treasure": "D",
-    "XP Value": "7,000<br>Infant: Nil<br>Juvenile, -3: 975<br>Juvenile, -2: 3,000<br>Juvenile, -1: 6,000<br>Elder: 9,000<br>Spell caster: 9,000"
+    "XP Value": "7,000 / Infant: Nil / Juvenile, -3: 975 / Juvenile, -2: 3,000 / Juvenile, -1: 6,000 / Elder: 9,000 / Spell caster: 9,000"
   },
   {
     "Name": "Giant, Storm",
@@ -27933,7 +27933,7 @@
     "Special Defenses": "Impervious to electricity",
     "THAC0": "3",
     "Treasure": "E,Qx10,S",
-    "XP Value": "14,000<br>Infant: Nil<br>Juvenile, -3: 1,400<br>Juvenile, -2: 4,000<br>Juvenile, -1: 7,000<br>Spell caster, 1st: 15,000<br>Spell caster, 2nd: 15,000<br>Spell caster, 3rd: 15,000<br>Spell caster, 4th+: 17,000"
+    "XP Value": "14,000 / Infant: Nil / Juvenile, -3: 1,400 / Juvenile, -2: 4,000 / Juvenile, -1: 7,000 / Spell caster, 1st: 15,000 / Spell caster, 2nd: 15,000 / Spell caster, 3rd: 15,000 / Spell caster, 4th+: 17,000"
   },
   {
     "Name": "Giant (Athas) - Beasthead",
@@ -28121,11 +28121,11 @@
     "No. of Attacks": "6+",
     "Organization": "Solitary",
     "Size": "M (4-7' tall)",
-    "Special Attacks": "<i>Gibbering</i>, spit, bite",
+    "Special Attacks": "Gibbering, spit, bite",
     "Special Defenses": "Ground control",
     "THAC0": "17",
     "Treasure": "Q",
-    "XP Value": "4 HD: 975<br>8 HD: 2,000"
+    "XP Value": "4 HD: 975 / 8 HD: 2,000"
   },
   {
     "Name": "Giff",
@@ -28461,7 +28461,7 @@
     "Special Defenses": "Nil",
     "THAC0": "17",
     "Treasure": "Nil",
-    "XP Value": "120<br>Leader: 175"
+    "XP Value": "120, Leader: 175"
   },
   {
     "Name": "Gnasher, Winged",
@@ -28485,7 +28485,7 @@
     "Special Defenses": "Nil",
     "THAC0": "17",
     "Treasure": "Nil",
-    "XP Value": "270<br> Leader 650"
+    "XP Value": "270,  Leader 650"
   },
   {
     "Name": "Gnoll - Flind",
@@ -28533,7 +28533,7 @@
     "Special Defenses": "Nil",
     "THAC0": "19",
     "Treasure": "D,Qx5,S (L,M)",
-    "XP Value": "35<br>Leaders &amp; guards: 65<br>Chieftain: 120"
+    "XP Value": "35 / Leaders &amp; guards: 65 / Chieftain: 120"
   },
   {
     "Name": "Gnome - Forest",
@@ -28653,7 +28653,7 @@
     "Special Defenses": "See below",
     "THAC0": "17 or 11",
     "Treasure": "A",
-    "XP Value": "Male: 3,000<br>Female: 2,000"
+    "XP Value": "Male: 3,000 / Female: 2,000"
   },
   {
     "Name": "Gnome, Tinker",
@@ -28701,18 +28701,18 @@
     "Special Defenses": "Nil",
     "THAC0": "19",
     "Treasure": "M,N,O (Qx10,S,V)",
-    "XP Value": "175<br>Scout: 270<br>Patriarch: 650<br>Shaman: 975"
+    "XP Value": "175 / Scout: 270 / Patriarch: 650 / Shaman: 975"
   },
   {
     "Name": "Goblin (Cerilia)",
     "Activity Cycle": "Any",
     "Alignment": "Lawful evil",
-    "Armor Class": "Common: 7 (10)<br>Elite: 5 (10)<br>Huge: 3 (10",
+    "Armor Class": "Common: 7 (10) / Elite: 5 (10) / Huge: 3 (10",
     "Climate/Terrain": "Any",
     "Damage/Attack": "By weapon (+1 huge)",
     "Diet": "Carnivore",
     "Frequency": "Common",
-    "Hit Dice": "Common: 1-1<br>Elite: 1+1<br>Huge: 3+l",
+    "Hit Dice": "Common: 1-1 / Elite: 1+1 / Huge: 3+l",
     "Intelligence": "Low to High (8-14)",
     "Magic Resistance": "Nil",
     "Morale": "Average to Elite (10-14)",
@@ -28720,10 +28720,10 @@
     "No. Appearing": "4-24 (60-360 in settlement)",
     "No. of Attacks": "1",
     "Organization": "Clan or tribe",
-    "Size": "Common: S (4' tall)<br>Elite: M (6' tall)<br>Huge: L (7' tall)",
+    "Size": "Common: S (4' tall) / Elite: M (6' tall) / Huge: L (7' tall)",
     "Special Attacks": "Nil",
     "Special Defenses": "Nil",
-    "THAC0": "Common: 20<br>Elite: 19<br>Huge: 17",
+    "THAC0": "Common: 20 / Elite: 19 / Huge: 17",
     "Treasure": "K (C)",
     "XP Value": "35, 65, or 120"
   },
@@ -28749,7 +28749,7 @@
     "Special Defenses": "Nil",
     "THAC0": "20",
     "Treasure": "C (K)",
-    "XP Value": "15<br>Chief &amp; sub-chiefs: 35"
+    "XP Value": "15 / Chief and sub-chiefs: 35"
   },
   {
     "Name": "Goblin Rat",
@@ -28842,7 +28842,7 @@
     "Organization": "Solitary",
     "Size": "L (6' shell, 8-12' tentacles)",
     "Special Attacks": "Blinding, draining",
-    "Special Defenses": "Immune to psionic attack, telepathy, <i>ESP</i>, and all enchantment/charm spells; takes half damage from blunt weapons and cold-based attacks; can regenerate; cannot be surprised in its environment",
+    "Special Defenses": "Immune to psionic attack, telepathy, ESP, and all enchantment/charm spells; takes half damage from blunt weapons and cold-based attacks; can regenerate; cannot be surprised in its environment",
     "THAC0": "11",
     "Treasure": "Special",
     "XP Value": "8,000"
@@ -29345,7 +29345,7 @@
     "No. of Attacks": "2",
     "Organization": "Solitary",
     "Size": "L (9' tall)",
-    "Special Attacks": "<i>Pounding force</i>",
+    "Special Attacks": "Pounding force",
     "Special Defenses": "Spells immunities, +1 weapon to hit",
     "THAC0": "7",
     "Treasure": "Nil",
@@ -29659,9 +29659,9 @@
     "Size": "L to H (8-20')",
     "Special Attacks": "Crushing",
     "Special Defenses": "Immune to fire",
-    "THAC0": "10 HD: 11<br>11-12 HD: 9<br>13 HD: 7",
+    "THAC0": "10 HD: 11 / 11-12 HD: 9 / 13 HD: 7",
     "Treasure": "Nil",
-    "XP Value": "10 HD: 3,000<br>+1,000 per additional Hit Die"
+    "XP Value": "10 HD: 3,000 / +1,000 per additional Hit Die"
   },
   {
     "Name": "Golem VI (Stone Variants) - Stone Guardian",
@@ -30192,7 +30192,7 @@
     "XP Value": "5,000"
   },
   {
-    "Name": "Golem (Savage Coast) - Aelder<br>(lesser golem)",
+    "Name": "Golem (Savage Coast) - Aelder / (lesser golem)",
     "Activity Cycle": "Any",
     "Alignment": "Neutral",
     "Armor Class": "3",
@@ -30216,7 +30216,7 @@
     "XP Value": "2,000"
   },
   {
-    "Name": "Golem (Savage Coast) - Glassine Horror<br>(lesser golem)",
+    "Name": "Golem (Savage Coast) - Glassine Horror / (lesser golem)",
     "Activity Cycle": "Any",
     "Alignment": "Lawful neutral",
     "Armor Class": "2",
@@ -30240,7 +30240,7 @@
     "XP Value": "4,000"
   },
   {
-    "Name": "Golem (Savage Coast) - Golem, Red<br>(greater golem)",
+    "Name": "Golem (Savage Coast) - Golem, Red (greater golem)",
     "Activity Cycle": "Any",
     "Alignment": "Neutral",
     "Armor Class": "1",
@@ -30264,7 +30264,7 @@
     "XP Value": "14,000"
   },
   {
-    "Name": "Golem (Savage Coast) - Juggernaut, Hulean<br>(greater golem)",
+    "Name": "Golem (Savage Coast) - Juggernaut, Hulean (greater golem)",
     "Activity Cycle": "Any",
     "Alignment": "Neutral",
     "Armor Class": "0",
@@ -30305,8 +30305,8 @@
     "No. of Attacks": "1",
     "Organization": "Solitary",
     "Size": "L (10' long/wide)",
-    "Special Attacks": "Engulfing, <i>wall of ice</i>",
-    "Special Defenses": "Immune to paralysis, poison, acid, cold, gas, <i>caused</i> wounds; Strength or energy drain; <i>sleep</i>, <i>charm</i>, and <i>hold</i> spells; and water-based creatures, spells, and effects",
+    "Special Attacks": "Engulfing, wall of ice",
+    "Special Defenses": "Immune to paralysis, poison, acid, cold, gas, caused wounds; Strength or energy drain; sleep, charm, and hold spells; and water-based creatures, spells, and effects",
     "THAC0": "9",
     "Treasure": "Nil",
     "XP Value": "6,000"
@@ -30909,7 +30909,7 @@
     "Special Defenses": "See below",
     "THAC0": "20",
     "Treasure": "Per 10 individuals O,Q; in lair C,Q(x5),S,T",
-    "XP Value": "Normal: 15<br>Elder: 65"
+    "XP Value": "Normal: 15 / Elder: 65"
   },
   {
     "Name": "Gremlin - Fremlin",
@@ -30945,9 +30945,9 @@
     "Diet": "Blood",
     "Frequency": "Very rare",
     "Hit Dice": "2 hp",
-    "Intelligence": "Average <nobr>(8-10)</nobr>",
+    "Intelligence": "Average (8-10)",
     "Magic Resistance": "Nil",
-    "Morale": "Average <nobr>(8-10)</nobr>",
+    "Morale": "Average (8-10)",
     "Movement": "6, Fl 18 (B)",
     "No. Appearing": "1-4",
     "No. of Attacks": "1",
@@ -30995,7 +30995,7 @@
     "Hit Dice": "1-1",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
-    "Morale": "Average <nobr>(8-10)</nobr>",
+    "Morale": "Average (8-10)",
     "Movement": "3",
     "No. Appearing": "6-24",
     "No. of Attacks": "1",
@@ -31019,7 +31019,7 @@
     "Hit Dice": "1-1",
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "See below",
-    "Morale": "Average <nobr>(8-10)</nobr>",
+    "Morale": "Average (8-10)",
     "Movement": "21",
     "No. Appearing": "1-8",
     "No. of Attacks": "Nil",
@@ -31098,7 +31098,7 @@
     "Organization": "Solitary",
     "Size": "M (2' tall at shoulder)",
     "Special Attacks": "Howl, surprise, turns undead",
-    "Special Defenses": "Ethereal by day, never surprised, +1 or better magical weapon to hit, <i>protection from evil</i> aura, <i>detect evil</i>",
+    "Special Defenses": "Ethereal by day, never surprised, +1 or better magical weapon to hit, protection from evil aura, detect evil",
     "THAC0": "17",
     "Treasure": "Nil",
     "XP Value": "975"
@@ -31125,7 +31125,7 @@
     "Special Defenses": "See below",
     "THAC0": "19",
     "Treasure": "Individual K,L,M; B in Lair",
-    "XP Value": "Normal: 35<br>Leader: 120<br>Champion: 175"
+    "XP Value": "Normal: 35 / Leader: 120 / Champion: 175"
   },
   {
     "Name": "Grim Reaper",
@@ -31173,7 +31173,7 @@
     "Special Defenses": "Nil",
     "THAC0": "19",
     "Treasure": "Qx4,I",
-    "XP Value": "Normal: 65<br>Mates: 175<br>Tribe mother: 270"
+    "XP Value": "Normal: 65 / Mates: 175 / Tribe mother: 270"
   },
   {
     "Name": "Grist",
@@ -31341,7 +31341,7 @@
     "Special Defenses": "Nil",
     "THAC0": "19",
     "Treasure": "C",
-    "XP Value": "Normal: 120<br>Tadpole: 7<br>Juvenile: 35<br>Shaman, 1st or 2nd: 175<br>Shaman, 3rd: 270"
+    "XP Value": "Normal: 120 / Tadpole: 7 / Juvenile: 35 / Shaman, 1st or 2nd: 175 / Shaman, 3rd: 270"
   },
   {
     "Name": "Grythok",
@@ -31701,7 +31701,7 @@
     "Special Defenses": "Nil",
     "THAC0": "17",
     "Treasure": "K (W)",
-    "XP Value": "120<br>Cockrobin: 270<br>Rooster: 1,400"
+    "XP Value": "120 / Cockrobin: 270 / Rooster: 1,400"
   },
   {
     "Name": "Hadozee",
@@ -31817,7 +31817,7 @@
     "No. of Attacks": "2",
     "Organization": "Solitary",
     "Size": "M",
-    "Special Attacks": "<i>Staff of frost</i>",
+    "Special Attacks": "Staff of frost",
     "Special Defenses": "See below",
     "THAC0": "11",
     "Treasure": "Nil (D)",
@@ -31841,11 +31841,11 @@
     "No. of Attacks": "1",
     "Organization": "Solitary",
     "Size": "M (3' tall plus 3-foot tail)",
-    "Special Attacks": "Ogre strength (+3 to attack rolls, +6 damage), <i>charm gaze</i>, ghastly visage, spells",
-    "Special Defenses": "<i>Change self</i>, immune to charms, spells",
-    "THAC0": "19 (2 HD)<br>17 (3 &amp; 4 HD)<br>15 (5 &amp; 6 HD)<br>13 (7 &amp; 8 HD)",
+    "Special Attacks": "Ogre strength (+3 to attack rolls, +6 damage), charm gaze, ghastly visage, spells",
+    "Special Defenses": "Change self, immune to charms, spells",
+    "THAC0": "19 (2 HD) / 17 (3 and 4 HD) / 15 (5 and 6 HD) / 13 (7 and 8 HD)",
     "Treasure": "B,C,Y",
-    "XP Value": "2 Dice: 975<br>3 Hit Dice: 1,400<br>4 Hit Dice: 2,000<br>5 Hit Dice: 3,000<br>6 Hit Dice: 4,000<br>7 Hit Dice: 5,000<br>8 Hit Dice: 6,000"
+    "XP Value": "2 Dice: 975 / 3 Hit Dice: 1,400 / 4 Hit Dice: 2,000 / 5 Hit Dice: 3,000 / 6 Hit Dice: 4,000 / 7 Hit Dice: 5,000 / 8 Hit Dice: 6,000"
   },
   {
     "Name": "Hag, Spectral - Annis",
@@ -31939,9 +31939,9 @@
     "Size": "M (5' tall)",
     "Special Attacks": "Nil",
     "Special Defenses": "Immune to water attacks",
-    "THAC0": "1 HD: 19<br>2 HD: 19<br>3 HD: 17<br>4 HD: 17",
+    "THAC0": "1 HD: 19 / 2 HD: 19 / 3 HD: 17 / 4 HD: 17",
     "Treasure": "U",
-    "XP Value": "1 HD: 35<br>2 HD: 65<br>3 HD: 120<br>4 HD: 175"
+    "XP Value": "1 HD: 35 / 2 HD: 65 / 3 HD: 120 / 4 HD: 175"
   },
   {
     "Name": "Hakeashar",
@@ -31989,7 +31989,7 @@
     "Special Defenses": "Special resistances",
     "THAC0": "19",
     "Treasure": "Varies",
-    "XP Value": "Normal: 65<br>Hunter-chief: 120<br>Forest-chief: 270<br>Tribe-chief: 2,000"
+    "XP Value": "Normal: 65 / Hunter-chief: 120 / Forest-chief: 270 / Tribe-chief: 2,000"
   },
   {
     "Name": "Halfling - Hairfoot",
@@ -32085,7 +32085,7 @@
     "Special Defenses": "Nil",
     "THAC0": "15",
     "Treasure": "P (D)",
-    "XP Value": "Non-psionicist: 270<br>Psionicist: 420"
+    "XP Value": "Non-psionicist: 270 / Psionicist: 420"
   },
   {
     "Name": "Hama",
@@ -32225,7 +32225,7 @@
     "No. of Attacks": "3",
     "Organization": "Flock",
     "Size": "M (6')",
-    "Special Attacks": "Singing and <i>charm</i>",
+    "Special Attacks": "Singing and charm",
     "Special Defenses": "Nil",
     "THAC0": "13",
     "Treasure": "R (C)",
@@ -32637,7 +32637,7 @@
     "Special Defenses": "Psionics",
     "THAC0": "19",
     "Treasure": "O (C)",
-    "XP Value": "Warrior: 65<br>Priest: 175<br>Mage: 175"
+    "XP Value": "Warrior: 65 / Priest: 175 / Mage: 175"
   },
   {
     "Name": "Helborn",
@@ -32707,9 +32707,9 @@
     "Size": "M",
     "Special Attacks": "Breathe fire",
     "Special Defenses": "See below",
-    "THAC0": "4 HD: 17<br>5-6 HD: 15<br>7 HD: 13",
+    "THAC0": "4 HD: 17 / 5-6 HD: 15 / 7 HD: 13",
     "Treasure": "C",
-    "XP Value": "4 HD: 420<br>5 HD: 650<br>6 HD: 975<br>7 HD: 1,400"
+    "XP Value": "4 HD: 420 / 5 HD: 650 / 6 HD: 975 / 7 HD: 1,400"
   },
   {
     "Name": "Helmed Horror",
@@ -32776,7 +32776,7 @@
     "No. Appearing": "1-20",
     "No. of Attacks": "1",
     "Organization": "Solitary or band",
-    "Size": "Human or biped: M (5-6' tall)<br>Animal form: S (2-3' long)",
+    "Size": "Human or biped: M (5-6' tall) / Animal form: S (2-3' long)",
     "Special Attacks": "See below",
     "Special Defenses": "See below",
     "THAC0": "20",
@@ -33307,9 +33307,9 @@
     "Size": "L-H (10-20' long)",
     "Special Attacks": "Acid",
     "Special Defenses": "Nil",
-    "THAC0": "6 HD: 15<br>7-8 HD: 13<br>9-10 HD: 11<br>11-12 HD: 9",
+    "THAC0": "6 HD: 15 / 7-8 HD: 13 / 9-10 HD: 11 / 11-12 HD: 9",
     "Treasure": "Nil",
-    "XP Value": "6 HD: 420<br>7 HD: 650<br>8 HD: 975<br>9 HD: 1,400<br>11 HG: 3,000<br>12 HD: 4,000<br>10 HD: 2,000"
+    "XP Value": "6 HD: 420 / 7 HD: 650 / 8 HD: 975 / 9 HD: 1,400 / 11 HG: 3,000 / 12 HD: 4,000 / 10 HD: 2,000"
   },
   {
     "Name": "Hermit, Sea",
@@ -33464,7 +33464,7 @@
     "Damage/Attack": "1d4/1d4/1d6 or 1d6/hy weapon ",
     "Diet": "Carnivore",
     "Frequency": "Rare",
-    "Hit Dice": "As host+1d4 hp or 2+1,<br>whichever is greater",
+    "Hit Dice": "As host+1d4 hp or 2+1, whichever is greater",
     "Intelligence": "Semi- (4)",
     "Magic Resistance": "Nil",
     "Morale": "Fearless (20)",
@@ -33474,7 +33474,7 @@
     "Organization": "Colony",
     "Size": "M (4&#189;-7' tall)",
     "Special Attacks": "Hivemind powers",
-    "Special Defenses": "Immune to vision-<br>affecting spells",
+    "Special Defenses": "Immune to vision-affecting spells",
     "THAC0": "As host or 19",
     "Treasure": "O (I)",
     "XP Value": "270 or by host"
@@ -33498,7 +33498,7 @@
     "Organization": "Colony",
     "Size": "M (7' long)",
     "Special Attacks": "Paralysis, hivemind powers",
-    "Special Defenses": "Immune to vision-<br>affecting spells",
+    "Special Defenses": "Immune to vision-affecting spells",
     "THAC0": "13",
     "Treasure": "N,O,U,V (I)",
     "XP Value": "4,000"
@@ -33522,7 +33522,7 @@
     "Organization": "Colony",
     "Size": "M (7' tall)",
     "Special Attacks": "Paralysis, hivemind powers",
-    "Special Defenses": "Immune to vision-<br>affecting spells",
+    "Special Defenses": "Immune to vision-affecting spells",
     "THAC0": "15",
     "Treasure": "N,U,V (I)",
     "XP Value": "1,400"
@@ -33546,7 +33546,7 @@
     "Organization": "Colony",
     "Size": "L (12' long)",
     "Special Attacks": "Poisonous gas",
-    "Special Defenses": "Immune to vision-<br>affecting spells",
+    "Special Defenses": "Immune to vision-affecting spells",
     "THAC0": "9",
     "Treasure": "N,O,U,V (I)",
     "XP Value": "4,000"
@@ -33570,7 +33570,7 @@
     "Organization": "Colony",
     "Size": "M (5' tall)",
     "Special Attacks": "Paralysis, hivemind powers",
-    "Special Defenses": "Immune to vision-<br>affecting spells",
+    "Special Defenses": "Immune to vision-affecting spells",
     "THAC0": "17",
     "Treasure": "N,O,U (J)",
     "XP Value": "420"
@@ -33597,7 +33597,7 @@
     "Special Defenses": "Nil",
     "THAC0": "19",
     "Treasure": "E",
-    "XP Value": "Normal: 35<br>Sub-chief: 65<br>Chief: 120"
+    "XP Value": "Normal: 35 / Sub-chief: 65 / Chief: 120"
   },
   {
     "Name": "Hobgoblin",
@@ -33621,7 +33621,7 @@
     "Special Defenses": "Nil",
     "THAC0": "19",
     "Treasure": "J,M,D; (Qx5)",
-    "XP Value": "35<br>Sub-chief: 65<br>Chief: 120"
+    "XP Value": "35 / Sub-chief: 65 / Chief: 120"
   },
   {
     "Name": "Hollyphant",
@@ -33789,7 +33789,7 @@
     "Special Defenses": "Nil",
     "THAC0": "17",
     "Treasure": "Nil (D)",
-    "XP Value": "270<br>Young: 15"
+    "XP Value": "270, Young: 15"
   },
   {
     "Name": "Horde",
@@ -33835,7 +33835,7 @@
     "Size": "S, M, or L",
     "Special Attacks": "See below",
     "Special Defenses": "See below",
-    "THAC0": "6+3 HD: 15<br>7+2 and 8+1 HD: 13<br>9 HD: 11",
+    "THAC0": "6+3 HD: 15 / 7+2 and 8+1 HD: 13 / 9 HD: 11",
     "Treasure": "Nil",
     "XP Value": "Varies by hordling"
   },
@@ -33861,7 +33861,7 @@
     "Special Defenses": "Intense heat",
     "THAC0": "5",
     "Treasure": "Nil",
-    "XP Value": "30 HD: 26,000<br>(add 1,000/HD above 30)"
+    "XP Value": "30 HD: 26,000 (add 1,000/HD above 30)"
   },
   {
     "Name": "Hornet, Giant - Hornet",
@@ -34459,9 +34459,9 @@
     "Size": "M (5' tall, 15' wingspan)",
     "Special Attacks": "Spells",
     "Special Defenses": "Allies",
-    "THAC0": "4 HD: 17<br>5-6 HD: 15<br>7-8 HD: 13<br>9-10 HD: 11<br>11-12 HD: 9<br>13-14 HD: 7<br>15 HD: 5",
+    "THAC0": "4 HD: 17 / 5-6 HD: 15 / 7-8 HD: 13 / 9-10 HD: 11 / 11-12 HD: 9 / 13-14 HD: 7 / 15 HD: 5",
     "Treasure": "O (I)",
-    "XP Value": "4 Hit Dice: 420<br>5 Hit Dice: 650<br>6 Hit Dice: 975<br>7 Hit Dice: 1,400<br>8 Hit Dice: 2,000<br>9 Hit Dice: 3,000<br>10 Hit Dice: 4,000<br>11 Hit Dice: 5,000<br>12 Hit Dice: 6,000<br>13 Hit Dice: 7,000<br>14 Hit Dice: 8,000<br>15 Hit Dice: 9,000"
+    "XP Value": "4 Hit Dice: 420 / 5 Hit Dice: 650 / 6 Hit Dice: 975 / 7 Hit Dice: 1,400 / 8 Hit Dice: 2,000 / 9 Hit Dice: 3,000 / 10 Hit Dice: 4,000 / 11 Hit Dice: 5,000 / 12 Hit Dice: 6,000 / 13 Hit Dice: 7,000 / 14 Hit Dice: 8,000 / 15 Hit Dice: 9,000"
   },
   {
     "Name": "Hsing-sing",
@@ -34941,7 +34941,7 @@
     "Special Defenses": "See below",
     "THAC0": "19 or better",
     "Treasure": "L,M,U",
-    "XP Value": "Slayer Warrior (2 HD): 270<br>Slayer Knight (7 HD): 5,000<br>Slayer Mage (5 HD): 4,000"
+    "XP Value": "Slayer Warrior (2 HD): 270 / Slayer Knight (7 HD): 5,000 / Slayer Mage (5 HD): 4,000"
   },
   {
     "Name": "Human, Ka'Ardan",
@@ -35249,7 +35249,7 @@
     "No. of Attacks": "1",
     "Organization": "Clan",
     "Size": "M (6' tall)",
-    "Special Attacks": "<i>Evil eye</i>",
+    "Special Attacks": "Evil eye",
     "Special Defenses": "Prognostication",
     "THAC0": "20",
     "Treasure": "J,K,M (A)",
@@ -35299,9 +35299,9 @@
     "Size": "T-M (2&rdquo;-5')",
     "Special Attacks": "Spells",
     "Special Defenses": "See below",
-    "THAC0": "3-4 HD: 17<br>5-6 HD: 15<br>7 HD: 13",
+    "THAC0": "3-4 HD: 17 / 5-6 HD: 15 / 7 HD: 13",
     "Treasure": "Special",
-    "XP Value": "3 HD: 650<br>4 HD: 975<br>5 HD: 1,400<br>6 HD: 3,000<br>7 HD: 2,000"
+    "XP Value": "3 HD: 650 / 4 HD: 975 / 5 HD: 1,400 / 6 HD: 3,000 / 7 HD: 2,000"
   },
   {
     "Name": "Hurdu",
@@ -35325,7 +35325,7 @@
     "Special Defenses": "Nil",
     "THAC0": "18",
     "Treasure": "Nil",
-    "XP Value": "100<br>Chieftain: 250"
+    "XP Value": "100, Chieftain: 250"
   },
   {
     "Name": "Hutaakan - Other",
@@ -35418,10 +35418,10 @@
     "Organization": "Tribe",
     "Size": "S (3' tall)",
     "Special Attacks": "Sleep arrows",
-    "Special Defenses": "+4 to all saving throws, immune to poison, limited thief abilities in forest terrain, <i>continual light</i>, <i>ventriloquism</i>, <i>pass without trace</i>",
+    "Special Defenses": "+4 to all saving throws, immune to poison, limited thief abilities in forest terrain, continual light, ventriloquism, pass without trace",
     "THAC0": "19",
     "Treasure": "I,K",
-    "XP Value": "420<br>Leader 4th: 1,400<br>Leader 5th: 2,000<br>Leader 6th: 3,000<br>Leader 7th: 4,000<br>Guard: 975<br>Ranger: 3,000"
+    "XP Value": "420 / Leader 4th: 1,400 / Leader 5th: 2,000 / Leader 6th: 3,000 / Leader 7th: 4,000 / Guard: 975 / Ranger: 3,000"
   },
   {
     "Name": "Hydra - Cryohydra",
@@ -35997,7 +35997,7 @@
     "Special Defenses": "Nil",
     "THAC0": "20",
     "Treasure": "S (C,N)",
-    "XP Value": "65<br>Leader: 120<br>Chief: 175<br>Shaman: 270"
+    "XP Value": "65 / Leader: 120 / Chief: 175 / Shaman: 270"
   },
   {
     "Name": "Imp, Wishing",
@@ -36429,7 +36429,7 @@
     "Special Defenses": "Spell immunities",
     "THAC0": "13",
     "Treasure": "Nil",
-    "XP Value": "7 HD: 1,400<br>8 HD: 2,000"
+    "XP Value": "7 HD: 1,400 / 8 HD: 2,000"
   },
   {
     "Name": "Ixitxachitl, Ixzan",
@@ -36437,7 +36437,7 @@
     "Alignment": "Chaotic evil",
     "Armor Class": "4",
     "Climate/Terrain": "Underdark lakes",
-    "Damage/Attack": "1+1 to 3+3 HD 2d4 (+1d8)<br>4+4 to 6+6 HD 3d4 (+1d10)",
+    "Damage/Attack": "1+1 to 3+3 HD 2d4 (+1d8) / 4+4 to 6+6 HD 3d4 (+1d10)",
     "Diet": "Omnivore",
     "Frequency": "Very rare",
     "Hit Dice": "1+1 to 6+6",
@@ -36448,12 +36448,12 @@
     "No. Appearing": "3-10 (1d8+2) or 20-101 (9d10+11) in lair",
     "No. of Attacks": "1 (2)",
     "Organization": "Tribal",
-    "Size": "1+1 to 3+3 HD M (5' wingspan)<br>4+4 to 6+6 HD L (7-10' wingspan)",
+    "Size": "1+1 to 3+3 HD M (5' wingspan) / 4+4 to 6+6 HD L (7-10' wingspan)",
     "Special Attacks": "Nil (see below)",
     "Special Defenses": "Half damage from blunt weapons (unless +3 or above), +4 saving throw bonus against illusions and Elemental Water",
-    "THAC0": "1+1, 2+2 HD: 19<br>3+3 HD 17<br>4+4, 5+5 HD 15<br>6+6 HD 13",
+    "THAC0": "1+1, 2+2 HD: 19 / 3+3 HD 17 / 4+4, 5+5 HD 15 / 6+6 HD 13",
     "Treasure": "Nil (P,R,S)",
-    "XP Value": "1+1 HD 65<br>2+2 HD 120<br>3+3 HD 175<br>4+4 HD 270<br>5+5 Hi3 420<br>6+6 HD 650+ (see below)"
+    "XP Value": "1+1 HD 65 / 2+2 HD 120 / 3+3 HD 175 / 4+4 HD 270 / 5+5 Hi3 420 / 6+6 HD 650+ (see below)"
   },
   {
     "Name": "Ixitxachitl",
@@ -36475,9 +36475,9 @@
     "Size": "S-L (3-8' wingspan)",
     "Special Attacks": "Spells, see below",
     "Special Defenses": "Spells, see below",
-    "THAC0": "1+1 and 2+2 HD: 19<br>3+3 HD: 17<br>4+4 HD: 15",
+    "THAC0": "1+1 and 2+2 HD: 19 / 3+3 HD: 17 / 4+4 HD: 15",
     "Treasure": "P,R,S (in lair only)",
-    "XP Value": "35<br>1+1 HD priest: 65<br>2+2 HD priest: 120<br>3+3 HD guardian priest: 270<br>4+4 HD high priest: 420<br>2+2 HD vampiric: 420<br>8+8 HD greater vampiric: 4,000"
+    "XP Value": "35 / 1+1 HD priest: 65 / 2+2 HD priest: 120 / 3+3 HD guardian priest: 270 / 4+4 HD high priest: 420 / 2+2 HD vampiric: 420 / 8+8 HD greater vampiric: 4,000"
   },
   {
     "Name": "Jabberwock",
@@ -36497,7 +36497,7 @@
     "No. of Attacks": "1",
     "Organization": "Solitary",
     "Size": "G (30' body, 25' tail)",
-    "Special Attacks": "<i>Burble</i>, eyebeams, fear aura, grasp, flurry attack",
+    "Special Attacks": "Burble, eyebeams, fear aura, grasp, flurry attack",
     "Special Defenses": "Immune to non-vorpal weapons",
     "THAC0": "5",
     "Treasure": "Incidental",
@@ -36568,7 +36568,7 @@
     "No. Appearing": "1-4",
     "No. of Attacks": "1",
     "Organization": "Pack",
-    "Size": "S (3' long) as a jackal<br>M (6' tall) as a human or hybrid",
+    "Size": "S (3' long) as a jackal / M (6' tall) as a human or hybrid",
     "Special Attacks": "Gaze causes sleep",
     "Special Defenses": "Hit only by iron and +1 or better magical weapons",
     "THAC0": "17",
@@ -36811,9 +36811,9 @@
     "Size": "S to L (2&#189;-10')",
     "Special Attacks": "Paralyzation",
     "Special Defenses": "Transparent",
-    "THAC0": "1-2 HD: 19<br>3-4 HD: 17",
+    "THAC0": "1-2 HD: 19 / 3-4 HD: 17",
     "Treasure": "Nil",
-    "XP Value": "1 HD: 65<br>2 HD: 120<br>3 HD: 175<br>4 HD: 270"
+    "XP Value": "1 HD: 65 / 2 HD: 120 / 3 HD: 175 / 4 HD: 270"
   },
   {
     "Name": "Jhakar",
@@ -36981,7 +36981,7 @@
     "Special Defenses": "See below",
     "THAC0": "15",
     "Treasure": "Nil",
-    "XP Value": "975<br>With special attack: 1,400"
+    "XP Value": "975 / With special attack: 1,400"
   },
   {
     "Name": "Kaisharga",
@@ -37483,9 +37483,9 @@
     "Size": "M (5-7' tall)",
     "Special Attacks": "Nil",
     "Special Defenses": "See below",
-    "THAC0": "2 HD: 19<br>3-4 HD: 17<br>5 HD: 15",
+    "THAC0": "2 HD: 19 / 3-4 HD: 17 / 5 HD: 15",
     "Treasure": "F",
-    "XP Value": "2 HD: 175<br>3 HD: 420<br>4 HD: 650<br>5 HD: 975"
+    "XP Value": "2 HD: 175 / 3 HD: 420 / 4 HD: 650 / 5 HD: 975"
   },
   {
     "Name": "Kercpa",
@@ -37509,7 +37509,7 @@
     "Special Defenses": "Surprised only on 1, save as 7 HD (Dex 19 bonus); dodge missiles",
     "THAC0": "19",
     "Treasure": "Nil",
-    "XP Value": "1 HD: 65<br>2 HD: 120<br>3 HD: 175<br>4 HD: 270<br>Shaman 1-4: 175<br>Shaman 5th: 270<br>Wizard: +1 HD"
+    "XP Value": "1 HD: 65 / 2 HD: 120 / 3 HD: 175 / 4 HD: 270 / Shaman 1-4: 175 / Shaman 5th: 270 / Wizard: +1 HD"
   },
   {
     "Name": "Kes'trekel",
@@ -37845,7 +37845,7 @@
     "Special Defenses": "Nil",
     "THAC0": "9",
     "Treasure": "Nil",
-    "XP Value": "Adults: 6,000<br>Young: 650"
+    "XP Value": "Adults: 6,000 / Young: 650"
   },
   {
     "Name": "Kluzd",
@@ -37941,7 +37941,7 @@
     "Special Defenses": "Nil",
     "THAC0": "20",
     "Treasure": "J,O (Qx5)",
-    "XP Value": "7<br>Chiefs/Guards: 15<br>Shamans/Witchdoctors: 35"
+    "XP Value": "7 / Chiefs/Guards: 15 / Shamans/Witchdoctors: 35"
   },
   {
     "Name": "Kobold",
@@ -37965,7 +37965,7 @@
     "Special Defenses": "Nil",
     "THAC0": "20",
     "Treasure": "J,O (Qx5)",
-    "XP Value": "7<br>Chiefs/guards: 15"
+    "XP Value": "7, Chiefs/guards: 15"
   },
   {
     "Name": "Kobold - Urd",
@@ -37987,9 +37987,9 @@
     "Size": "S (3' tall)",
     "Special Attacks": "Rock bomb",
     "Special Defenses": "Nil",
-    "THAC0": "2 HD: 19<br>3-4 HD: 17<br>5 HD: 15",
+    "THAC0": "2 HD: 19 / 3-4 HD: 17 / 5 HD: 15",
     "Treasure": "J (Qx5)",
-    "XP Value": "2 HD: 35<br>3 HD: 65<br>4 HD: 120<br>5 HD: 175"
+    "XP Value": "2 HD: 35 / 3 HD: 65 / 4 HD: 120 / 5 HD: 175"
   },
   {
     "Name": "Kopru",
@@ -38349,7 +38349,7 @@
     "Special Defenses": "See below",
     "THAC0": "See below",
     "Treasure": "Nil",
-    "XP Value": "3 HD: 1,000<br>4 HD: 2,000<br>5 HD: 3,000<br>6 HD: 4,000"
+    "XP Value": "3 HD: 1,000 / 4 HD: 2,000 / 5 HD: 3,000 / 6 HD: 4,000"
   },
   {
     "Name": "Kuo-Toa",
@@ -38373,7 +38373,7 @@
     "Special Defenses": "See below",
     "THAC0": "19",
     "Treasure": "L,M,N (Z)",
-    "XP Value": "Normal: 175<br>Captain: 3,000<br>Lieutenant: 1,400<br>Whip: 420<br>Monitor: 975"
+    "XP Value": "Normal: 175 / Captain: 3,000 / Lieutenant: 1,400 / Whip: 420 / Monitor: 975"
   },
   {
     "Name": "Kupuk",
@@ -38851,9 +38851,9 @@
     "Size": "S to M (2-5')",
     "Special Attacks": "Drain blood",
     "Special Defenses": "Nil",
-    "THAC0": "1-2 HD: 19<br>3-4 HD: 17",
+    "THAC0": "1-2 HD: 19 / 3-4 HD: 17",
     "Treasure": "Nil",
-    "XP Value": "1 HD: 65<br>2 HD: 120<br>3 HD: 175<br>4 HD: 270"
+    "XP Value": "1 HD: 65 / 2 HD: 120 / 3 HD: 175 / 4 HD: 270"
   },
   {
     "Name": "Leech - Swarm",
@@ -38994,7 +38994,7 @@
     "Organization": "Pride",
     "Size": "L (6-7' long)",
     "Special Attacks": "Rear claws, knock-down",
-    "Special Defenses": "Camouflage, immune to <i>magic missiles</i>",
+    "Special Defenses": "Camouflage, immune to magic missiles",
     "THAC0": "15",
     "Treasure": "Nil",
     "XP Value": "1,400"
@@ -39219,7 +39219,7 @@
     "Name": "Lhiannan Shee",
     "Activity Cycle": "Night",
     "Alignment": "Neutral evil",
-    "Armor Class": "8 in darkness; 5 in strong firelight or <i>light</i> spell; 2 in sunlight or <i>continual light</i> spell",
+    "Armor Class": "8 in darkness; 5 in strong firelight or light spell; 2 in sunlight or continual light spell",
     "Climate/Terrain": "Subarctic to tropical woodlands",
     "Damage/Attack": "Special",
     "Diet": "Special",
@@ -44373,7 +44373,7 @@
     "Special Defenses": "+2 bonus on surprise roll",
     "THAC0": "13",
     "Treasure": "(C)",
-    "XP Value": "1,400<br>Elder: 3,000"
+    "XP Value": "1,400 / Elder: 3,000"
   },
   {
     "Name": "Misi",
@@ -48523,9 +48523,9 @@
     "Size": "L (8-16' tall)",
     "Special Attacks": "Blinding smoke",
     "Special Defenses": "See below",
-    "THAC0": "8 HD: 13<br>12 HD: 9<br>16 HD: 5",
+    "THAC0": "8 HD: 13 / 12 HD: 9 / 16 HD: 5",
     "Treasure": "Nil",
-    "XP Value": "8 HD: 3,000<br>12 HD: 7,000<br>16 HD: 11,000"
+    "XP Value": "8 HD: 3,000 / 12 HD: 7,000 / 16 HD: 11,000"
   },
   {
     "Name": "Parai",
@@ -48573,7 +48573,7 @@
     "Special Defenses": "Variable",
     "THAC0": "Nil",
     "Treasure": "Nil",
-    "XP Value": "15 if nonfatal<br>65 if potentially fatal"
+    "XP Value": "15 if nonfatal / 65 if potentially fatal"
   },
   {
     "Name": "Parasite - Bloodring",
@@ -48739,9 +48739,9 @@
     "Size": "T-S (1-4')",
     "Special Attacks": "Fear aura",
     "Special Defenses": "See below",
-    "THAC0": "3-4 HD: 17<br>5-6 HD: 15",
+    "THAC0": "3-4 HD: 17 / 5-6 HD: 15",
     "Treasure": "R,Qx2,S",
-    "XP Value": "3 HD: 270<br>4 HD: 420<br>5 HD: 650<br>6 HD: 975"
+    "XP Value": "3 HD: 270 / 4 HD: 420 / 5 HD: 650 / 6 HD: 975"
   },
   {
     "Name": "Pasari-Niml - Noble",
@@ -48837,7 +48837,7 @@
     "Special Defenses": "Nil",
     "THAC0": "17",
     "Treasure": "Nil",
-    "XP Value": "175<br>Greater: 650"
+    "XP Value": "175, Greater: 650"
   },
   {
     "Name": "Pegataur",
@@ -48858,10 +48858,10 @@
     "Organization": "Tribal",
     "Size": "L (8' tall)",
     "Special Attacks": "Dive",
-    "Special Defenses": "30% immunity to <i>sleep</i> and <i>charm</i>",
-    "THAC0": "5-6 HD: 15<br>7-8 HD 13",
+    "Special Defenses": "30% immunity to sleep and charm",
+    "THAC0": "5-6 HD: 15 / 7-8 HD 13",
     "Treasure": "M,Q (E)",
-    "XP Value": "975<br>Spellcaster (5 HD): 1,400<br>6 HD leader: 1,400<br>7 HD leader: 2.000<br>8 HD leader: 5,000"
+    "XP Value": "975 / Spellcaster (5 HD): 1,400 / 6 HD leader: 1,400 / 7 HD leader: 2.000 / 8 HD leader: 5,000"
   },
   {
     "Name": "Peltast - Greater Peltast",
@@ -49101,7 +49101,7 @@
     "Special Defenses": "+2 bonus on all saving throws",
     "THAC0": "20",
     "Treasure": "Nil",
-    "XP Value": "35<br>Warrior: 120<br>Chief: 270<br>King: 2,000"
+    "XP Value": "35 / Warrior: 120 / Chief: 270 / King: 2,000"
   },
   {
     "Name": "Phantom Stalker",
@@ -49169,8 +49169,8 @@
     "No. of Attacks": "1",
     "Organization": "Family",
     "Size": "M (6' tall)",
-    "Special Attacks": "<i>Hypnotic pattern</i>, <i>suggestion</i>",
-    "Special Defenses": "<i>ESP</i>, immunities",
+    "Special Attacks": "Hypnotic pattern, suggestion",
+    "Special Defenses": "ESP, immunities",
     "THAC0": "15",
     "Treasure": "R,U",
     "XP Value": "1,400"
@@ -49197,7 +49197,7 @@
     "Special Defenses": "+2 or better weapon to hit, immune to fire, heat and acid, &#189; damage from lightning",
     "THAC0": "11",
     "Treasure": "Nil",
-    "XP Value": "10,000<br>&ldquo;Harvester of Flame&rdquo;: 12,000"
+    "XP Value": "10,000 / Harvester of Flame: 12,000"
   },
   {
     "Name": "Phlog-Crawler",
@@ -49282,14 +49282,14 @@
     "Frequency": "Very rare",
     "Hit Dice": "13",
     "Intelligence": "Average (8-10)",
-    "Magic Resistance": "<i>Confusion</i> and <i>feeblemind</i>",
+    "Magic Resistance": "Confusion and feeblemind",
     "Morale": "L (9' tall)",
     "Movement": "15",
     "No. Appearing": "1",
     "No. of Attacks": "3 (claw/claw/bite)",
     "Organization": "Solitary",
     "Size": "Nil",
-    "Special Attacks": "<i>Feeblemind</i> or drain intelligence, cold",
+    "Special Attacks": "Feeblemind or drain intelligence, cold",
     "Special Defenses": "+2 or better weapons to hit, reflects spells, regenerates",
     "THAC0": "7",
     "Treasure": "Nil",
@@ -49301,7 +49301,7 @@
     "Alignment": "Neutral",
     "Armor Class": "3",
     "Climate/Terrain": "Any subterranean",
-    "Damage/Attack": "1 HD: 1-6<br>2 HD: 2-12<br>3 HD: 3-18<br>4 HD: 4-24",
+    "Damage/Attack": "1 HD: 1-6 / 2 HD: 2-12 / 3 HD: 3-18 / 4 HD: 4-24",
     "Diet": "Carnivore",
     "Frequency": "Uncommon",
     "Hit Dice": "1-4",
@@ -49315,9 +49315,9 @@
     "Size": "T-M (1-6' tall)",
     "Special Attacks": "Surprise",
     "Special Defenses": "Nil",
-    "THAC0": "1-2 HD: 19<br>3-4 HD: 17",
+    "THAC0": "1-2 HD: 19 / 3-4 HD: 17",
     "Treasure": "Nil",
-    "XP Value": "1 HD: 35<br>2 HD: 65<br>3 HD: 120<br>4 HD: 420"
+    "XP Value": "1 HD: 35 / 2 HD: 65 / 3 HD: 120 / 4 HD: 420"
   },
   {
     "Name": "Pigeon, Acid",
@@ -56897,7 +56897,7 @@
     "No. of Attacks": "2",
     "Organization": "Schools",
     "Size": "M (5' tall)",
-    "Special Attacks": "<i>Mass charm</i>, <i>advanced illusion</i>, disease",
+    "Special Attacks": "Mass charm, advanced illusion, disease",
     "Special Defenses": "Nil",
     "THAC0": "17",
     "Treasure": "C",
@@ -56923,7 +56923,7 @@
     "Size": "M (5-6' tall)",
     "Special Attacks": "Song, spell powers",
     "Special Defenses": "Spell powers, water-breathing",
-    "THAC0": "4 HD: 17<br>5-6 HD: 15<br>7 HD: 13",
+    "THAC0": "4 HD: 17 / 5-6 HD: 15 / 7 HD: 13",
     "Treasure": "L,M,N,Q,X",
     "XP Value": "4 HD: 2,000 (+1,000 for each additional Hit Die)"
   },
@@ -57355,9 +57355,9 @@
     "Size": "H (12-21' wingspan)",
     "Special Attacks": "Bite (2d4)",
     "Special Defenses": "Nil",
-    "THAC0": "4 HD: 17<br>5-6 HD: 15<br>7 HD: 13",
+    "THAC0": "4 HD: 17 / 5-6 HD: 15 / 7 HD: 13",
     "Treasure": "Nil",
-    "XP Value": "4 HD: 175<br>5 HD: 270<br>6 HD: 420<br>7 HD: 650"
+    "XP Value": "4 HD: 175 / 5 HD: 270 / 6 HD: 420 / 7 HD: 650"
   },
   {
     "Name": "Skotos",
@@ -57405,7 +57405,7 @@
     "Special Defenses": "+2 or better weapon to hit, immune to slow, acid, fire, lightning",
     "THAC0": "5",
     "Treasure": "Nil",
-    "XP Value": "16+16 HD: 16,000<br>24+24 HD: 24,000"
+    "XP Value": "16+16 HD: 16,000 / 24+24 HD: 24,000"
   },
   {
     "Name": "Skrit",
@@ -57739,9 +57739,9 @@
     "Size": "L (10-20' wingspan)",
     "Special Attacks": "Wing slash, poisonous stinger",
     "Special Defenses": "Nil",
-    "THAC0": "5-6 HD: 15<br>7-8 HD: 13",
+    "THAC0": "5-6 HD: 15 / 7-8 HD: 13",
     "Treasure": "Nil",
-    "XP Value": "5 HD: 1,400<br>6 HD: 2,000<br>7 HD: 3,000<br>8 HD: 4,000"
+    "XP Value": "5 HD: 1,400 / 6 HD: 2,000 / 7 HD: 3,000 / 8 HD: 4,000"
   },
   {
     "Name": "Sleek",
@@ -57828,7 +57828,7 @@
     "Intelligence": "Low (5-7)",
     "Magic Resistance": "Nil",
     "Morale": "Steady (11)",
-    "Movement": "9, Sw 6 (flaps like <a href=\"ixitxach.html\">ixitxachitl</a>, <a href=\"ray.html\">ray</a>)",
+    "Movement": "9, Sw 6 (flaps like ixitxachitl, ray)",
     "No. Appearing": "1",
     "No. of Attacks": "2",
     "Organization": "Solitary",
@@ -57979,7 +57979,7 @@
     "Size": "L (8' tall)",
     "Special Attacks": "Nil",
     "Special Defenses": "See below",
-    "THAC0": "4 HD: 17<br>5-6 HD: 15",
+    "THAC0": "4 HD: 17 / 5-6 HD: 15",
     "Treasure": "Nil",
     "XP Value": "975"
   },
@@ -58077,7 +58077,7 @@
     "Special Defenses": "Nil",
     "THAC0": "17",
     "Treasure": "Nil (W)",
-    "XP Value": "270<br>Elder: 975"
+    "XP Value": "270, Elder: 975"
   },
   {
     "Name": "Snake, Messenger",
@@ -58192,12 +58192,12 @@
     "No. Appearing": "1-6",
     "No. of Attacks": "1",
     "Organization": "Solitary",
-    "Size": "2 HD: S (2-3')<br>3 HD: M (4-5')<br>4 HD: M (6')",
+    "Size": "2 HD: S (2-3') / 3 HD: M (4-5') / 4 HD: M (6')",
     "Special Attacks": "Drain blood",
     "Special Defenses": "Anaesthetic slime",
-    "THAC0": "2 HD: 19<br>3-4 HD: 17",
+    "THAC0": "2 HD: 19 / 3-4 HD: 17",
     "Treasure": "Nil",
-    "XP Value": "2 HD: 120<br>3 HD: 175<br>4 HD: 270"
+    "XP Value": "2 HD: 120 / 3 HD: 175 / 4 HD: 270"
   },
   {
     "Name": "Snake, Stone",

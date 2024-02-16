@@ -132,44 +132,6 @@ export default function FilterPanel({
     );
   };
 
-//   const hasExcludedKeywords = (monster) =>
-//   Object.values(monster).some(
-//     (value) =>
-//       typeof value === "string" &&
-//       (value.toLowerCase().includes("athas") || value.toLowerCase().includes("ravenloft"))
-//   );
-
-// const isIncludedWorld = (monster, selectedWorlds) => {
-//   return (
-//     (!hasExcludedKeywords(monster)) &&
-//     (selectedWorlds.length === 0 ||
-//       (selectedWorlds.length > 0 &&
-//         selectedWorlds.some((world) =>
-//           Object.values(monster).some((value) =>
-//             typeof value === "string" &&
-//             value.toLowerCase().includes(world.toLowerCase())
-//           )
-//         ))
-//     )
-//   );
-// };
-
-
-//   const filterMonsters = (monster, selectedFilters) => {
-//    const includedWorld = isIncludedWorld(monster, selectedFilters.World);
-
-//    return(
-//     includedWorld &&
-//     isHitDiceInRange(monster, largeMonstersChecked ? [30, 100] : diceValues) &&
-//     isClimateMatch(monster, selectedFilters) &&
-//     isTerrainMatch(monster, selectedFilters) &&
-//     isPlanesMatch(monster, selectedFilters) &&
-//     isMovementTypeMatch(monster, selectedFilters) &&
-//     isFrequencyMatch(monster, selectedFilters) &&
-//     isActivityCycleMatch(monster, selectedFilters)
-//     )
-//    }
-
 const isIncludedWorld = (monster, selectedWorlds) => {
    const hasAthasKeyword = (monster) =>
      Object.values(monster).some(
@@ -197,8 +159,6 @@ const isIncludedWorld = (monster, selectedWorlds) => {
        ))
    );
  };
- 
- 
  
  
  const filterMonsters = (monster, selectedFilters) => {
