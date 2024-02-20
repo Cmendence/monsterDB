@@ -5,7 +5,6 @@ const filters = {
       { value: "night", label: "Night" },
     ],
    Climate: [
-     { value: "subarctic", label: "Subarctic" },
      { value: "arctic", label: "Arctic" },
      { value: "cold", label: "Cold" },
      { value: "temperate", label: "Temperate" },
@@ -14,6 +13,7 @@ const filters = {
      { value: "subtropical", label: "Subtropical" },
    ],
    Terrain: [
+     { value: "land", label: "Land" },
      { value: "desert", label: "Desert" },
      { value: "forest", label: "Forest" },
      { value: "hill", label: "Hills" },
