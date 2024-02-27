@@ -12,7 +12,7 @@ import Footer from "./Components/Footer";
 function App() {
   const [query, setQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const resultsPerPage = 10;
+  const [resultsPerPage, setResultsPerPage ] = useState(10);
 
   useEffect(() => {
    setCurrentPage(1); 
@@ -65,10 +65,12 @@ function App() {
                 setCurrentPage={setCurrentPage}
                 handlePageChange={handlePageChange}
                 resultsPerPage={resultsPerPage}
+                setResultsPerPage={setResultsPerPage}
                 totalPages={totalPages}
                 startIndex={startIndex}
                 endIndex={endIndex}
                 clearSearch={clearSearch}
+
               />
             }
           />
@@ -85,6 +87,7 @@ function App() {
                 setCurrentPage={setCurrentPage}
                 handlePageChange={handlePageChange}
                 resultsPerPage={resultsPerPage}
+                setResultsPerPage={setResultsPerPage}
                 totalPages={totalPages}
                 startIndex={startIndex}
                 endIndex={endIndex}

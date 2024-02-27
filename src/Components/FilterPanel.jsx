@@ -14,6 +14,7 @@ export default function FilterPanel({
   currentPage,
   handlePageChange,
   resultsPerPage,
+  setResultsPerPage,
   totalPages,
   startIndex,
   endIndex,
@@ -314,6 +315,7 @@ const isIncludedWorld = (monster, selectedWorlds) => {
           startIndex={startIndex}
           endIndex={endIndex}
           resultsPerPage={resultsPerPage}
+          setResultsPerPage={setResultsPerPage}
         />
       )}
     </div>

@@ -3,6 +3,7 @@ import MonsterCard from "./MonsterCard";
 import Pagination from "./Pagination";
 import SearchBar from "./SearchBar";
 import ScrollToTopButton from "./ScrollToTopButton";
+import ResultsDropdown from "./ResultsDropdown";
 
 export default function MonsterList({
   monsterSearch,
@@ -16,7 +17,9 @@ export default function MonsterList({
   totalPages,
   startIndex,
   endIndex,
-  clearSearch
+  clearSearch,
+  resultsPerPage,
+  setResultsPerPage
 }) {
   useEffect(() => {
     console.log(query);
@@ -38,7 +41,12 @@ export default function MonsterList({
         handleSearch={handleSearch}
         clearSearch={clearSearch}
       />
-      
+      <div className="flex justify-center">
+      <ResultsDropdown
+         resultsPerPage={resultsPerPage}
+         setResultsPerPage={setResultsPerPage}
+      />
+      </div>
       <h2 className="text-gray-800 font-semibold uppercase text-lg mx-6">
         All Monsters ({monsterSearch.length})
       </h2>

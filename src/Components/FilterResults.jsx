@@ -3,6 +3,7 @@ import MonsterCard from "./MonsterCard";
 import Pagination from "./Pagination";
 import SearchBar from "./SearchBar";
 import ScrollToTopButton from "./ScrollToTopButton";
+import ResultsDropdown from "./ResultsDropdown";
 
 export default function FilterResults({
   filteredMonsters,
@@ -15,6 +16,7 @@ export default function FilterResults({
   currentPage,
   handlePageChange,
   resultsPerPage,
+  setResultsPerPage,
   startIndex,
   endIndex
 }) {
@@ -38,14 +40,18 @@ export default function FilterResults({
          handleSearch={handleSearch}
          clearSearch={clearSearch}
       />
-      
+      <div className="flex justify-between">
       <button
         className="bg-violet-600 text-gray-50 lg:tracking-wide font-semibold rounded-md px-3 py-1 lg:px-3 lg:py-2 active:bg-violet-900 hover:bg-violet-800"
         onClick={() => toggleResults()}
       >
         Back to Filters
       </button>
-
+      <ResultsDropdown
+         resultsPerPage={resultsPerPage}
+         setResultsPerPage={setResultsPerPage}
+      />
+</div>
       <div className="-mx-4">
         <h2 className="text-gray-800 font-semibold capitalize text-lg mx-6 my-2">
           Showing ({filteredMonsters.length}) results for
