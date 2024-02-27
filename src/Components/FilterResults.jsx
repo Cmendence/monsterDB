@@ -53,8 +53,8 @@ export default function FilterResults({
       />
 </div>
       <div className="-mx-4">
-        <h2 className="text-gray-800 font-semibold capitalize text-lg mx-6 my-2">
-          Showing ({filteredMonsters.length}) results for
+        <h2 className="text-gray-800 font-semibold capitalize text-md mx-6 my-2">
+          Results: {filteredMonsters.length} monsters on {totalPages} {totalPages > 1 ? "Pages" : "Page"} for: {query ? query : ""}
         </h2>
         <h2 className="text-gray-800 font-semibold capitalize text-sm mx-6 my-2">
           {filterInfo}

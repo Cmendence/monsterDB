@@ -6,7 +6,6 @@ import FilterCategory from "./FilterCategory";
 
 export default function FilterPanel({
   monsterSearch,
-  monsters,
   handleSearch,
   clearSearch,
   query,
