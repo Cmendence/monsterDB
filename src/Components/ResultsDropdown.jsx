@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function ResultsDropdown({ resultsPerPage, setResultsPerPage }) {
 
@@ -11,16 +11,23 @@ export default function ResultsDropdown({ resultsPerPage, setResultsPerPage }) {
    ]
 
 const [ isDropdownOpen, setIsDropdownOpen ] = useState(false)
+const blurTimeoutRef = useRef(null);
 
-const handleResultsPPChange = (name, value) => {
-   setResultsPerPage(name, value)
+const handleResultsPPChange = (value) => {
+   setResultsPerPage(value)
    setIsDropdownOpen(false)
 }
-
 
 const toggleDropdown = () => {
    setIsDropdownOpen(!isDropdownOpen)
 }
+
+const handleBlur = () => {
+ // delay to handle the menu closing immediately when it loses focus and not executing handleResultsPPChange
+   blurTimeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+   }, 100);
+};
 
 return (
    <div className="relative flex items-center">
@@ -30,6 +37,7 @@ return (
        className="bg-violet-600 text-gray-50 lg:tracking-wide font-semibold rounded-md px-3 py-1 lg:px-3 lg:py-2 active:bg-violet-800 hover:bg-violet-800 text-center inline-flex items-center relative z-10"
        type="button"
        onClick={toggleDropdown}
+       onBlur={handleBlur}
      >
        {resultsPerPage == 3000 ? "All" : resultsPerPage}{" "}
        <svg
