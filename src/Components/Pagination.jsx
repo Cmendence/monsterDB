@@ -11,15 +11,8 @@ export default function Pagination({
   };
 
   return (
-    <div className="flex items-center gap-8 pt-6 pb-20">
-      {currentPage > 1 && (
-        <button
-          className="border border-violet-600 rounded-md w-14 h-8 text-sm bg-violet-200"
-          onClick={backToOne}
-        >
-          Page 1
-        </button>
-      )}
+   <div>
+    <div className="flex items-center gap-8 pt-6 pb-4">
       <button
         className="relative h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-lg border 
                border-violet-700 text-center text-violet-700 align-middle font-sans text-xs font-medium uppercase 
@@ -78,6 +71,17 @@ export default function Pagination({
           </svg>
         </span>
       </button>
+    </div>
+    <div className="text-center pb-16">
+    {currentPage > 1 && (
+        <button
+          className="border border-violet-600 rounded-md w-14 h-8 text-sm bg-violet-200"
+          onClick={backToOne}
+        >
+          Page 1
+        </button>
+      )}
+      </div>
     </div>
   );
 }
