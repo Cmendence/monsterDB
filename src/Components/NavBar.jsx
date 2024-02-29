@@ -1,14 +1,13 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import DragonLogo from "/android-chrome-512x512.png"
+import DragonLogo from "/android-chrome-512x512.png";
 
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -56,11 +55,7 @@ export default function NavBar() {
             </button>
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <img
-              className="h-10 w-auto"
-              src={DragonLogo}
-              alt="Dragon"
-            />
+            <img className="h-10 w-auto" src={DragonLogo} alt="Dragon" />
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 <Link

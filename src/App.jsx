@@ -1,6 +1,11 @@
 import "./App.css";
 // import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
 import { useState, useEffect } from "react";
 import monsters from "../newMonsterDB.json";
 import MonsterList from "./Components/MonsterList";
@@ -10,11 +15,11 @@ import Home from "./Components/Home";
 import Footer from "./Components/Footer";
 
 function App() {
-   //query is the controlled search input
+  //query is the controlled search input
   const [query, setQuery] = useState("");
   // results per page and current page used for pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const [resultsPerPage, setResultsPerPage ] = useState(10);
+  const [resultsPerPage, setResultsPerPage] = useState(10);
 
   // search bar updates on every keystroke. handleSearch sets the current page to 1 when you hit search
   const handleSearch = () => {
@@ -27,13 +32,12 @@ function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-
   const clearSearch = () => {
-   setQuery('')
-   setCurrentPage(1)
-  }
+    setQuery("");
+    setCurrentPage(1);
+  };
 
-// all monsters first sent through the search if query is truthy
+  // all monsters first sent through the search if query is truthy
   const monsterSearch = monsters.filter((monster) => {
     const monsterName = monster["Name"].toLowerCase();
     return monsterName.includes(query.toLowerCase());
@@ -70,7 +74,6 @@ function App() {
                 startIndex={startIndex}
                 endIndex={endIndex}
                 clearSearch={clearSearch}
-
               />
             }
           />

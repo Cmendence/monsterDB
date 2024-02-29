@@ -62,7 +62,7 @@ export default function SearchBar({
           }
         }}
       />
-            <button
+      <button
         className="text-violet-700 focus:outline-none"
         onClick={clearSearch}
         type="button"

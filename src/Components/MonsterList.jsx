@@ -18,20 +18,18 @@ export default function MonsterList({
   endIndex,
   clearSearch,
   resultsPerPage,
-  setResultsPerPage
+  setResultsPerPage,
 }) {
-
-   //set currentPage to 1 on load
+  //set currentPage to 1 on load
   useEffect(() => {
-   setCurrentPage(1); 
- }, []);
+    setCurrentPage(1);
+  }, []);
 
-    // Get the monsters to display on the current page
-    const monstersOnCurrentPage = monsterSearch.slice(startIndex, endIndex);
+  // Get the monsters to display on the current page
+  const monstersOnCurrentPage = monsterSearch.slice(startIndex, endIndex);
 
   return (
     <div className="py-2 lg:w-1/2 select-none">
-
       <SearchBar
         query={query}
         setQuery={setQuery}
@@ -39,10 +37,10 @@ export default function MonsterList({
         clearSearch={clearSearch}
       />
       <div className="flex justify-end mb-2 px-4">
-      <ResultsDropdown
-         resultsPerPage={resultsPerPage}
-         setResultsPerPage={setResultsPerPage}
-      />
+        <ResultsDropdown
+          resultsPerPage={resultsPerPage}
+          setResultsPerPage={setResultsPerPage}
+        />
       </div>
       <h2 className="text-gray-800 font-semibold uppercase text-lg mx-6">
         All Monsters ({monsterSearch.length})

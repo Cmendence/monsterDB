@@ -2,33 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-   overscroll-behavior: none;
- }
+html,
+body {
+  overscroll-behavior: none;
+}
 
 .slider {
-   height: 10px;
+  height: 10px;
 }
 
 .slider .thumb {
-   width: 23px;
-   height: 23px;
-   cursor: grab;
-   background: #14b8a6;
-   border-radius: 50%;
-   border: 1px black solid;
-   top: -.4rem;
+  width: 23px;
+  height: 23px;
+  cursor: grab;
+  background: #14b8a6;
+  border-radius: 50%;
+  border: 1px black solid;
+  top: -0.4rem;
 }
 
 .sliderDisabled .thumb {
-   background: gray;
+  background: gray;
 }
 
 .rotateChevron {
-   transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .chevron {
-      transition: transform 0.4s ease;
+  transition: transform 0.4s ease;
 }
-
