@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 
  export default function MonsterCard({ monsters, keysToRender, }) {
+
+   // variable for conditionally showing the condensed vs full monster card
   const [showFullCard, setShowFullCard] = useState(false);
 
+  //conditionally changing the color of the card when expanded
   const cardBg = showFullCard ? 'bg-red-400' : 'bg-orange-300 ';
 
   const toggleFullCard = () => {

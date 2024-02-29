@@ -14,12 +14,15 @@ export default function FilterResults({
   query,
   setQuery,
   currentPage,
+  setCurrentPage,
   handlePageChange,
   resultsPerPage,
   setResultsPerPage,
   startIndex,
   endIndex
 }) {
+
+   // values displayed by default
   const keysToRender = [
     "Activity Cycle",
     "Alignment",
@@ -73,6 +76,7 @@ export default function FilterResults({
           <div className=" flex justify-center">
             <Pagination
               currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
               totalPages={totalPages}
               handlePageChange={handlePageChange}
             />

@@ -11,19 +11,24 @@ export default function FilterPanel({
   query,
   setQuery,
   currentPage,
+  setCurrentPage,
   handlePageChange,
   resultsPerPage,
   setResultsPerPage,
   totalPages,
   startIndex,
   endIndex,
-  setCurrentPage,
+
 }) {
+
+   // hit dice default values
   const minDice = 1;
   const maxDice = 30;
 
   const [diceValues, setDiceValues] = useState([minDice, maxDice]);
+  // state variable for tracking the "30+ HD" button
   const [largeMonstersChecked, setLargeMonstersChecked] = useState(false);
+//selectedFilters for storing which filters are selected from the list
   const [selectedFilters, setSelectedFilters] = useState({
     Activity: [],
     Climate: [],
@@ -34,7 +39,9 @@ export default function FilterPanel({
     World: []
   });
 
+  // used for toggling between the main filter panel and the filter results
   const [showResults, setShowResults] = useState(false);
+  // used for checking if the filter categories are expanded or not
   const [expandedCategories, setExpandedCategories] = useState({
      Activity: false,
      Climate: false,
@@ -45,18 +52,22 @@ export default function FilterPanel({
      World: false
    });
    
+   //clears query on load
    useEffect(() => { 
       setQuery('')
     }, []);
 
    const LargeMonsters = [{ value: [30, 100], label: "30+ HD" }];
 
+   // spaghetti string for displaying all the different filters selected from the filter panel while looking at filter results
    const filterInfo = `HD ${diceValues[0]}-${diceValues[1]}, Activity: ${selectedFilters.Activity}, 
                       Climate/Terrain: ${selectedFilters.Climate} ${selectedFilters.Terrain} ${selectedFilters.Plane},
                       Move: ${selectedFilters.Movement} Frequency: ${selectedFilters.Frequency}`;
 
 
+// ***FILTERS***
 
+//hit dice
   const isHitDiceInRange = (monster, diceValues) => {
     const hitDice = parseInt(monster["Hit Dice"], 10);
     return (
@@ -65,6 +76,7 @@ export default function FilterPanel({
     );
   };
 
+ //  returns true if climate/terrain is "any" OR matches the selected filters. splits on comma and forward slash
   const isClimateMatch = (monster, selectedFilters) => {
     const monsterClimate = monster["Climate/Terrain"].toLowerCase();
 
@@ -77,6 +89,7 @@ export default function FilterPanel({
     );
   };
 
+   //  returns true if climate/terrain is exclusively "any" OR matches the selected filters. splits on comma and forward slash
   const isTerrainMatch = (monster, selectedFilters) => {
     const monsterTerrain = monster["Climate/Terrain"].toLowerCase();
 
@@ -95,6 +108,7 @@ export default function FilterPanel({
       monster["Climate/Terrain"].toLowerCase().includes(filter)
     );
 
+  // if activity cycle is "any" it will return those monsters regardless if "day" or "night" is selected, but will also return the selected option   
   const isActivityCycleMatch = (monster, selectedFilters) => {
     const selectedActivityCycle = selectedFilters.Activity;
     return (
@@ -109,6 +123,7 @@ export default function FilterPanel({
     );
   };
 
+  // still needs work, but returns monsters if they have the selected letter combo anywhere in the value. Split on the comma, slash, and parentheses.
   const isMovementTypeMatch = (monster, selectedFilters) => {
     const monsterMovement = monster["Movement"].toLowerCase();
 
@@ -132,6 +147,8 @@ export default function FilterPanel({
     );
   };
 
+  // at request, This filters OUT the monsters from other worlds by default. if it's then selected, it will filter for monsters with the 
+  // selected world value anywhere in the monster object. 
 const isIncludedWorld = (monster, selectedWorlds) => {
    const hasAthasKeyword = (monster) =>
      Object.values(monster).some(
@@ -160,7 +177,7 @@ const isIncludedWorld = (monster, selectedWorlds) => {
    );
  };
  
- 
+ // The meat. checks for all matching filters while filtering out other worlds and taking into account the hit dice
  const filterMonsters = (monster, selectedFilters) => {
    const includedWorld = isIncludedWorld(monster, selectedFilters.World);
  
@@ -176,15 +193,17 @@ const isIncludedWorld = (monster, selectedWorlds) => {
    );
  };
  
-
+// monsters that survived the filter
   const filteredMonsters = monsterSearch.filter((monster) =>
     filterMonsters(monster, selectedFilters)
   );
 
+  // conditional style of the slider bar
   const isSliderDisabled = largeMonstersChecked
     ? "bg-gray-300 sliderDisabled"
     : "bg-violet-400";
 
+    // clear filters
   const resetFilters = () => {
     setSelectedFilters({
       Activity: [],
@@ -198,6 +217,7 @@ const isIncludedWorld = (monster, selectedWorlds) => {
     setDiceValues([minDice, maxDice]);
     setLargeMonstersChecked(false);
   };
+
 
   const handleFilterChange = (category, value) => {
     // Create a new object to avoid mutating the state directly
@@ -227,6 +247,7 @@ const isIncludedWorld = (monster, selectedWorlds) => {
     }
   };
 
+  // function on button to go to filterResults. toggles showResults, sets current page back to 1, clears the search bar and scrolls to top.
   const toggleResults = () => {
     setShowResults(!showResults);
     setCurrentPage(1);
@@ -234,6 +255,7 @@ const isIncludedWorld = (monster, selectedWorlds) => {
     window.scrollTo(0, 0);
   };
 
+  // passed to filterCategory for each category to track their own open and closed state
   const toggleCategory = (category) => {
     setExpandedCategories((prev) => ({
       ...prev,
@@ -309,6 +331,7 @@ const isIncludedWorld = (monster, selectedWorlds) => {
           toggleResults={toggleResults}
           filteredMonsters={filteredMonsters}
           currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
           totalPages={totalPages}
           handlePageChange={handlePageChange}
           startIndex={startIndex}

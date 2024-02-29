@@ -12,8 +12,10 @@ export default function FilterCategory(
    }
 ) {
 
+//list of filters from filters.js
    const categoryFilters = filters[category];
 
+   //moves the bottom border from the h2 to the bottom of the filter list when the list is toggled
    const bottomBorder = (option) =>
    option ? "border-b-2 border-violet-500" : "";
 
@@ -51,6 +53,7 @@ export default function FilterCategory(
         <div className={`ml-4 border-b-2 ${bottomBorder(
          expandedCategories[category]
        )}`}>
+         {/* mapping over the filters */}
           {categoryFilters.map(({ value, label }) => (
             <label key={value} className="ml-4 m-2 flex">
               <input

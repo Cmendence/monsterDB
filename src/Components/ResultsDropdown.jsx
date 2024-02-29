@@ -34,7 +34,8 @@ return (
      <p className="text-xs font-medium">Results per page: &nbsp;</p>
      <button
        id="dropdownDefaultButton"
-       className="bg-violet-600 text-gray-50 lg:tracking-wide font-semibold rounded-md px-3 py-1 lg:px-3 lg:py-2 active:bg-violet-800 hover:bg-violet-800 text-center inline-flex items-center relative z-10"
+       className="bg-violet-300 text-gray-700 font-medium border-2 border-violet-600 text-sm font-base rounded-md px-1.5 py-0 lg:px-1.5 lg:py-0.5
+        active:bg-violet-600 hover:bg-violet-600 hover:text-white text-center inline-flex items-center relative z-10"
        type="button"
        onClick={toggleDropdown}
        onBlur={handleBlur}

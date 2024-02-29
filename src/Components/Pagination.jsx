@@ -1,9 +1,20 @@
 import React from "react";
 
-export default function Pagination({ currentPage, totalPages, handlePageChange }) {
+export default function Pagination({ currentPage, setCurrentPage, totalPages, handlePageChange }) {
+
+   const backToOne = () => {
+      setCurrentPage(1)
+   }
 
    return(
   <div className="flex items-center gap-8 pt-6 pb-20">
+   {currentPage > 1 &&
+   <button className="border border-violet-600 rounded-md w-14 h-8 text-sm bg-violet-200"
+      onClick={backToOne}
+      >
+         Page 1
+      </button>
+}
     <button
       
       className="relative h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-lg border 

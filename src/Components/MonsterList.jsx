@@ -7,7 +7,6 @@ import ResultsDropdown from "./ResultsDropdown";
 
 export default function MonsterList({
   monsterSearch,
-  monsters,
   handleSearch,
   query,
   setQuery,
@@ -21,10 +20,8 @@ export default function MonsterList({
   resultsPerPage,
   setResultsPerPage
 }) {
-  useEffect(() => {
-    console.log(query);
-  }, [query]);
 
+   //set currentPage to 1 on load
   useEffect(() => {
    setCurrentPage(1); 
  }, []);
@@ -41,7 +38,7 @@ export default function MonsterList({
         handleSearch={handleSearch}
         clearSearch={clearSearch}
       />
-      <div className="flex justify-center">
+      <div className="flex justify-end mb-2 px-4">
       <ResultsDropdown
          resultsPerPage={resultsPerPage}
          setResultsPerPage={setResultsPerPage}
@@ -72,6 +69,7 @@ export default function MonsterList({
       <div className=" flex justify-center">
         <Pagination
           currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
           totalPages={totalPages}
           handlePageChange={handlePageChange}
         />
