@@ -24,7 +24,7 @@ function App() {
   // search bar updates on every keystroke. handleSearch sets the current page to 1 when you hit search
   const handleSearch = (e) => {
     setCurrentPage(1);
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' || e.key === 13) {
       // Close the keyboard by blurring the input element
       e.target.blur();
   }
