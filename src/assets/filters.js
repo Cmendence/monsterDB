@@ -13,7 +13,6 @@ const filters = {
      { value: "subtropical", label: "Subtropical" },
    ],
    Terrain: [
-     { value: "land", label: "Land" },
      { value: "desert", label: "Desert" },
      { value: "forest", label: "Forest" },
      { value: "hill", label: "Hills" },

@@ -33916,7 +33916,7 @@
     "Activity Cycle": "Day",
     "Alignment": "Neutral",
     "Armor Class": "7",
-    "Climate/Terrain": "Any non-mountainous",
+    "Climate/Terrain": "Any",
     "Damage/Attack": "1-3",
     "Diet": "Herbivore",
     "Frequency": "Common",
@@ -58291,9 +58291,9 @@
     "Size": "M (7' tall)",
     "Special Attacks": "Weapon specialization, exceptional Strength",
     "Special Defenses": "Immune to fire and illusions, saving throw bonus vs. magic",
-    "THAC0": "10 HD: 11<br>11 HD: 10<br>12 HD: 9<br>13 HD: 8<br>14 HD: 7<br>",
+    "THAC0": "10 HD: 11 / 11 HD: 10 / 12 HD: 9 / 13 HD: 8 / 14 HD: 7",
     "Treasure": "Z",
-    "XP Value": "10 HD: 3,000<br>11 HD: 4,000<br>12 HD: 5,000<br>13 HD: 6,000<br>14 HD: 7,000"
+    "XP Value": "10 HD: 3,000 / 11 HD: 4,000 / 12 HD: 5,000 / 13 HD: 6,000 / 14 HD: 7,000"
   },
   {
     "Name": "So-ut",
@@ -58386,7 +58386,7 @@
     "Organization": "Solitary",
     "Size": "L (6' tall, 4' long plus 10' tail)",
     "Special Attacks": "Poison",
-    "Special Defenses": "Hit only by <i>red steel</i> or +1 or better<br>magical weapons, spell immunities",
+    "Special Defenses": "Hit only by red steel or +1 or better magical weapons, spell immunities",
     "THAC0": "9",
     "Treasure": "J,K,M,Q",
     "XP Value": "8,000 (+2,000 if a spellcaster)"
@@ -58509,7 +58509,7 @@
     "Special Defenses": "+1 or better to hit",
     "THAC0": "Varies",
     "Treasure": "Nil",
-    "XP Value": "Philosopher: 975<br>Reveler: 975<br>Searcher: 975<br>Guardian: 1,400<br>Warrior: 1,400<br>Berserker: 1,400"
+    "XP Value": "Philosopher: 975 / Reveler: 975 / Searcher: 975 / Guardian: 1,400 / Warrior: 1,400 / Berserker: 1,400"
   },
   {
     "Name": "Spectral Scion",
@@ -58581,7 +58581,7 @@
     "Special Defenses": "See below",
     "THAC0": "15",
     "Treasure": "V",
-    "XP Value": "Low level: 4,000<br>High level: 5,000"
+    "XP Value": "Low level: 4,000 / High level: 5,000"
   },
   {
     "Name": "Spellhaunt",
@@ -58821,7 +58821,7 @@
     "Special Defenses": "Nil",
     "THAC0": "15",
     "Treasure": "Qx2",
-    "XP Value": "Warrior: 975<br>Mage: 2,000<br>Queen: 3,000 (8 HD)<br>Psionicist: +2,000"
+    "XP Value": "Warrior: 975 / Mage: 2,000 / Queen: 3,000 (8 HD) / Psionicist: +2,000"
   },
   {
     "Name": "Spider (Athas) - Mountain",
@@ -58987,9 +58987,9 @@
     "Size": "Phasing",
     "Special Attacks": "Poison, phasing",
     "Special Defenses": "Nil",
-    "THAC0": "15 (5-6 HD)<br>13 (7-8 HD)<br>11 (9-10 HD)<br>9 (11-12 HD)",
+    "THAC0": "15 (5-6 HD) / 13 (7-8 HD) / 11 (9-10 HD) / 9 (11-12 HD)",
     "Treasure": "Special",
-    "XP Value": "5 HD: 2,000<br>6 HD: 3,000<br>7 HD: 4,000<br>8 HD: 5,000<br>9 HD: 6,000<br>10 HD: 7,000<br>11 HD: 8,000<br>12 HD: 9,000"
+    "XP Value": "5 HD: 2,000 / 6 HD: 3,000 / 7 HD: 4,000 / 8 HD: 5,000 / 9 HD: 6,000 / 10 HD: 7,000 / 11 HD: 8,000 / 12 HD: 9,000"
   },
   {
     "Name": "Spider-kin - Plopped",
@@ -59044,7 +59044,7 @@
     "Activity Cycle": "Any",
     "Alignment": "Chaotic evil",
     "Armor Class": "4",
-    "Climate/Terrain": "Any nonarctic<br>land",
+    "Climate/Terrain": "Any nonarctic land",
     "Damage/Attack": "2-12",
     "Diet": "Carnivore",
     "Frequency": "Very rare",
@@ -59059,16 +59059,16 @@
     "Size": "G (10' long, 20' diameter)",
     "Special Attacks": "See below",
     "Special Defenses": "See below",
-    "THAC0": "7+7 HD: 13<br>8+8 HD: 11",
+    "THAC0": "7+7 HD: 13 / 8+8 HD: 11",
     "Treasure": "C",
-    "XP Value": "7+7 HD: 1,400<br>8+8 HD: 3,000"
+    "XP Value": "7+7 HD: 1,400 / 8+8 HD: 3,000"
   },
   {
     "Name": "Spider - Giant",
     "Activity Cycle": "Any",
     "Alignment": "Chaotic evil",
     "Armor Class": "4",
-    "Climate/Terrain": "Any nonarctic<br>land",
+    "Climate/Terrain": "Any nonarctic land",
     "Damage/Attack": "1-8",
     "Diet": "Carnivore",
     "Frequency": "Uncommon",
@@ -59083,16 +59083,16 @@
     "Size": "L (8'-12' diameter)",
     "Special Attacks": "See below",
     "Special Defenses": "Nil",
-    "THAC0": "3+3 HD: 17<br>4+4 HD: 15",
+    "THAC0": "3+3 HD: 17 / 4+4 HD: 15",
     "Treasure": "C",
-    "XP Value": "3+3 HD: 420<br>Flying: 650<br>4+4 HD: 650<br>Steeder: 975<br>Trap door: 975"
+    "XP Value": "3+3 HD: 420 / Flying: 650 / 4+4 HD: 650 / Steeder: 975 / Trap door: 975"
   },
   {
     "Name": "Spider - Hairy",
     "Activity Cycle": "Any",
     "Alignment": "Neutral evil",
     "Armor Class": "8",
-    "Climate/Terrain": "Any nonarctic<br>land",
+    "Climate/Terrain": "Any nonarctic land",
     "Damage/Attack": "1",
     "Diet": "Omnivore",
     "Frequency": "Common",
@@ -59116,7 +59116,7 @@
     "Activity Cycle": "Any",
     "Alignment": "Neutral",
     "Armor Class": "6",
-    "Climate/Terrain": "Any nonarctic<br>land",
+    "Climate/Terrain": "Any nonarctic land",
     "Damage/Attack": "1-6",
     "Diet": "Carnivore",
     "Frequency": "Common",
@@ -59140,7 +59140,7 @@
     "Activity Cycle": "Any",
     "Alignment": "Neutral",
     "Armor Class": "8",
-    "Climate/Terrain": "Any nonarctic<br>land",
+    "Climate/Terrain": "Any nonarctic land",
     "Damage/Attack": "1",
     "Diet": "Carnivore",
     "Frequency": "Common",
@@ -59549,7 +59549,7 @@
     "Alignment": "Neutral evil",
     "Armor Class": "-4",
     "Climate/Terrain": "Any",
-    "Damage/Attack": "Eye: Nil<br>Hand: 1d4 (strike)<br>Skull: 1d6 (bite)",
+    "Damage/Attack": "Eye: Nil / Hand: 1d4 (strike) / Skull: 1d6 (bite)",
     "Diet": "None",
     "Frequency": "Very rare",
     "Hit Dice": "14",
@@ -59611,9 +59611,9 @@
     "Size": "Variable",
     "Special Attacks": "See below",
     "Special Defenses": "See below",
-    "THAC0": "8 HD: 13<br>9-10 HD: 11<br>11-12 HD: 9<br>13-14 HD: 7<br>15 HD: 5",
+    "THAC0": "8 HD: 13 / 9-10 HD: 11 / 11-12 HD: 9 / 13-14 HD: 7 / 15 HD: 5",
     "Treasure": "H",
-    "XP Value": "8 HD: 4,000<br>9 HD: 5,000<br>10 HD: 6,000<br>11 HD: 7,000<br>12 HD: 8,000<br>13 HD: 9,000<br>14 HD: 10,000<br>15 HD: 11,000"
+    "XP Value": "8 HD: 4,000 / 9 HD: 5,000 / 10 HD: 6,000 / 11 HD: 7,000 / 12 HD: 8,000 / 13 HD: 9,000 / 14 HD: 10,000 / 15 HD: 11,000"
   },
   {
     "Name": "Spirit, Nature - Least Nature Spirit",
@@ -59659,9 +59659,9 @@
     "Size": "Variable",
     "Special Attacks": "See below",
     "Special Defenses": "See below",
-    "THAC0": "2 HD: 19<br>3-4 HD: 17<br>5-6 HD: 15<br>7 HD: 13",
+    "THAC0": "2 HD: 19 / 3-4 HD: 17 / 5-6 HD: 15 / 7 HD: 13",
     "Treasure": "I",
-    "XP Value": "2 HD: 175<br>3 HD: 270<br>4 HD: 420<br>5 HD: 650<br>6 HD: 975<br>7 HD: 1,400"
+    "XP Value": "2 HD: 175 / 3 HD: 270 / 4 HD: 420 / 5 HD: 650 / 6 HD: 975 / 7 HD: 1,400"
   },
   {
     "Name": "Spirit of the Air",
@@ -59997,7 +59997,7 @@
     "Special Defenses": "Invisibility",
     "THAC0": "20",
     "Treasure": "Nil (D)",
-    "XP Value": "270<br>Noble: 420<br>Monarch: 650"
+    "XP Value": "270 / Noble: 420 / Monarch: 650"
   },
   {
     "Name": "Sprite - Atomie",
@@ -60429,7 +60429,7 @@
     "Special Defenses": "Half damage from fire-based attacks",
     "THAC0": "17",
     "Treasure": "R,S",
-    "XP Value": "Warrior: 270<br>Shaman: 975"
+    "XP Value": "Warrior: 270 / Shaman: 975"
   },
   {
     "Name": "Starfish, Giant",
@@ -60717,7 +60717,7 @@
     "Special Defenses": "See below",
     "THAC0": "15",
     "Treasure": "Nil",
-    "XP Value": "Rock: 420<br>Ooze: 650"
+    "XP Value": "Rock: 420 / Ooze: 650"
   },
   {
     "Name": "Statue, Living - Silver",

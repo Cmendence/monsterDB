@@ -107,7 +107,7 @@ const isClimateMatch = (monster, selectedFilters) => {
      selectedFilters.Climate.length === 0 ||
      monsterClimate === "any" ||
      selectedFilters.Climate.every((filter) =>
-       (filter.toLowerCase() === "land" || monsterClimate.includes(filter)) ||
+     (monsterClimate.includes("land") || monsterClimate.includes(filter)) ||
        monsterClimate.split(/[,/]/).some((word) => word.includes(filter))
      )
    );
@@ -120,7 +120,7 @@ const isClimateMatch = (monster, selectedFilters) => {
      selectedFilters.Terrain.length === 0 ||
      monsterTerrain === "any" ||
      selectedFilters.Terrain.every((filter) =>
-       (filter.toLowerCase() === "land" || monsterTerrain.includes(filter)) ||
+       (monsterTerrain.includes("land") || monsterTerrain.includes(filter)) ||
        monsterTerrain.split(/[,/]/).some((word) => word.includes(filter))
      )
    );

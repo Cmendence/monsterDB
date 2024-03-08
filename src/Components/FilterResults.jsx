@@ -35,6 +35,7 @@ export default function FilterResults({
   const monstersOnCurrentPage = filteredMonsters.slice(startIndex, endIndex);
   const totalPages = Math.ceil(filteredMonsters.length / resultsPerPage);
 
+
   return (
     <div className="lg:w-1/2">
       <SearchBar
