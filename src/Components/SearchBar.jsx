@@ -56,11 +56,12 @@ export default function SearchBar({
         name="search"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        onKeyPress={(e) => {
-          if (e.key === "Enter") {
-            handleSearch(e);
-          }
-        }}
+      //   onKeyPress={(e) => {
+      //     if (e.key === "Enter") {
+      //       handleSearch(e);
+      //     }
+      //   }}
+      onClick={(e)=> handleSearch(e)}
       />
       <button
         className="text-violet-700 focus:outline-none"
