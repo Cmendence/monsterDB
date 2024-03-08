@@ -73,31 +73,58 @@ export default function FilterPanel({
     );
   };
 
-  //  returns true if climate/terrain is "any" OR matches the selected filters. splits on comma and forward slash
-  const isClimateMatch = (monster, selectedFilters) => {
-    const monsterClimate = monster["Climate/Terrain"].toLowerCase();
+//   //  returns true if climate/terrain is "any" OR matches the selected filters. splits on comma and forward slash
+//   const isClimateMatch = (monster, selectedFilters) => {
+//     const monsterClimate = monster["Climate/Terrain"].toLowerCase();
 
-    return (
-      selectedFilters.Climate.length === 0 ||
-      monsterClimate === "any" ||
-      selectedFilters.Climate.every((filter) =>
-        monsterClimate.split(/[,/]/).some((word) => word.includes(filter))
-      )
-    );
-  };
+//     return (
+//       selectedFilters.Climate.length === 0 ||
+//       monsterClimate === "any" ||
+//       selectedFilters.Climate.every((filter) =>
+//         monsterClimate.split(/[,/]/).some((word) => word.includes(filter))
+//       )
+//     );
+//   };
 
-  //  returns true if climate/terrain is exclusively "any" OR matches the selected filters. splits on comma and forward slash
-  const isTerrainMatch = (monster, selectedFilters) => {
-    const monsterTerrain = monster["Climate/Terrain"].toLowerCase();
+//   //  returns true if climate/terrain is exclusively "any" OR matches the selected filters. splits on comma and forward slash
+//   const isTerrainMatch = (monster, selectedFilters) => {
+//     const monsterTerrain = monster["Climate/Terrain"].toLowerCase();
 
-    return (
-      selectedFilters.Terrain.length === 0 ||
-      monsterTerrain === "any" ||
-      selectedFilters.Terrain.every((filter) =>
-        monsterTerrain.split(/[,/]/).some((word) => word.includes(filter))
-      )
-    );
-  };
+//     return (
+//       selectedFilters.Terrain.length === 0 ||
+//       monsterTerrain === "any" ||
+//       selectedFilters.Terrain.every((filter) =>
+//         monsterTerrain.split(/[,/]/).some((word) => word.includes(filter))
+//       )
+//     );
+//   };
+
+const isClimateMatch = (monster, selectedFilters) => {
+   const monsterClimate = monster["Climate/Terrain"].toLowerCase();
+ 
+   return (
+     selectedFilters.Climate.length === 0 ||
+     monsterClimate === "any" ||
+     selectedFilters.Climate.every((filter) =>
+       (filter.toLowerCase() === "land" || monsterClimate.includes(filter)) ||
+       monsterClimate.split(/[,/]/).some((word) => word.includes(filter))
+     )
+   );
+ };
+ 
+ const isTerrainMatch = (monster, selectedFilters) => {
+   const monsterTerrain = monster["Climate/Terrain"].toLowerCase();
+ 
+   return (
+     selectedFilters.Terrain.length === 0 ||
+     monsterTerrain === "any" ||
+     selectedFilters.Terrain.every((filter) =>
+       (filter.toLowerCase() === "land" || monsterTerrain.includes(filter)) ||
+       monsterTerrain.split(/[,/]/).some((word) => word.includes(filter))
+     )
+   );
+ };
+ 
 
   const isPlanesMatch = (monster, selectedFilters) =>
     selectedFilters.Plane.length === 0 ||
