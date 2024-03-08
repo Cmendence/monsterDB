@@ -18,6 +18,7 @@ export default function FilterPanel({
   totalPages,
   startIndex,
   endIndex,
+  handleKeyPress
 }) {
   // hit dice default values
   const minDice = 1;
@@ -366,6 +367,7 @@ const isClimateMatch = (monster, selectedFilters) => {
           endIndex={endIndex}
           resultsPerPage={resultsPerPage}
           setResultsPerPage={setResultsPerPage}
+          handleKeyPress={handleKeyPress}
         />
       )}
     </div>
