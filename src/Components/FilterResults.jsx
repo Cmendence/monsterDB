@@ -20,6 +20,7 @@ export default function FilterResults({
   setResultsPerPage,
   startIndex,
   endIndex,
+  handleKeyPress
 }) {
   // values displayed by default
   const keysToRender = [
@@ -41,6 +42,7 @@ export default function FilterResults({
         setQuery={setQuery}
         handleSearch={handleSearch}
         clearSearch={clearSearch}
+        handleKeyPress={handleKeyPress}
       />
       <div className="flex justify-between">
         <button

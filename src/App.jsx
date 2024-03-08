@@ -22,13 +22,19 @@ function App() {
   const [resultsPerPage, setResultsPerPage] = useState(10);
 
   // search bar updates on every keystroke. handleSearch sets the current page to 1 when you hit search
-  const handleSearch = (e) => {
+  const handleSearch = () => {
     setCurrentPage(1);
-    if (e.key === 'Enter' || e.key === 13) {
-      // Close the keyboard by blurring the input element
-      e.target.blur();
-  }
   };
+
+  const handleKeyPress = (e) => {
+   if (e.key === 'Enter' || e.key === 13) {
+     // Close the keyboard by blurring the input element
+     e.target.blur();
+
+     handleSearch()
+   }
+ };
+
   // used to set the new page of pagination and scroll to top
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
@@ -77,6 +83,7 @@ function App() {
                 startIndex={startIndex}
                 endIndex={endIndex}
                 clearSearch={clearSearch}
+                handleKeyPress={handleKeyPress}
               />
             }
           />
@@ -98,6 +105,7 @@ function App() {
                 startIndex={startIndex}
                 endIndex={endIndex}
                 clearSearch={clearSearch}
+                handleKeyPress={handleKeyPress}
               />
             }
           />

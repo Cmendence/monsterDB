@@ -5,6 +5,7 @@ export default function SearchBar({
   setQuery,
   handleSearch,
   clearSearch,
+  handleKeyPress
 }) {
   const magnifyingGlass = (
     <svg
@@ -56,12 +57,7 @@ export default function SearchBar({
         name="search"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-      //   onKeyPress={(e) => {
-      //     if (e.key === "Enter") {
-      //       handleSearch(e);
-      //     }
-      //   }}
-      onClick={(e)=> handleSearch(e)}
+        onKeyDown={handleKeyPress}
       />
       <button
         className="text-violet-700 focus:outline-none"

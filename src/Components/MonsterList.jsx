@@ -19,6 +19,7 @@ export default function MonsterList({
   clearSearch,
   resultsPerPage,
   setResultsPerPage,
+  handleKeyPress
 }) {
   //set currentPage to 1 on load
   useEffect(() => {
@@ -35,6 +36,7 @@ export default function MonsterList({
         setQuery={setQuery}
         handleSearch={handleSearch}
         clearSearch={clearSearch}
+        handleKeyPress={handleKeyPress}
       />
       <div className="flex justify-end mb-2 px-4">
         <ResultsDropdown
