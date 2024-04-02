@@ -37,6 +37,7 @@ export default function MonsterList({
         handleSearch={handleSearch}
         clearSearch={clearSearch}
         handleKeyPress={handleKeyPress}
+        setCurrentPage={setCurrentPage}
       />
       <div className="flex justify-end mb-2 px-4">
         <ResultsDropdown

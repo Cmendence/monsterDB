@@ -4,9 +4,8 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useNavigate,
 } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import monsters from "../newMonsterDB.json";
 import MonsterList from "./Components/MonsterList";
 import FilterPanel from "./Components/FilterPanel";
@@ -21,30 +20,12 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [resultsPerPage, setResultsPerPage] = useState(10);
 
-  // search bar updates on every keystroke. handleSearch sets the current page to 1 when you hit search
-  const handleSearch = () => {
-    setCurrentPage(1);
-  };
-
-  const handleKeyPress = (e) => {
-   if (e.key === 'Enter' || e.key === 13) {
-     // Close the keyboard by blurring the input element
-     e.target.blur();
-
-     handleSearch()
-   }
- };
-
   // used to set the new page of pagination and scroll to top
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const clearSearch = () => {
-    setQuery("");
-    setCurrentPage(1);
-  };
 
   // all monsters first sent through the search if query is truthy
   const monsterSearch = monsters.filter((monster) => {
@@ -73,7 +54,6 @@ function App() {
                 monsters={monsters}
                 query={query}
                 setQuery={setQuery}
-                handleSearch={handleSearch}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
                 handlePageChange={handlePageChange}
@@ -82,8 +62,6 @@ function App() {
                 totalPages={totalPages}
                 startIndex={startIndex}
                 endIndex={endIndex}
-                clearSearch={clearSearch}
-                handleKeyPress={handleKeyPress}
               />
             }
           />
@@ -95,7 +73,6 @@ function App() {
                 monsters={monsters}
                 query={query}
                 setQuery={setQuery}
-                handleSearch={handleSearch}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
                 handlePageChange={handlePageChange}
@@ -104,8 +81,6 @@ function App() {
                 totalPages={totalPages}
                 startIndex={startIndex}
                 endIndex={endIndex}
-                clearSearch={clearSearch}
-                handleKeyPress={handleKeyPress}
               />
             }
           />

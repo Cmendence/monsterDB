@@ -1,12 +1,32 @@
-import React from "react";
+import { useState } from "react";
 
 export default function SearchBar({
   query,
   setQuery,
-  handleSearch,
-  clearSearch,
-  handleKeyPress
+  setCurrentPage,
 }) {
+
+   const [isFocused, setIsFocused] = useState(false);
+
+   const handleSearch = () => {
+      setCurrentPage(1);
+    };
+  
+    const handleKeyPress = (e) => {
+     if (e.key === 'Enter' || e.key === 13) {
+       // Close the keyboard by blurring the input element
+       e.target.blur();
+  
+       handleSearch()
+     }
+   };
+
+   const clearSearch = () => {
+      setQuery("");
+      setCurrentPage(1);
+      setIsFocused(true);
+    };
+
   const magnifyingGlass = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -58,9 +78,11 @@ export default function SearchBar({
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleKeyPress}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
       />
       <button
-        className="text-violet-700 focus:outline-none"
+        className="text-violet-700 focus:outline-none relative right-10"
         onClick={clearSearch}
         type="button"
       >

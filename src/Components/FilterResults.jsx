@@ -9,8 +9,6 @@ export default function FilterResults({
   filteredMonsters,
   toggleResults,
   filterInfo,
-  handleSearch,
-  clearSearch,
   query,
   setQuery,
   currentPage,
@@ -41,9 +39,8 @@ export default function FilterResults({
       <SearchBar
         query={query}
         setQuery={setQuery}
-        handleSearch={handleSearch}
-        clearSearch={clearSearch}
         handleKeyPress={handleKeyPress}
+        setCurrentPage={setCurrentPage}
       />
       <div className="flex justify-between">
         <button
