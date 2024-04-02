@@ -24,7 +24,7 @@ export default function SearchBar({
    const clearSearch = () => {
       setQuery("");
       setCurrentPage(1);
-      setIsFocused(true);
+      setIsFocused(false);
     };
 
   const magnifyingGlass = (
