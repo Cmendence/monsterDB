@@ -10,7 +10,7 @@ import monsters from "../newMonsterDB.json";
 import MonsterList from "./Components/MonsterList";
 import FilterPanel from "./Components/FilterPanel";
 import NavBar from "./Components/NavBar";
-import Home from "./Components/Home";
+import About from "./Components/About";
 import Footer from "./Components/Footer";
 
 function App() {
@@ -45,9 +45,9 @@ function App() {
       <Router>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          
           <Route
-            path="/allMonsters"
+            path="/"
             element={
               <MonsterList
                 monsterSearch={monsterSearch}
@@ -84,6 +84,7 @@ function App() {
               />
             }
           />
+          <Route path="/About" element={<About />}></Route>
         </Routes>
         <Footer />
       </Router>

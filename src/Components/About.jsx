@@ -1,6 +1,5 @@
-import React from "react";
 
-export default function Home() {
+export default function About() {
   return (
     <div className="text-center text-gray-800 mt-10">
       <h1 className=" text-3xl font-semibold p-4 ">

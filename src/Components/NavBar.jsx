@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import DragonLogo from "/android-chrome-512x512.png";
 
@@ -62,7 +62,7 @@ export default function NavBar() {
                   to="/"
                   className="text-gray-200 hover:bg-teal-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
-                  Home
+                  All Monsters
                 </Link>
                 <Link
                   to="/filter"
@@ -71,10 +71,10 @@ export default function NavBar() {
                   Filter
                 </Link>
                 <Link
-                  to="/allMonsters"
+                  to="/About"
                   className="text-gray-200 hover:bg-teal-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
-                  All Monsters
+                  About
                 </Link>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function NavBar() {
               className="text-gray-300 active:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium focus:bg-purple-600"
               onClick={toggleMobileMenu}
             >
-              Home
+              All Monsters
             </Link>
             <Link
               to="/filter"
@@ -104,11 +104,11 @@ export default function NavBar() {
               Filter
             </Link>
             <Link
-              to="/allMonsters"
+              to="/About"
               className="text-gray-300 active:bg-teal-600 hover:text-white block rounded-md px-3 py-2 text-base font-medium focus:bg-purple-600"
               onClick={toggleMobileMenu}
             >
-              All Monsters
+              About
             </Link>
           </div>
         </div>
