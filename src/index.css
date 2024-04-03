@@ -32,3 +32,11 @@ body {
 .chevron {
   transition: transform 0.4s ease;
 }
+
+.visible {
+   visibility: visible;
+ }
+ 
+ .hidden {
+   visibility: hidden;
+ }

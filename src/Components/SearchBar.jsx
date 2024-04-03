@@ -1,12 +1,10 @@
-import { useRef } from "react";
+
 
 export default function SearchBar({
   query,
   setQuery,
   setCurrentPage,
 }) {
-
-   const inputRef = useRef(null);
 
    const handleSearch = () => {
       setCurrentPage(1);
@@ -21,10 +19,9 @@ export default function SearchBar({
      }
    };
 
-   const clearSearch = () => {
+   const clearSearch = (e) => {
       setQuery("");
       setCurrentPage(1);
-      inputRef.current.focus();
     };
 
   const magnifyingGlass = (
@@ -62,7 +59,7 @@ export default function SearchBar({
   );
 
   return (
-    <div className=" flex justify-center my-2">
+    <div className=" flex justify-center my-2 relative">
       <button
         className="text-violet-700 focus:outline-none"
         onClick={handleSearch}
@@ -79,15 +76,15 @@ export default function SearchBar({
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleKeyPress}
       />
-      { query && (
       <button
-        className="text-violet-700 focus:outline-none relative right-10"
+        className={`text-violet-700 focus:outline-none relative right-10`}
         onClick={clearSearch}
         type="button"
+        onPointerDown={(e) => e.preventDefault()}
+
       >
         {xIcon}
       </button>
-  )}
     </div>
   );
 }
