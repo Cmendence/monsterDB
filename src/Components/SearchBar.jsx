@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef } from "react";
 
 export default function SearchBar({
   query,
@@ -6,7 +6,7 @@ export default function SearchBar({
   setCurrentPage,
 }) {
 
-   // const [isFocused, setIsFocused] = useState(false);
+   const inputRef = useRef(null);
 
    const handleSearch = () => {
       setCurrentPage(1);
@@ -24,6 +24,7 @@ export default function SearchBar({
    const clearSearch = () => {
       setQuery("");
       setCurrentPage(1);
+      inputRef.current.focus();
     };
 
   const magnifyingGlass = (
