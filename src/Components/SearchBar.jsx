@@ -22,7 +22,7 @@ export default function SearchBar({
    };
 
    const clearSearch = (e) => {
-      e.stopPropigation()
+      e.stopPropagation()
       setQuery("");
       setCurrentPage(1);
     };
