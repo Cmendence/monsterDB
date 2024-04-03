@@ -49,7 +49,13 @@ export default function MonsterList({
         All Monsters ({monsterSearch.length})
       </h2>
       <div>
-        {monstersOnCurrentPage.map((monster) => {
+         {monsterSearch.length === 0 ? (
+            <div className="text-2xl ml-10 mt-4">
+               Oops! No Results :(
+            </div>
+         ) : (
+      
+        monstersOnCurrentPage.map((monster) => {
           let keysToRender = [
             "Activity Cycle",
             "Alignment",
@@ -65,7 +71,7 @@ export default function MonsterList({
               monsters={monster}
             />
           );
-        })}
+        }))}
       </div>
       <div className=" flex justify-center">
         <Pagination

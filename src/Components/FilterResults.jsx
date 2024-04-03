@@ -63,7 +63,13 @@ export default function FilterResults({
           {filterInfo}
         </h2>
         <div className="">
-          {monstersOnCurrentPage.map((monster, index) => {
+         <div>
+        { filteredMonsters.length === 0 ? (
+            <div className="text-2xl ml-10">
+               Oops! No results :(
+            </div>
+         ):(
+            monstersOnCurrentPage.map((monster, index) => {
             return (
               <MonsterCard
                 key={index}
@@ -71,8 +77,8 @@ export default function FilterResults({
                 keysToRender={keysToRender}
               />
             );
-          })}
-
+          }))}
+</div>
           <div className=" flex justify-center">
             <Pagination
               currentPage={currentPage}
