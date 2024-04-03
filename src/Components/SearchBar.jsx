@@ -21,8 +21,7 @@ export default function SearchBar({
      }
    };
 
-   const clearSearch = (e) => {
-      e.stopPropagation()
+   const clearSearch = () => {
       setQuery("");
       setCurrentPage(1);
     };
@@ -81,7 +80,7 @@ export default function SearchBar({
       />
       <button
         className="text-violet-700 focus:outline-none relative right-10"
-        onClick={(e) => clearSearch(e)}
+        onClick={(e) => { e.stopPropagation(); clearSearch();}}
         type="button"
       >
         {xIcon}
