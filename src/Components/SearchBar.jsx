@@ -6,7 +6,7 @@ export default function SearchBar({
   setCurrentPage,
 }) {
 
-   const [isFocused, setIsFocused] = useState(false);
+   // const [isFocused, setIsFocused] = useState(false);
 
    const handleSearch = () => {
       setCurrentPage(1);
@@ -21,10 +21,10 @@ export default function SearchBar({
      }
    };
 
-   const clearSearch = () => {
+   const clearSearch = (e) => {
+      e.stopPropigation()
       setQuery("");
       setCurrentPage(1);
-      setIsFocused(false);
     };
 
   const magnifyingGlass = (
@@ -78,12 +78,10 @@ export default function SearchBar({
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyDown={handleKeyPress}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
       />
       <button
         className="text-violet-700 focus:outline-none relative right-10"
-        onClick={clearSearch}
+        onClick={(e) => clearSearch(e)}
         type="button"
       >
         {xIcon}
